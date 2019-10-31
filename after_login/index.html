@@ -1,0 +1,265 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoodFinder</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- comment -->
+    <style>
+            .hero.is-large .hero-body {
+                padding-bottom: 0;
+                padding-top: 10rem;
+            }
+            .hero figure {
+                height: 0;
+                padding-bottom: 75%;
+                overflow: hidden;
+            }
+            figure.image {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            .bg-white {
+                background-color: #ffffff;
+            }
+            .bg-light {
+                background-color: #ffffff;
+            }
+            .media-left {
+                padding-left: 15px;
+            }
+            .media-left .icon {
+                margin-top: 15px;
+            }
+            .media-content {
+                padding-left: 25px;
+            }
+            .media {
+                background-image: linear-gradient( 135deg, rgb(255, 255, 255) 0%, rgba(75, 156, 211) 100%);
+                padding: 25px;
+            }
+            .section {
+                padding: 7rem 5rem;
+            }
+            .content h1 {
+                margin-bottom: 2em;
+            }
+            #stn-download {
+                color: #ffffff;
+                background-image: linear-gradient( 135deg, rgb(255, 255, 255) 0%, rgba(75, 156, 211) 100%)
+            }
+            .hero.is-landing {
+                color: #ffffff;
+                background-image: linear-gradient( 135deg, rgb(255, 255, 255) 0%, rgba(75, 156, 211) 100%)
+            }
+            .hero.is-landing * {
+                color: #ffffff;
+            }
+            #stn-download h1 {
+                color: #ffffff;
+            }
+            .button.button-store {
+                border-radius: 3px;
+                background: #FFF;
+                box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.26);
+                font-size: 14px;
+                font-weight: 500;
+                color: #633991;
+                margin: 0.5rem;
+                padding: 0.7rem 1.6rem;
+                line-height: 1.8;
+                height: auto;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+                display: inline-block;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+            }
+            .button.button-store:hover {
+                color: #000000;
+                background-color: #faf6fb;
+            }
+            .button.button-store img {
+                margin-right: 0.4rem;
+                vertical-align: text-bottom;
+            }
+            p {
+                color: #FFFFFF;
+            }
+            .navbar-item{
+                background-color: #000080;
+                padding-left:30px;
+                padding-right:30px;
+                            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="content-wrapper">
+    
+        <section class="hero is-landing is-small">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <span class="navbar-burger burger" data-target="mainNavbar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="mainNavbar" class="navbar-menu" color="black">
+                            <div class="navbar-end">
+                                <a class="navbar-item">
+                                    Log Out
+                                </a>
+                                <span class="navbar-item">
+                                    <a class="button is-info is-inverted is-outlined">
+                                        <span>Recipe From Ingredients</span>
+                                    </a>
+                                </span>
+                                <span class="navbar-item">
+                                    <a class="button is-info is-inverted is-outlined">
+                                        <span>Restaurant Item Recommendations</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+    
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="columns">
+                        <div class="column is-6 is-offset-3">
+                            <figure class="image">
+                                <img src="logo_transparent.png" alt="Food Finder Logo">
+                            </figure>
+                            <h1 class="subtitle is-2">
+                                Find the perfect food for <b>you</b>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <section class="bg-light">
+            <div class="container section">
+                <div class="content has-text-centered">
+                    <h1>Dashboard</h1>
+                </div>
+    
+                <nav class="columns">
+                    <div class="column has-text-centered">
+                        <article class="media">
+                            <figure class="media-left">
+                                <span class="icon has-text-danger">
+                                    <i class="far fa-id-badge fa-3x"></i>
+                                </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h4 class="heading"><strong>Your Info</strong></h4>
+                                    <p><font color="red">
+                                        Height: <br>
+                                        Weight:<br>
+                                        Dietary Restrictions:<br>
+                                        Food Preferences  <br>
+                                    </font>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+    
+                    <div class="column has-text-centered">
+                        <article class="media">
+                            <figure class="media-left">
+                                <span class="icon has-text-danger">
+                                    <i class="fas fa-utensils fa-3x"></i>
+                                </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h4 class="heading"><strong>Recent Recommended Recipes</strong></h4>
+                                    <p>
+                                    <font color="red">
+                                        <ol>
+                                            <li>Coffee</li>
+                                            <li>Tea</li>
+                                            <li>Milk</li>
+                                    </ol>
+                                    </font>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column has-text-centered">
+                        <article class="media">
+                            <figure class="media-left">
+                                <span class="icon has-text-danger">
+                                        <i class="fas fa-car fa-3x"></i>
+                                </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                        <h4 class="heading"><strong>Recent Restuarant Item Recommendations</strong></h4>
+                                        <p>
+                                            <font color="red">
+                                                <ol>
+                                                    <li>Turkey Sandwich -Potbelly</li>
+                                                    <li>Strawberry Banana Smoothie -Smoothie King</li>
+                                                </ol>
+                                             </font>
+                                        </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    
+        <section class="bg-light">
+            <div class="container section">
+                <div class="content has-text-centered">
+                    <h1>Frequently Ask Questions</h1>
+                </div>
+    
+                <div class="columns">
+                    <div class="column is-half">
+                        <div class="title is-4">Where do you get the recipes?</div>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante.</h4>
+                    </div>
+    
+                    <div class="column is-half">
+                        <div class="title is-4">How is this tool unique?</div>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante.</h4>
+                    </div>
+                </div>
+    
+                <div class="columns">
+                    <div class="column is-half">
+                        <div class="title is-4">What is the purpose of this project?</div>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante.</h4>
+                    </div>
+    
+                    <div class="column is-half">
+                        <div class="title is-4">What technologies did we use?</div>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante.</h4>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+    </div>
+    
+    </body>
+    </html>
