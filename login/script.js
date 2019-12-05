@@ -17,11 +17,7 @@ $(function () {
       {
         "name": document.getElementById("setupUsername").value.toString(),
         "pass": document.getElementById("setupPassword").value.toString(),
-        "data": {
-          "allergies": [],
-          "diets": [],
-          "intolerances": [],
-        }
+
       }).then(() => {
         $message2.html('<span class="has-text-success">Success! You just made an account.</span>')
 
