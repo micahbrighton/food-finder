@@ -102,7 +102,121 @@
             <i class="fa fa-refresh" id="getRecipes"></i>
         </span>
     </button>
+    <label class="label">Diets</label>
+    <div class="box">
+        <div class="field">
 
+            <div class="control">
+                <div><label class="checkbox">
+                        <input type="checkbox" id="gluten">
+                        Gluten Free
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="vegetarian">
+                        Vegetarian
+                    </label></div>
+
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="vegan">
+                        Vegan
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="lacto-vegetarian">
+                        Lacto-Vegetarian
+                    </label></div>
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="ovo-vegetarian">
+                        Ovo-Vegetarian
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="ketogenic">
+                        Ketogenic
+                    </label></div>
+
+                <div> <label class="checkbox">
+                        <input type="checkbox" id="pescetarian">
+                        Pescetarian
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="paleo">
+                        Paleo
+                    </label></div>
+
+                <div></div>
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="primal">
+                        Primal
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="whole30">
+                        Whole30
+                    </label></div>
+                <div></div>
+
+            </div>
+        </div>
+    </div>
+    <label class="label">Intolerances</label>
+    <div class="box">
+        <div class="field">
+
+            <div class="control">
+                <div><label class="checkbox">
+                        <input type="checkbox" id="dairy">
+                        Dairy
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="egg">
+                        Egg
+                    </label></div>
+
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="gluten2">
+                        Gluten
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="grain">
+                        Grain
+                    </label></div>
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="peanut">
+                        Peanut
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="seafood">
+                        Seafood
+                    </label></div>
+
+                <div> <label class="checkbox">
+                        <input type="checkbox" id="sesame">
+                        Sesame
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="shellfish">
+                        Shellfish
+                    </label></div>
+
+                <div></div>
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="soy">
+                        Soy
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="sulfite">
+                        Sulfite
+                    </label></div>
+                <div><label class="checkbox">
+                        <input type="checkbox" id="tree-nut">
+                        Tree Nut
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="wheat">
+                        Wheat
+                    </label></div>
+                <div></div>
+
+            </div>
+        </div>
+    </div>
     <a class="level-item">
         <div id="feedbox">
 
@@ -110,11 +224,25 @@
         </div>
     </a>
 
+
+    <script src="../node_modules/axios/dist/axios.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         const API_KEY = "128541af6bef438a808dc04669c8f556";
         var returnIngreds = [];
         var enteredIngreds = [];
+        var user = '';
+        axios.get('http://localhost:3000/account/status',
+            {
+
+                headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+
+            }).then((response) => {
+                console.log(response);
+                user = response.data.user.name;
+            }).catch((error) => {
+                console.log(error)
+            });
 
         function autocomplete(inp, arr) {
             /*the autocomplete function takes two arguments,
@@ -267,14 +395,43 @@
             })
         });
         $(document).on("click", "#getRecipes", function (event) {
+
             console.log("clicked");
+            const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-vegetarian", "ketogenic", "pescetarian", "paleo", "primal", "whole30"];
+            const intolerancesList = ["dairy", "egg", "gluten2", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
+
+            var userIngreds = [];
+
+            function checked(id) {
+                return document.getElementById(id).checked;
+            }
+
+
+
+            let userDiets = [];
+            let userIntolerances = [];
+            dietsList.forEach(function (element) {
+                if (checked(element)) { userDiets.push(element) }
+            });
+            intolerancesList.forEach(function (element) {
+                if (checked(element)) { userIntolerances.push(element) }
+            });
+
+
 
 
             const ingredientsString = enteredIngreds.map(ingredient =>
                 ingredient + '%2C'
             );
 
-            let requestString = "https://api.spoonacular.com/recipes/complexSearch?query=" + ingredientsString + "&instructionsRequired=true&ignorePantry=true&addRecipeInformation=true&fillIngredients=true&apiKey=128541af6bef438a808dc04669c8f556";
+            const dietsString = userDiets.map(ingredient =>
+                ingredient + '%2C'
+            );
+            const intolerancesString = userIntolerances.map(ingredient =>
+                ingredient + '%2C'
+            );
+
+            let requestString = "https://api.spoonacular.com/recipes/complexSearch?query=" + ingredientsString + "&diet=" + dietsString + "&intolerances=" + intolerancesString + "&instructionsRequired=true&ignorePantry=true&addRecipeInformation=true&fillIngredients=true&apiKey=128541af6bef438a808dc04669c8f556";
             $.ajax({
 
                 url: requestString,
@@ -316,7 +473,7 @@
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- <script src="node_modules/axios/dist/axios.js"></script> -->
+    <script src="../node_modules/axios/dist/axios.js"></script>
     <script src="script.js" type="module"></script>
 </body>
 
