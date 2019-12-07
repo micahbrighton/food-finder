@@ -1,0 +1,204 @@
+{
+  "2346663": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "lacto-vegetarian",
+        "ovo-vegetarian",
+        "ketogenic"
+      ],
+      "intolerances": [
+        "gluten2",
+        "shellfish"
+      ]
+    }
+  },
+  "3333333": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "vegan",
+        "ovo-vegetarian",
+        "whole30"
+      ],
+      "intolerances": [
+        "gluten2"
+      ]
+    }
+  },
+  "222223455": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "ovo-vegetarian",
+        "ketogenic",
+        "paleo"
+      ],
+      "intolerances": [
+        "seafood",
+        "sesame"
+      ]
+    }
+  },
+  "john`": {
+    "data": {
+      "allergies": [
+        "chocolate",
+        "soy"
+      ],
+      "diets": [
+        "vegan",
+        "paleo"
+      ],
+      "intolerances": [
+        "dairy",
+        "egg",
+        "peanut"
+      ]
+    }
+  },
+  "claudia": {
+    "data": {
+      "allergies": [
+        "chocolate milk"
+      ],
+      "diets": [
+        "whole30"
+      ],
+      "intolerances": [
+        "egg",
+        "peanut"
+      ]
+    }
+  },
+  "yo": {
+    "data": {
+      "allergies": [
+        "peanut"
+      ],
+      "diets": [
+        "gluten",
+        "ketogenic"
+      ],
+      "intolerances": [
+        "egg"
+      ]
+    }
+  },
+  "pppp": {
+    "data": {
+      "allergies": [],
+      "diets": [],
+      "intolerances": []
+    }
+  },
+  "kurt": {
+    "data": {
+      "allergies": [
+        "peanuts"
+      ],
+      "diets": [
+        "whole30"
+      ],
+      "intolerances": [
+        "shellfish"
+      ]
+    }
+  },
+  "newchef": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "gluten",
+        "vegetarian",
+        "vegan"
+      ],
+      "intolerances": [
+        "dairy"
+      ]
+    }
+  },
+  "newchefman": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "gluten",
+        "vegetarian",
+        "pescetarian"
+      ],
+      "intolerances": [
+        "dairy",
+        "peanut"
+      ]
+    }
+  },
+  "newchefman2": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "gluten",
+        "ovo-vegetarian"
+      ],
+      "intolerances": [
+        "sesame",
+        "shellfish"
+      ]
+    }
+  },
+  "pewpew": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "ketogenic"
+      ],
+      "intolerances": [
+        "shellfish"
+      ]
+    }
+  },
+  "fryguy": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "pescetarian",
+        "primal"
+      ],
+      "intolerances": [
+        "grain"
+      ]
+    }
+  },
+  "tryall": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "gluten",
+        "vegetarian",
+        "vegan",
+        "lacto-vegetarian",
+        "ovo-vegetarian",
+        "ketogenic",
+        "pescetarian",
+        "paleo",
+        "primal",
+        "whole30"
+      ],
+      "intolerances": [
+        "dairy",
+        "egg",
+        "gluten2",
+        "grain",
+        "peanut",
+        "seafood",
+        "sesame",
+        "shellfish",
+        "soy",
+        "sulfite",
+        "tree-nut",
+        "wheat"
+      ]
+    }
+  }
+}
