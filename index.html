@@ -88,6 +88,7 @@
             p {
                 color: #FFFFFF;
             }
+            
         </style>
     </head>
     <body>
@@ -107,11 +108,11 @@
                         </div>
                         <div id="mainNavbar" class="navbar-menu">
                             <div class="navbar-end">
-                                <a class="navbar-item" href="../login/index.html">
+                                <a class="navbar-item" id="signup">
                                     Sign Up
                                 </a>
                                 <span class="navbar-item">
-                                    <a class="button is-info is-inverted is-outlined" href="../login/index.html">
+                                    <a class="button is-info is-inverted is-outlined"  id="login">
                                         <span>Login</span>
                                     </a>
                                 </span>
@@ -209,8 +210,7 @@
                     <div class="column ">
                             <div class="content">
                                 <h1 class="subtitle is-2">Learn More</h1>
-                                <h4>See how everything works, and sign up when you're ready!</h4>
-                                <a href="" class="button is-danger">Sign Up</a>
+                                <h4>Watch our video explaining how we built the FoodFinder and the different capabilities it has.</h4>
                             </div>
                     </div>
                 </div>
@@ -249,7 +249,131 @@
     
             </div>
         </section>
+
+        <div class="modal" id="signupmodal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                        <div class="total">
+                                <div id="setup" style="align-items: center;
+                          justify-content: center;
+                          background: #F7F7F7;">
+                                    <div class="setup-card" style="background: #fff;
+                          box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.11);">
+                                        <div class="card-title" style="background-color: rgba(75, 156, 211);
+                          padding: 2rem;">
+                                            <h1 style="color: #fff;
+                          text-align: center;
+                          font-size: 1.2rem;">Make a New Account</h1>
+                                        </div>
+                         
+                                        <div class="content" style="padding: 3rem 2.5rem 5rem;">
+                                            <form id="setup-form">
+                                                <input id="setupUsername" type="username" name="setupUsername" title="setupUsername" placeholder="Username" required autofocus style="display: block;
+                          width: 100%;
+                          font-size: 1rem;
+                          margin-bottom: 1.75rem;
+                          padding: 0.25rem 0;
+                          border: none;
+                          border-bottom: 1px solid #dbdbdb;
+                          transition: all .5s;"><input id="setupPassword" type="password" name="setupPassword" title="setupPassword" placeholder="Password" required style="display: block;
+                          width: 100%;
+                          font-size: 1rem;
+                          margin-bottom: 1.75rem;
+                          padding: 0.25rem 0;
+                          border: none;
+                          border-bottom: 1px solid #dbdbdb;
+                          transition: all .5s;"><div class="field">
+                                                    <div class="control">
+                                                        <button type="submit" class="btn btn-primary" style="cursor: pointer;
+                          font-size: 1.2rem;
+                          color: rgba(75, 156, 211);
+                          border-radius: 4rem;
+                          display: block;
+                          width: 100%;
+                          background: transparent;
+                          border: 2px solid rgba(75, 156, 211);
+                          padding: 0.9rem 0 1.1rem;
+                          transition: color .5s, border-color .5s;">Sign up</button>
+                                                    </div>
+                                                </div>
+                         
+                                                <div class="field">
+                                                    <div class="control">
+                                                        <p id="message2"></p>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+        </div>
+
+        <div class="modal" id="loginmodal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                        <div class="total">
+                                <div id="login" style="align-items: center;
+                          justify-content: center;
+                          background: #F7F7F7;">
+                                    <div class="login-card" style="background: #fff;
+                          box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.11);">
+                                        <div class="card-title" style="background-color: rgba(75, 156, 211);
+                          padding: 2rem;">
+                                            <h1 style="color: #fff;
+                          text-align: center;
+                          font-size: 1.2rem;">Login</h1>
+                                        </div>
+                         
+                                        <div class="content" style="padding: 3rem 2.5rem 5rem;">
+                                            <form id="login-form">
+                                                <input id="username" type="username" name="username" title="username" placeholder="Username" required autofocus style="display: block;
+                          width: 100%;
+                          font-size: 1rem;
+                          margin-bottom: 1.75rem;
+                          padding: 0.25rem 0;
+                          border: none;
+                          border-bottom: 1px solid #dbdbdb;
+                          transition: all .5s;"><input id="password" type="password" name="password" title="password" placeholder="Password" required style="display: block;
+                          width: 100%;
+                          font-size: 1rem;
+                          margin-bottom: 1.75rem;
+                          padding: 0.25rem 0;
+                          border: none;
+                          border-bottom: 1px solid #dbdbdb;
+                          transition: all .5s;"><div class="field">
+                                                    <div class="control">
+                                                        <button type="submit" class="btn btn-primary" style="cursor: pointer;
+                          font-size: 1.2rem;
+                          color: rgba(75, 156, 211);
+                          border-radius: 4rem;
+                          display: block;
+                          width: 100%;
+                          background: transparent;
+                          border: 2px solid rgba(75, 156, 211);
+                          padding: 0.9rem 0 1.1rem;
+                          transition: color .5s, border-color .5s;">Login</button>
+                                                    </div>
+                                                </div>
+                         
+                                                <div class="field">
+                                                    <div class="control">
+                                                        <p id="message"></p>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+              </div>
     </div>
     
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="node_modules/axios/dist/axios.js"></script>
+    <script src="script.js" type="module"></script>
     </body>
     </html>
+    
