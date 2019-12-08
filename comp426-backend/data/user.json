@@ -200,5 +200,19 @@
         "wheat"
       ]
     }
+  },
+  "james": {
+    "data": {
+      "allergies": [
+        "kfjkjfjk"
+      ],
+      "diets": [
+        "primal",
+        "whole30"
+      ],
+      "intolerances": [
+        "egg"
+      ]
+    }
   }
 }
