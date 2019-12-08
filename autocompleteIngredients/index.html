@@ -224,19 +224,45 @@
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
         autocomplete(document.getElementById("myInput"), returnIngreds);
         $(function () {
+
             const $form = $('#submitIngredients');
             $form.submit(function (e) {
                 e.preventDefault();
                 var node = document.createElement("LI");                 // Create a <li> node
                 var textnode = document.createTextNode(document.getElementById("myInput").value);         // Create a text node
                 node.appendChild(textnode);                              // Append the text to <li>
+
+                var deleteIcon = document.createElement('span')
+                deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
+                node.appendChild(deleteIcon);
+
+
+
                 document.getElementById("list").appendChild(node);     // Append <li> to <ul> with id="myList"
                 enteredIngreds.push(document.getElementById("myInput").value);
                 document.getElementById('myInput').value = '';
 
+                console.log(enteredIngreds);
+
+                $('.delete').on('click', function () {
+
+                    console.log($(this).parent().parent()[0].childNodes[0].data);
+                    let removedIngredient = $(this).parent().parent()[0].childNodes[0].data;
+
+                    for (var i = 0; i < enteredIngreds.length; i++) {
+                        if (enteredIngreds[i] === removedIngredient) {
+                            enteredIngreds.splice(i, 1);
+                        }
+                    }
+                    console.log(enteredIngreds);
+                    $(this).parent().parent().remove();
+
+                });
+
 
             })
         });
+
     </script>
 
 </body>
