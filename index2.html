@@ -379,9 +379,19 @@
         <div class="modal" id="preferencemodal">
             <div class="modal-background"></div>
             <div class="modal-content">
-                <div style="background: #F7F7F7; padding: 25px">
-                    <label class="label">Diets</label>
-                    <div class="box">
+                <div style="align-items: center;
+                justify-content: center;
+                background: #F7F7F7;">
+                    <div class="login-card" style="
+                        box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.11);">
+                                      <div class="card-title" style="background-color: rgba(75, 156, 211);
+                        padding: 2rem;">
+                                          <h1 style="color: #fff;
+                        text-align: center;
+                        font-size: 1.2rem;">Set Your Preferences</h1>
+                    </div>
+                    <br>
+                    <label class="label" style="text-align: center;">Diets</label>
                         <div class="field">
                 
                             <div class="control">
@@ -431,11 +441,9 @@
                                     </label></div>
                                 <div></div>
                 
-                            </div>
                         </div>
                     </div>
-                    <label class="label">Intolerances</label>
-                    <div class="box">
+                    <label class="label" style="text-align: center;">Intolerances</label>
                         <div class="field">
                 
                             <div class="control">
@@ -492,30 +500,22 @@
                                     </label></div>
                                 <div></div>
                 
-                            </div>
                         </div>
                     </div>
                     <div id="autocomplete"></div>
-                
-                    <!-- <div class="field">
-                            <div class="control">
-                                <label class="radio">
-                                    <input type="radio" name="question">
-                                    Yes
-                                </label>
-                                <label class="radio">
-                                    <input type="radio" name="question">
-                                    No
-                                </label>
-                            </div>
-                        </div> -->
                     <br>
-                    <div class="field is-grouped">
+                    <div class="field">
                         <div class="control">
-                            <button class="button is-link" id=submitForm>Submit</button>
-                        </div>
-                        <div class="control">
-                            <button class="button is-link is-light">Cancel</button>
+                            <button class="btn is-primary" id="submitForm" style="cursor: pointer;
+                            font-size: 1.2rem;
+                            color: rgba(75, 156, 211);
+                            border-radius: 4rem;
+                            display: block;
+                            width: 100%;
+                            background: transparent;
+                            border: 2px solid rgba(75, 156, 211);
+                            padding: 0.9rem 0 1.1rem;
+                            transition: color .5s, border-color .5s;">Save Preferences</button>
                         </div>
                     </div>
                 </div>
