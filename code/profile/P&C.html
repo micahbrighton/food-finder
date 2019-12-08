@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" >
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+    <script src="../node_modules/axios/dist/axios.js"></script>
+    <script src="P&Cscript.js"></script>
+    <style type="text/css">
+        html,
+        body {
+            font-family: 'Open Sans';
+        }
+        img {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .blueback {
+            background-image: linear-gradient( 135deg, rgb(255, 255, 255) 0%, rgba(75, 156, 211) 100%);
+            padding: 25px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#autocomplete").load("../autocompleteIngredients/index.html");
+        });
+    </script>
+</head>
+
+<body>
+    <section class="hero is-fullheight is-default is-bold">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                            <h1><b>Food Finder</b></h1>
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <div class="tabs is-right">
+                                <ul>
+                                    <li><a href="">Recipe Finder</a></li>
+                                    <li><a href="../restaurants/index.html">Restaurant Finder</a></li>
+                                    <li class="is-active"><a href="../profile/index.html">Profile</a></li>
+                                    <li><a href="/index.html">Log Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body">
+            <label class="label">Diets</label>
+<div class="box">
+    <div class="field">
+
+        <div class="control">
+            <div><label class="checkbox">
+                    <input type="checkbox" id="gluten">
+                    Gluten Free
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="vegetarian">
+                    Vegetarian
+                </label></div>
+
+
+            <div><label class="checkbox">
+                    <input type="checkbox" id="vegan">
+                    Vegan
+                </label><label class="checkbox">
+                    <input type="checkbox" id="lacto-vegetarian">
+                    Lacto-Vegetarian
+                </label></div>
+
+            <div><label class="checkbox">
+                    <input type="checkbox" id="ovo-vegetarian">
+                    Ovo-Vegetarian
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="ketogenic">
+                    Ketogenic
+                </label></div>
+
+            <div> <label class="checkbox">
+                    <input type="checkbox" id="pescetarian">
+                    Pescetarian
+                </label><label class="checkbox">
+                    <input type="checkbox" id="paleo">
+                    Paleo
+                </label></div>
+
+            <div></div>
+
+            <div><label class="checkbox">
+                    <input type="checkbox" id="primal">
+                    Primal
+                </label><label class="checkbox">
+                    <input type="checkbox" id="whole30">
+                    Whole30
+                </label></div>
+            <div></div>
+
+        </div>
+    </div>
+</div>
+<label class="label">Intolerances</label>
+<div class="box">
+    <div class="field">
+
+        <div class="control">
+            <div><label class="checkbox">
+                    <input type="checkbox" id="dairy">
+                    Dairy
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="egg">
+                    Egg
+                </label></div>
+
+
+            <div><label class="checkbox">
+                    <input type="checkbox" id="gluten2">
+                    Gluten
+                </label><label class="checkbox">
+                    <input type="checkbox" id="grain">
+                    Grain
+                </label></div>
+
+            <div><label class="checkbox">
+                    <input type="checkbox" id="peanut">
+                    Peanut
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="seafood">
+                    Seafood
+                </label></div>
+
+            <div> <label class="checkbox">
+                    <input type="checkbox" id="sesame">
+                    Sesame
+                </label><label class="checkbox">
+                    <input type="checkbox" id="shellfish">
+                    Shellfish
+                </label></div>
+
+            <div></div>
+
+            <div><label class="checkbox">
+                    <input type="checkbox" id="soy">
+                    Soy
+                </label><label class="checkbox">
+                    <input type="checkbox" id="sulfite">
+                    Sulfite
+                </label></div>
+            <div><label class="checkbox">
+                    <input type="checkbox" id="tree-nut">
+                    Tree Nut
+                </label><label class="checkbox">
+                    <input type="checkbox" id="wheat">
+                    Wheat
+                </label></div>
+            <div></div>
+
+        </div>
+    </div>
+</div>
+        </div>
+
+        <div class="hero-foot">
+            <div class="container">
+                <div class="tabs is-centered">
+                    <ul>
+                        <li><a>Footer thing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
