@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login or Sign Up</title>
+
+    <!-- Include links to CSS stylesheets below -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="total">
+
+        <div id="login">
+            <div class="login-card">
+                <div class="card-title">
+                    <h1>Login</h1>
+                </div>
+
+                <div class="content">
+                    <form id="login-form">
+                        <input id="username" type="username" name="username" title="username" placeholder="Username"
+                            required autofocus>
+                        <input id="password" type="password" name="password" title="password" placeholder="Password"
+                            required>
+
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <p id="message"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="setup">
+            <div class="setup-card">
+                <div class="card-title">
+                    <h1>Make a New Account</h1>
+                </div>
+
+                <div class="content">
+                    <form id="setup-form">
+                        <input id="setupUsername" type="username" name="setupUsername" title="setupUsername"
+                            placeholder="Username" required autofocus>
+                        <input id="setupPassword" type="password" name="setupPassword" title="setupPassword"
+                            placeholder="Password" required>
+
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" class="btn btn-primary">Sign up</button>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <p id="message2"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include links to JavaScript files below -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="node_modules/axios/dist/axios.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>

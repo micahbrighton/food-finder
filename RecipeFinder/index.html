@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+    <link rel="import" href="../autocompleteIngredients/index.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 16px Arial;
+        }
+
+        /*the container must be positioned relative:*/
+        .autocomplete {
+            position: relative;
+            display: inline-block;
+        }
+
+        input {
+            border: 1px solid transparent;
+            background-color: #f1f1f1;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type=text] {
+            background-color: #f1f1f1;
+            width: 100%;
+        }
+
+        input[type=submit] {
+            background-color: DodgerBlue;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        /*when hovering an item:*/
+        .autocomplete-items div:hover {
+            background-color: #e9e9e9;
+        }
+
+        /*when navigating through the items using the arrow keys:*/
+        .autocomplete-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+
+        #feedbox {
+            width: 500px;
+            height: 1000px;
+            border: 2px solid #08a0e9;
+            padding: 25px;
+            text-align: center;
+            margin: auto;
+            overflow-y: scroll;
+
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#autocomplete").load("../autocompleteIngredients/index.html");
+        });
+    </script>
+</head>
+
+<body>
+
+    <label class="label">What ingredients do you have?</label>
+    <div id="autocomplete"></div>
+
+
+    <!--Make sure the form has the autocomplete function switched off:-->
+    <!-- <form autocomplete="off" id="submitIngredients">
+        <div class="autocomplete" style="width:300px;">
+            <input id="myInput" type="text" name="allergies" placeholder="Type any ingredients">
+        </div>
+        <input type="submit" id=autoSubmit>
+    </form>
+    <div id="list">
+
+    </div> -->
+    <button class="button is-rounded is-medium" id="getRecipes">
+        <span class="icon is-large">
+            <i class="fa fa-refresh" ></i>
+        </span>
+    </button>
+    <label class="label">Diets</label>
+    <div class="box">
+        <div class="field">
+
+            <div class="control">
+                <div><label class="checkbox">
+                        <input type="checkbox" id="gluten">
+                        Gluten Free
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="vegetarian">
+                        Vegetarian
+                    </label></div>
+
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="vegan">
+                        Vegan
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="lacto-vegetarian">
+                        Lacto-Vegetarian
+                    </label></div>
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="ovo-vegetarian">
+                        Ovo-Vegetarian
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="ketogenic">
+                        Ketogenic
+                    </label></div>
+
+                <div> <label class="checkbox">
+                        <input type="checkbox" id="pescetarian">
+                        Pescetarian
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="paleo">
+                        Paleo
+                    </label></div>
+
+                <div></div>
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="primal">
+                        Primal
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="whole30">
+                        Whole30
+                    </label></div>
+                <div></div>
+
+            </div>
+        </div>
+    </div>
+    <label class="label">Intolerances</label>
+    <div class="box">
+        <div class="field">
+
+            <div class="control">
+                <div><label class="checkbox">
+                        <input type="checkbox" id="dairy">
+                        Dairy
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="egg">
+                        Egg
+                    </label></div>
+
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="gluten2">
+                        Gluten
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="grain">
+                        Grain
+                    </label></div>
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="peanut">
+                        Peanut
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="seafood">
+                        Seafood
+                    </label></div>
+
+                <div> <label class="checkbox">
+                        <input type="checkbox" id="sesame">
+                        Sesame
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="shellfish">
+                        Shellfish
+                    </label></div>
+
+                <div></div>
+
+                <div><label class="checkbox">
+                        <input type="checkbox" id="soy">
+                        Soy
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="sulfite">
+                        Sulfite
+                    </label></div>
+                <div><label class="checkbox">
+                        <input type="checkbox" id="tree-nut">
+                        Tree Nut
+                    </label><label class="checkbox">
+                        <input type="checkbox" id="wheat">
+                        Wheat
+                    </label></div>
+                <div></div>
+
+            </div>
+        </div>
+    </div>
+    <a class="level-item">
+        <div id="feedbox">
+
+
+        </div>
+    </a>
+
+
+    <script src="../node_modules/axios/dist/axios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        const API_KEY = "128541af6bef438a808dc04669c8f556";
+        var returnIngreds = [];
+        var enteredIngreds = [];
+        var user = '';
+        axios.get('http://localhost:3000/account/status',
+            {
+
+                headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+
+            }).then((response) => {
+                console.log(response);
+                user = response.data.user.name;
+            }).catch((error) => {
+                console.log(error)
+            });
+
+ 
+        $(document).on("click", "#getRecipes", function (event) {
+
+            console.log("clicked");
+            const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-vegetarian", "ketogenic", "pescetarian", "paleo", "primal", "whole30"];
+            const intolerancesList = ["dairy", "egg", "gluten2", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
+
+            var userIngreds = [];
+
+            function checked(id) {
+                return document.getElementById(id).checked;
+            }
+
+
+
+            let userDiets = [];
+            let userIntolerances = [];
+            dietsList.forEach(function (element) {
+                if (checked(element)) { userDiets.push(element) }
+            });
+            intolerancesList.forEach(function (element) {
+                if (checked(element)) { userIntolerances.push(element) }
+            });
+
+
+
+
+            const ingredientsString = enteredIngreds.map(ingredient =>
+                ingredient + '%2C'
+            );
+
+            const dietsString = userDiets.map(ingredient =>
+                ingredient + '%2C'
+            );
+            const intolerancesString = userIntolerances.map(ingredient =>
+                ingredient + '%2C'
+            );
+
+            let requestString = "https://api.spoonacular.com/recipes/complexSearch?query=" + ingredientsString + "&diet=" + dietsString + "&intolerances=" + intolerancesString + "&instructionsRequired=true&ignorePantry=true&addRecipeInformation=true&fillIngredients=true&apiKey=128541af6bef438a808dc04669c8f556";
+            $.ajax({
+
+                url: requestString,
+
+                type: 'GET',
+
+                headers: {
+
+                    'Content-Type':
+                        'application/json',
+
+
+                },
+
+
+            }).then((response) => {
+                if(response.totalResults===0){
+                    alert("The ingredients you entered returned no results. Make sure you use the autocompleted options")
+                    location.reload()
+                }
+                console.log(response);
+                for (var i = 0; i < response.results.length; i++) {
+                    var img = new Image();
+                    img.src = response.results[i].image;
+                    var title = response.results[i].title;
+                    var meal = document.createElement("DIV");
+                    meal.append(img);
+                    meal.append(title);
+                    document.getElementById('feedbox').append(meal);
+
+                }
+
+                //  response.results.forEach(element => document.getElementById('feedbox').append(element.src = element.image));
+
+
+
+            }).catch((error) => {
+                console.log(error);
+
+
+            });
+
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../node_modules/axios/dist/axios.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
