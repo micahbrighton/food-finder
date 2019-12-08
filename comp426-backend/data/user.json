@@ -9,5 +9,17 @@
         "seafood"
       ]
     }
+  },
+  "newnewnewnew": {
+    "data": {
+      "allergies": [
+        "chocolate"
+      ],
+      "diets": [],
+      "intolerances": [
+        "egg",
+        "sesame"
+      ]
+    }
   }
 }

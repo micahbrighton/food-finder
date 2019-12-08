@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
     <link rel="import" href="../autocompleteIngredients/index.html">
     <link rel="import" href="../autocompleteAllergies/index.html">
+    <!-- <link rel="import" href="ModalRecipeBox/index.html"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
@@ -80,6 +81,59 @@
             overflow-y: scroll;
 
         }
+
+        /* modal styling     */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
     <script>
         $(function () {
@@ -107,7 +161,7 @@
     </div> -->
     <button class="button is-rounded is-medium" id="getRecipes">
         <span class="icon is-large">
-            <i class="fa fa-refresh" ></i>
+            <i class="fa fa-refresh"></i>
         </span>
     </button>
     <label class="label">Diets</label>
@@ -227,19 +281,35 @@
     </div>
     <label class="label">What are you allergic to?</label>
     <div id="autocomplete2"></div>
-    <div id="list2"> 
+    <div id="list2">
 
-        
+
     </div>
     <div>
-    <a class="level-item">
-        <div id="feedbox">
+        <a class="level-item">
+            <div id="feedbox">
 
+
+            </div>
+        </a>
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 id="title"> </h1>
+            <div id="pic">
+
+            </div>
+            <div id="instructions">
+
+            </div>
 
         </div>
-    </a>
-</div>
 
+    </div>
 
     <script src="../node_modules/axios/dist/axios.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -247,68 +317,69 @@
         const API_KEY = "128541af6bef438a808dc04669c8f556";
         var returnIngreds = [];
         var enteredIngreds = [];
-        var enteredAllergies=[]
+        var enteredAllergies = []
         var user = '';
-        if(sessionStorage.getItem('jwt')===null){
+        var recipesResponse;
+        if (sessionStorage.getItem('jwt') === null) {
             console.log('nobody is signed in')
-            var enteredAllergies=[]
+            var enteredAllergies = []
         }
-        else{
+        else {
             axios.get('http://localhost:3000/user/data',
-        {
+                {
 
-            headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+                    headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
 
-        }).then((response) => {
-            console.log(response);
-            for (let i = 0; i < response.data.result.diets.length; i++) {
+                }).then((response) => {
+                    console.log(response);
+                    for (let i = 0; i < response.data.result.diets.length; i++) {
 
-                let diet = response.data.result.diets[i];
-                document.getElementById(diet).checked = true;
+                        let diet = response.data.result.diets[i];
+                        document.getElementById(diet).checked = true;
 
-            }
-            for (let i = 0; i < response.data.result.intolerances.length; i++) {
-                let intolerance = response.data.result.intolerances[i];
-                document.getElementById(intolerance).checked = true;
-
-            }
-            for(let i=0; i<response.data.result.allergies.length;i++){
-                enteredAllergies.push(response.data.result.allergies[i]);
-               
-                var node = document.createElement("LI");
-                var textnode = document.createTextNode(response.data.result.allergies[i]);  
-                console.log(textnode.nodeValue)       // Create a text node
-                node.appendChild(textnode);                              // Append the text to <li>
-                var deleteIcon = document.createElement('span')
-                deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
-                node.appendChild(deleteIcon);
-                
-
-                console.log(document.getElementById("list2"))
-                document.getElementById("list2").appendChild(node);     // Append <li> to <ul> with id="myList"
-               
-
-              
-
-                $('.delete').on('click', function () {
-
-                    console.log($(this).parent().parent()[0].childNodes[0].data);
-                    let removedIngredient = $(this).parent().parent()[0].childNodes[0].data;
-
-                    for (var i = 0; i < enteredAllergies.length; i++) {
-                        if (enteredAllergies[i] === removedIngredient) {
-                            enteredAllergies.splice(i, 1);
-                        }
                     }
-                    console.log(enteredAllergies);
-                    $(this).parent().parent().remove();
+                    for (let i = 0; i < response.data.result.intolerances.length; i++) {
+                        let intolerance = response.data.result.intolerances[i];
+                        document.getElementById(intolerance).checked = true;
 
+                    }
+                    for (let i = 0; i < response.data.result.allergies.length; i++) {
+                        enteredAllergies.push(response.data.result.allergies[i]);
+
+                        var node = document.createElement("LI");
+                        var textnode = document.createTextNode(response.data.result.allergies[i]);
+                        console.log(textnode.nodeValue)       // Create a text node
+                        node.appendChild(textnode);                              // Append the text to <li>
+                        var deleteIcon = document.createElement('span')
+                        deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
+                        node.appendChild(deleteIcon);
+
+
+                        console.log(document.getElementById("list2"))
+                        document.getElementById("list2").appendChild(node);     // Append <li> to <ul> with id="myList"
+
+
+
+
+                        $('.delete').on('click', function () {
+
+                            console.log($(this).parent().parent()[0].childNodes[0].data);
+                            let removedIngredient = $(this).parent().parent()[0].childNodes[0].data;
+
+                            for (var i = 0; i < enteredAllergies.length; i++) {
+                                if (enteredAllergies[i] === removedIngredient) {
+                                    enteredAllergies.splice(i, 1);
+                                }
+                            }
+                            console.log(enteredAllergies);
+                            $(this).parent().parent().remove();
+
+                        });
+
+                    }
+                }).catch((error) => {
+                    console.log(error)
                 });
-
-            }
-        }).catch((error) => {
-            console.log(error)
-        });
 
             // axios.get('http://localhost:3000/account/status',
             // {
@@ -323,7 +394,7 @@
             // });
         }
 
- 
+
         $(document).on("click", "#getRecipes", function (event) {
 
             console.log("clicked");
@@ -363,7 +434,7 @@
             const allergiesString = enteredAllergies.map(ingredient =>
                 ingredient + '%2C'
             );
-            let requestString = "https://api.spoonacular.com/recipes/complexSearch?query=" + ingredientsString + "&diet=" + dietsString + "&intolerances=" + intolerancesString + "&excludeIngredients="+ allergiesString+"&instructionsRequired=true&ignorePantry=true&addRecipeInformation=true&fillIngredients=true&apiKey=128541af6bef438a808dc04669c8f556";
+            let requestString = "https://api.spoonacular.com/recipes/complexSearch?query=" + ingredientsString + "&diet=" + dietsString + "&intolerances=" + intolerancesString + "&excludeIngredients=" + allergiesString + "&instructionsRequired=true&ignorePantry=true&addRecipeInformation=true&fillIngredients=true&apiKey=128541af6bef438a808dc04669c8f556";
             console.log(requestString)
             $.ajax({
 
@@ -381,11 +452,14 @@
 
 
             }).then((response) => {
-                if(response.totalResults===0){
+                if (response.totalResults === 0) {
                     alert("The ingredients you entered returned no results. Make sure you use the autocompleted options")
                     location.reload()
                 }
                 console.log(response);
+                recipesResponse = jQuery.parseJSON(JSON.stringify(response));
+                // recipesResponse = JSON.parse(recipesResponse);
+
                 for (var i = 0; i < response.results.length; i++) {
                     var img = new Image();
                     img.src = response.results[i].image;
@@ -393,6 +467,7 @@
                     var meal = document.createElement("DIV");
                     meal.append(img);
                     meal.append(title);
+                    meal.id = "returnedRecipe"
                     document.getElementById('feedbox').append(meal);
 
                 }
@@ -406,7 +481,72 @@
 
 
             });
+            $(document).on("click", "#returnedRecipe", function (event) {
+                console.log($(this)[0].lastChild.data)
+                let clickedRecipeName = $(this)[0].lastChild.data;
+                // window.location.assign("ModalRecipeBox/index.html");
 
+                // Get the modal
+                var modal = document.getElementById("myModal");
+                // document.getElementById("title").append(clickedRecipeName)
+                document.getElementById("title").innerHTML = clickedRecipeName;
+
+                // Get the button that opens the modal
+                // var btn = document.getElementById("myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                //    btn.onclick = function () {
+
+                for (let i = 0; i < recipesResponse.results.length; i++) {
+
+                    if (recipesResponse.results[i].title === clickedRecipeName) {
+                        console.log("yes it worked")
+                        console.log(recipesResponse.results[i].analyzedInstructions[0].steps);
+                        //append image
+                        let img = new Image();
+                        img.src = recipesResponse.results[i].image;
+                        let title = recipesResponse.results[i].title;
+                        let meal = document.createElement("DIV");
+                        meal.append(img);
+                        meal.id = "returnedRecipeModal"
+                        document.getElementById('pic').append(meal);
+
+                        //add instructions
+                        stepByStep = recipesResponse.results[i].analyzedInstructions[0].steps;
+                        for (let j = 0; j < stepByStep.length; j++) {
+                            let node = document.createElement("LI");
+                            let stepByStepNumber = stepByStep[j].number;
+                            let stepByStepInstruction = stepByStep[j].step;
+                            let textnode = document.createTextNode(stepByStepNumber + ': ' + stepByStepInstruction);
+                            console.log(textnode.nodeValue)       // Create a text node
+                            node.appendChild(textnode);                              // Append the text to <li>
+
+                            document.getElementById("instructions").appendChild(node);     // Append <li> to <ul> with id="myList"
+                        }
+                    }
+
+                }
+                modal.style.display = "block";
+                //   }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    $("#returnedRecipeModal").remove();
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        $("#returnedRecipeModal").remove();
+                        modal.style.display = "none";
+                    }
+                }
+
+            });
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
