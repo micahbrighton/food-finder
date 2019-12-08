@@ -225,14 +225,20 @@
             </div>
         </div>
     </div>
-    <!-- <label class="label">What are you allergic to?</label>
-    <div id="autocomplete2"></div> -->
+    <label class="label">What are you allergic to?</label>
+    <div id="autocomplete2"></div>
+    <div id="list2"> 
+
+        
+    </div>
+    <div>
     <a class="level-item">
         <div id="feedbox">
 
 
         </div>
     </a>
+</div>
 
 
     <script src="../node_modules/axios/dist/axios.js"></script>
@@ -245,6 +251,7 @@
         var user = '';
         if(sessionStorage.getItem('jwt')===null){
             console.log('nobody is signed in')
+            var enteredAllergies=[]
         }
         else{
             axios.get('http://localhost:3000/user/data',
@@ -267,6 +274,37 @@
             }
             for(let i=0; i<response.data.result.allergies.length;i++){
                 enteredAllergies.push(response.data.result.allergies[i]);
+               
+                var node = document.createElement("LI");
+                var textnode = document.createTextNode(response.data.result.allergies[i]);  
+                console.log(textnode.nodeValue)       // Create a text node
+                node.appendChild(textnode);                              // Append the text to <li>
+                var deleteIcon = document.createElement('span')
+                deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
+                node.appendChild(deleteIcon);
+                
+
+                console.log(document.getElementById("list2"))
+                document.getElementById("list2").appendChild(node);     // Append <li> to <ul> with id="myList"
+               
+
+              
+
+                $('.delete').on('click', function () {
+
+                    console.log($(this).parent().parent()[0].childNodes[0].data);
+                    let removedIngredient = $(this).parent().parent()[0].childNodes[0].data;
+
+                    for (var i = 0; i < enteredAllergies.length; i++) {
+                        if (enteredAllergies[i] === removedIngredient) {
+                            enteredAllergies.splice(i, 1);
+                        }
+                    }
+                    console.log(enteredAllergies);
+                    $(this).parent().parent().remove();
+
+                });
+
             }
         }).catch((error) => {
             console.log(error)
