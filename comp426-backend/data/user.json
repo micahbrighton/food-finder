@@ -200,5 +200,35 @@
         "wheat"
       ]
     }
+  },
+<<<<<<< HEAD
+  "lucas": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "gluten",
+        "vegan",
+        "pescetarian",
+        "paleo"
+      ],
+      "intolerances": [
+        "gluten2",
+        "peanut",
+        "sulfite"
+=======
+  "james": {
+    "data": {
+      "allergies": [
+        "kfjkjfjk"
+      ],
+      "diets": [
+        "primal",
+        "whole30"
+      ],
+      "intolerances": [
+        "egg"
+>>>>>>> cd843f4d843ee3886ce06496e88c80962fa10848
+      ]
+    }
   }
 }
