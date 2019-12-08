@@ -16,19 +16,19 @@
             display: inline-block;
         }
 
-        input2 {
+        input {
             border: 1px solid transparent;
             background-color: #f1f1f1;
             padding: 10px;
             font-size: 16px;
         }
 
-        input2[type=text] {
+        input[type=text] {
             background-color: #f1f1f1;
             width: 100%;
         }
 
-        input2[type=submit] {
+        input[type=submit] {
             background-color: DodgerBlue;
             color: #fff;
             cursor: pointer;
@@ -77,14 +77,12 @@
         <div class="autocomplete2" style="width:300px;">
             <input id="myInput2" type="text" name="allergies" placeholder="Type any ingredients">
         </div>
-        <input type="submit" id=autoSubmit2>
+        <input type="submit" id=autoSubmit>
     </form>
-    <div id="list2">
-
-    </div>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
-        var returnIngreds = [];
+        var returnIngreds2 = [];
         var enteredAllergies = [];
 
         function autocomplete(inp2, arr2) {
@@ -95,7 +93,7 @@
             if (inp2 == null) {
                 return;
             }
-            inp2.addEventListener("input2", function (e) {
+            inp2.addEventListener("input", function (e) {
                 var a, b, i, val = this.value;
                 /*close any already open lists of autocompleted values*/
                 closeAllLists();
@@ -128,7 +126,7 @@
 
 
                         for (let i = 0; i < response.length; i++) {
-                            returnIngreds.push(response[i].name);
+                            returnIngreds2.push(response[i].name);
 
                         }
 
@@ -152,7 +150,7 @@
                         /*execute a function when someone clicks on the item value (DIV element):*/
                         b.addEventListener("click", function (e) {
                             /*insert the value for the autocomplete text field:*/
-                            inp2.value = this.getElementsByTagName("input2")[0].value;
+                            inp2.value = this.getElementsByTagName("input")[0].value;
                             /*close the list of autocompleted values,
                             (or any other open lists of autocompleted values:*/
                             closeAllLists();
@@ -222,19 +220,37 @@
 
 
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-        autocomplete(document.getElementById("myInput2"), returnIngreds);
+        autocomplete(document.getElementById("myInput2"), returnIngreds2);
         $(function () {
             const $form = $('#submitIngredients2');
             $form.submit(function (e) {
                 e.preventDefault();
                 var node = document.createElement("LI");                 // Create a <li> node
                 var textnode = document.createTextNode(document.getElementById("myInput2").value);         // Create a text node
-                node.appendChild(textnode);                              // Append the text to <li>
+                node.appendChild(textnode); 
+                var deleteIcon = document.createElement('span')
+                deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
+                node.appendChild(deleteIcon);
+                
+                // Append the text to <li>
                 document.getElementById("list2").appendChild(node);     // Append <li> to <ul> with id="myList"
                 enteredAllergies.push(document.getElementById("myInput2").value);
                 document.getElementById('myInput2').value = '';
 
+                $('.delete').on('click', function () {
 
+console.log($(this).parent().parent()[0].childNodes[0].data);
+let removedIngredient = $(this).parent().parent()[0].childNodes[0].data;
+
+for (var i = 0; i < enteredAllergies.length; i++) {
+    if (enteredAllergies[i] === removedIngredient) {
+        enteredAllergies.splice(i, 1);
+    }
+}
+console.log(enteredAllergies);
+$(this).parent().parent().remove();
+
+});
             })
         });
     </script>
