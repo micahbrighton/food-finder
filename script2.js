@@ -72,7 +72,7 @@ $(function () {
   var nohtml = document.querySelector('html');
   preferencemodal.classList.add('is-active');
   nohtml.classList.add('is-clipped');
-  modal.querySelector('.modal-background').addEventListener('click', function(e) {
+  preferencemodal.querySelector('.modal-background').addEventListener('click', function(e) {
     e.preventDefault();
     preferencemodal.classList.remove('is-active');
     nohtml.classList.remove('is-clipped');
