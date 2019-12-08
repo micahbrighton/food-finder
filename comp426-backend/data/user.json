@@ -200,5 +200,21 @@
         "wheat"
       ]
     }
+  },
+  "lucas": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "gluten",
+        "vegan",
+        "pescetarian",
+        "paleo"
+      ],
+      "intolerances": [
+        "gluten2",
+        "peanut",
+        "sulfite"
+      ]
+    }
   }
 }

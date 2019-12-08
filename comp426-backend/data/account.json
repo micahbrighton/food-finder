@@ -49,6 +49,9 @@
     },
     "tryall": {
       "passwordHash": "$2a$10$fJ6..Inl8nLXkG1cBDvCm.54wT57a2/WHPVEnF59q7Hi5ZmBVbUl2"
+    },
+    "lucas": {
+      "passwordHash": "$2a$10$XMyspBc45usnaieyo.nHDOLVpW4WrMAYVKGuUr/hVU2y2a.ZMUgh2"
     }
   }
 }
