@@ -5,6 +5,9 @@
     },
     "deez": {
       "passwordHash": "$2a$10$OejCQbi9SwSvT9JGAGFUB.Yg.6Mnp/UZC.M2fSlbynJeUlDtL9q3K"
+    },
+    "lucas": {
+      "passwordHash": "$2a$10$PCnOFYunqt0j8.tDKH9q7.8ndV014cks.H3EHN5qxrUTcuDCLEFU6"
     }
   }
 }
