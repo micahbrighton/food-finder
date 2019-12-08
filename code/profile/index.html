@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Profile</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
+    <link href="/node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
+    <link href="/node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" >
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="./node_modules/axios/dist/axios.js"></script>
     <script src="script.js"></script>
     <style type="text/css">
@@ -27,15 +27,7 @@
             background-image: linear-gradient( 135deg, rgb(255, 255, 255) 0%, rgba(75, 156, 211) 100%);
             padding: 25px;
         }
-        .hero-body {
-            display: fixed;
-        }
     </style>
-    <script>
-        $(function () {
-            $("#autocomplete").load("../autocompleteIngredients/index.html");
-        });
-    </script>
 </head>
 
 <body>
@@ -44,7 +36,7 @@
             <nav class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a class="navbar-item" href="../">
+                        <a class="navbar-item" href="../Ingredients/index.html">
                             <h1><b>Food Finder</b></h1>
                         </a>
                         <span class="navbar-burger burger" data-target="navbarMenu">
@@ -57,9 +49,9 @@
                         <div class="navbar-end">
                             <div class="tabs is-right">
                                 <ul>
-                                    <li><a href="">Recipe Finder</a></li>
+                                    <li><a href="../Ingredients/index.html">Recipe Finder</a></li>
                                     <li><a href="../restaurants/index.html">Restaurant Finder</a></li>
-                                    <li class="is-active"><a href="../profile/index.html">Profile</a></li>
+                                    <li class="is-active"><a>Profile</a></li>
                                     <li><a href="/index.html">Log Out</a></li>
                                 </ul>
                             </div>
@@ -68,78 +60,36 @@
                 </div>
             </nav>
         </div>
-            
-        <div class="hero-body" style="display: inline">
-        <div class="profile-usertitle">
-                <span>
-                    <!-- USERPIC -->
-                    <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg">
-                    <!-- Username -->
-                    <h2 class="profile-usertitle-name" id="username" style="display: inline;"></h2>
-                </span>
+        <div class="hero-body" style="display: inline; text-align: center;">
+            <p class="title" id="username">Welcome, </p>
+            <div>
+                <p class="control">
+                    <button class="button is-info is-outlined is-large">
+                        <span class="icon">
+                            <i class="fas fa-binoculars"></i>
+                        </span>
+                        <span>Overview</span>
+                    </button>
+                </p>
+                <br>
+                <p class="control">
+                        <button class="button is-info is-outlined is-large">
+                            <span class="icon">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span>Preferences</span>
+                        </button>
+                </p>
+                <br>
+                <p class="control">
+                        <button class="button is-info is-outlined is-large">
+                            <span class="icon">
+                                <i class="fas fa-bookmark"></i>
+                            </span>
+                            <span>Saved Recipes</span>
+                        </button>
+                </p>
             </div>
-            <div class="container">
-                <div class="row profile">
-                    <div class="col-md-3">
-                        <div class="profile-sidebar">
-                            <!-- END SIDEBAR USERPIC -->
-                            <!-- SIDEBAR USER TITLE -->
-                            <!-- END SIDEBAR USER TITLE -->
-                            <!-- SIDEBAR BUTTONS -->
-            
-                            <!-- END SIDEBAR BUTTONS -->
-                            <!-- SIDEBAR MENU -->
-                            <div class="profile-usermenu">
-                                <ul class="nav">
-                                    <li class="active">
-                                        <a href="#">
-                                            <i class="glyphicon glyphicon-home"></i>
-                                            Overview </a>
-                                    </li>
-                                    <li>
-                                        <a href="P&C.html">
-                                            <i class="glyphicon glyphicon-user"></i>
-                                            Preferences and Customizations </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class="glyphicon glyphicon-ok"></i>
-                                            Saved Recipes </a>
-                                    </li>
-                                    <!-- <li>
-                                        <a href="#">
-                                            <i class="glyphicon glyphicon-flag"></i>
-                                            Help </a>
-                                    </li> -->
-                                </ul>
-                            </div>
-                            <!-- END MENU -->
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="blueback">
-                            <div class="profile-usertitle"></div>
-                            <ul>
-                                <tr>
-                                    <li>Email: </li>
-                                    <li class="profile-usertitle-name" id="username"></li>
-                                </tr>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="hero-foot">
-            <div class="container">
-                <div class="tabs is-centered">
-                    <ul>
-                        <li><a>Footer thing</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </section>
 
 </body>
