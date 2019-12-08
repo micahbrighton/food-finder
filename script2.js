@@ -28,7 +28,55 @@ document.querySelector('a#login').addEventListener('click', function(event) {
     });
 });
 
+const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-vegetarian", "ketogenic", "pescetarian", "paleo", "primal", "whole30"];
+    const intolerancesList = ["dairy", "egg", "gluten2", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
+
+    var userIngreds = [];
+
+    function checked(id) {
+        return document.getElementById(id).checked;
+    }
+    $(document).on("click", "#autoSubmit", function () {
+        userIngreds.push(document.getElementById("myInput").value)
+    });
+    $(document).on("click", "#submitForm", function () {
+
+        let userDiets = [];
+        let userIntolerances = [];
+        dietsList.forEach(function (element) {
+            if (checked(element)) { userDiets.push(element) }
+        });
+        intolerancesList.forEach(function (element) {
+            if (checked(element)) { userIntolerances.push(element) }
+        });
+
+        axios.post('http://localhost:3000/user/data/',
+            {
+
+                "name": sessionStorage.getItem('name'),
+                "data": {
+                    "allergies": Array.from(userIngreds),
+                    "diets": Array.from(userDiets),
+                    "intolerances": Array.from(userIntolerances),
+                },
+            },
+            {
+                headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+
+            }).then(location.href = "./userProfile/index.html"
+            );
+    });
+
 $(function () {
+  var preferencemodal = document.querySelector('#preferencemodal.modal');
+  var nohtml = document.querySelector('html');
+  preferencemodal.classList.add('is-active');
+  nohtml.classList.add('is-clipped');
+  modal.querySelector('.modal-background').addEventListener('click', function(e) {
+    e.preventDefault();
+    preferencemodal.classList.remove('is-active');
+    nohtml.classList.remove('is-clipped');
+  });
   const $setupForm = $('#setup-form');
   const $loginForm = $('#login-form');
   const $message = $('#message');
@@ -61,7 +109,6 @@ $(function () {
         sessionStorage.setItem('jwt', response.data.jwt);
 
         //redirect
-        location.href = "index2.html"
       }).catch((error) => {
         alert(error);
       });
