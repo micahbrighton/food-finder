@@ -462,13 +462,13 @@
                 console.log(response);
                 recipesResponse = jQuery.parseJSON(JSON.stringify(response));
                 // recipesResponse = JSON.parse(recipesResponse);
-                if(document. getElementById('returnedRecipe')!=null){
-                    for(var i =0;i<10;i++){
-                    var element = document. getElementById('returnedRecipe');
-                    element.parentNode.removeChild(element);
+                if (document.getElementById('returnedRecipe') != null) {
+                    for (var i = 0; i < 10; i++) {
+                        var element = document.getElementById('returnedRecipe');
+                        element.parentNode.removeChild(element);
+                    }
                 }
-                }
-                
+
                 for (var i = 0; i < response.results.length; i++) {
                     var img = new Image();
                     img.src = response.results[i].image;

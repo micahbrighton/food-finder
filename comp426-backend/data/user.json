@@ -21,5 +21,32 @@
         "sesame"
       ]
     }
+  },
+  "new man": {
+    "data": {
+      "allergies": [
+        "walnut"
+      ],
+      "diets": [],
+      "intolerances": [
+        "sesame",
+        "shellfish",
+        "soy"
+      ]
+    }
+  },
+  "claudio": {
+    "data": {
+      "allergies": [
+        "spicy food"
+      ],
+      "diets": [
+        "vegetarian",
+        "vegan"
+      ],
+      "intolerances": [
+        "tree-nut"
+      ]
+    }
   }
 }

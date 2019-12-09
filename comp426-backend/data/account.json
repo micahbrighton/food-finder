@@ -11,6 +11,12 @@
     },
     "newnewnewnew": {
       "passwordHash": "$2a$10$nPtkrre2On3Hg/GPgri/JeW//1C7hBHOQRfCxrl.C8MqT8hPTsjpO"
+    },
+    "new man": {
+      "passwordHash": "$2a$10$mXF6I5czN08//FwmPLHgLuosSEZbRh0mMDCp.juAsIoUWnxvRbLxK"
+    },
+    "claudio": {
+      "passwordHash": "$2a$10$9p5ItVw1KFXF8RUp0skwNuqF08rnkpY9YSV3hOcxmCL2Xa2IfTw3u"
     }
   }
 }
