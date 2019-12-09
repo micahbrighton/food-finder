@@ -114,6 +114,7 @@
                         </div>
                         <div id="mainNavbar" class="navbar-menu">
                             <div class="navbar-end">
+                                <a class="navbar-item" id="getRecipes" href="./code/ingredients/index.html">Get Recipes</a>
                                 <a class="navbar-item" id="signup">
                                     Sign Up
                                 </a>
@@ -388,179 +389,200 @@
                         padding: 2rem;">
                                           <h1 style="color: #fff;
                         text-align: center;
-                        font-size: 1.2rem;">Set Your Preferences</h1>
+                        font-size: 1.5rem;">Set Your Preferences</h1>
                     </div>
                     <br>
-                    <label class="label" style="text-align: center;">Diets</label>
+                    <label class="label" style="text-align: center; font-size:1.25rem">Diets</label>
                         <div class="field">
                 
-                            <div class="control">
-                                <div class="columns" style="width:60%; float: none; text-align: center; margin:auto">
+                            <div class="control" style="width:60%; float: none; text-align: center; margin:auto">
+                                <div class="columns">
                                 <div class="column">
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left;">
                                     <label class="is-checkradio is-info">
                                         <input type="checkbox" id="gluten">
                                         Gluten Free
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="vegetarian">
                                         Vegetarian
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="vegan">
                                         Vegan
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="lacto-vegetarian">
                                         Lacto-Vegetarian
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="ovo-vegetarian">
                                         Ovo-Vegetarian
                                     </label>
                                     </div>
                                 </div>
-                                <div class="column">
+                                <div class="column" style="margin-left:20%;">
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="ketogenic">
                                         Ketogenic
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="pescetarian">
                                         Pescetarian
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="paleo">
                                         Paleo
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="primal">
                                         Primal
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="whole30">
                                         Whole30
                                     </label>
                                     </div>
                                 </div>
-                                <div></div>
-                                </div>
+                            </div>
                         </div>
                     </div>
-                    <label class="label" style="text-align: center;">Intolerances</label>
+                    <label class="label" style="text-align: center; font-size:1.25rem">Intolerances</label>
                         <div class="field">
                 
-                            <div class="control" style="width:60%; float: none; text-align: center; margin:auto">
+                            <div class="control" style="width:60%; float: none; text-align: center; margin: auto">
                                 <div class="columns">
                                     <div class="column">
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                            <label class="checkbox">
+                                                <input type="checkbox" id="dairy">
+                                                Dairy
+                                            </label>
+                                        </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="dairy">
-                                        Dairy
-                                    </label>
+                                    flex-direction:column;
+                                    text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="egg">
+                                            Egg
+                                        </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="egg">
-                                        Egg
-                                    </label>
+                                    flex-direction:column;
+                                    text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="gluten2">
+                                            Gluten
+                                        </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="gluten2">
-                                        Gluten
-                                    </label>
+                                    flex-direction:column;
+                                    text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="grain">
+                                            Grain
+                                        </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="grain">
-                                        Grain
-                                    </label>
-                                    </div>
-                                    <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="peanut">
                                         Peanut
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="seafood">
                                         Seafood
                                     </label>
                                     </div>
                                     </div>
-                                    <div class="column">
+                                    <div class="column" style="margin-left: 20%">
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="sesame">
                                         Sesame
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="shellfish">
                                         Shellfish
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="soy">
                                         Soy
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="sulfite">
                                         Sulfite
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="tree-nut">
                                         Tree Nut
                                     </label>
                                     </div>
                                     <div style="display:flex;
-                                    flex-direction:column;">
+                                    flex-direction:column;
+                                    text-align: left">
                                     <label class="checkbox">
                                         <input type="checkbox" id="wheat">
                                         Wheat

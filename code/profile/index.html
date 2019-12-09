@@ -36,7 +36,7 @@
             <nav class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a class="navbar-item" href="../Ingredients/index.html">
+                        <a class="navbar-item" href="../ingredients/index.html">
                             <h1><b>Food Finder</b></h1>
                         </a>
                         <span class="navbar-burger burger" data-target="navbarMenu">
@@ -49,7 +49,7 @@
                         <div class="navbar-end">
                             <div class="tabs is-right">
                                 <ul>
-                                    <li><a href="../Ingredients/index.html">Recipe Finder</a></li>
+                                    <li><a href="../ingredients/index.html">Recipe Finder</a></li>
                                     <li><a href="../restaurants/index.html">Restaurant Finder</a></li>
                                     <li class="is-active"><a>Profile</a></li>
                                     <li><a href="/index.html">Log Out</a></li>
@@ -60,25 +60,44 @@
                 </div>
             </nav>
         </div>
-        <div class="hero-body" style="display: inline; text-align: center;">
+        <div class="hero-body" style="display: inline;">
+            <div class="columns">
+            <div class="column is-one-quarter">
             <p class="title" id="username">Welcome, </p>
-            <div>
-                <p class="control">
-                    <button class="button is-info is-outlined is-large">
-                        <span class="icon">
-                            <i class="fas fa-binoculars"></i>
+            <img src="/profileimage.jpg" alt="profileimage" style="width:100px">
+            <div class="file">
+                    <label class="file-label">
+                      <input class="file-input" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
                         </span>
-                        <span>Overview</span>
-                    </button>
+                        <span class="file-label">
+                          Profile Photo
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+            <div>
+            <br>
+                <p class="control">
+                            <button class="button is-info is-outlined is-large">
+                                <span class="icon">
+                                    <i class="fas fa-binoculars"></i>
+                                </span>
+                                <span>Overview</span>
+                            </button>
                 </p>
                 <br>
                 <p class="control">
+                    <a href="P&C.html">
                         <button class="button is-info is-outlined is-large">
                             <span class="icon">
                                 <i class="fas fa-user"></i>
                             </span>
                             <span>Preferences</span>
                         </button>
+                    </a>
                 </p>
                 <br>
                 <p class="control">
@@ -89,6 +108,16 @@
                             <span>Saved Recipes</span>
                         </button>
                 </p>
+            </div>
+            </div>
+            <div class="column" style=" text-align: center;">
+                <div class="card-title" style="background-color: rgba(75, 156, 211);
+                    padding: 2rem;">
+                                      <h1 style="color: #fff;
+                    text-align: center;
+                    font-size: 1.5rem;">Recent Activity</h1>
+                </div>
+            </div>
             </div>
     </section>
 
