@@ -67,6 +67,9 @@
     },
     "kmp2": {
       "passwordHash": "$2a$10$95DFN8dtpKfWxHA0J6kUp.rKLxwng.ok0TstN5E6ug29.DnlNoRDy"
+    },
+    "s;ldkj": {
+      "passwordHash": "$2a$10$Q.x7/f2gglCl.1rS3aIQbeb8mt0qenF/gC2BxdgdVTJ0VKIeuMnzq"
     }
   }
 }
