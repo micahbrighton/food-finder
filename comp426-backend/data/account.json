@@ -61,6 +61,12 @@
     },
     "jacob": {
       "passwordHash": "$2a$10$lPYJFEyOvQ9R43xlOL8ak.4WJwmMFXkDlofvhEPgZgDSH3JE2bZeO"
+    },
+    "kmp": {
+      "passwordHash": "$2a$10$ru.FsepoClkPz.zsubB0ae.m4tBfWO./lIoaxcxpvZl/glhyWSlrW"
+    },
+    "kmp2": {
+      "passwordHash": "$2a$10$95DFN8dtpKfWxHA0J6kUp.rKLxwng.ok0TstN5E6ug29.DnlNoRDy"
     }
   }
 }
