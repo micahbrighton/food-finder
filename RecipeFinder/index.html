@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
     <link rel="import" href="../autocompleteIngredients/index.html">
     <link rel="import" href="../autocompleteAllergies/index.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="import" href="ModalRecipeBox/index.html"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -82,57 +83,86 @@
 
         }
 
-        /* modal styling     */
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
-
-        /* Modal Content */
         .modal-content {
             background-color: #fefefe;
             margin: auto;
-            padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 800px;
         }
 
-        /* The Close Button */
-        .close {
-            color: #aaaaaa;
+        /* star ratings */
+
+        .starChecked {
+            color: orange;
+        }
+
+        /* hoverable stars */
+
+        /* .starRating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+
+        .starRating>span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+        }
+
+        .starRating>span:hover:before,
+        .starRating>span:hover~span:before {
+            content: "\2605";
+            position: absolute;
+        } */
+
+        /****** Style Star Rating Widget *****/
+
+        .starRating {
+            border: none;
+            float: left;
+        }
+
+        .starRating>input {
+            display: none;
+        }
+
+        .starRating>label:before {
+            margin: 5px;
+            font-size: 1.25em;
+            font-family: FontAwesome;
+            display: inline-block;
+            content: "\f005";
+        }
+
+        .starRating>.half:before {
+            content: "\f089";
+            position: absolute;
+        }
+
+        .starRating>label {
+            color: #ddd;
             float: right;
-            font-size: 28px;
-            font-weight: bold;
         }
 
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
+        /***** CSS Magic to Highlight Stars on Hover *****/
+
+        .starRating>input:checked~label,
+        /* show gold star when clicked */
+        .starRating:not(:checked)>label:hover,
+        /* hover current star */
+        .starRating:not(:checked)>label:hover~label {
+            color: #FFD700;
+        }
+
+        /* hover previous stars in list */
+
+        .starRating>input:checked+label:hover,
+        /* hover current star when changing rating */
+        .starRating>input:checked~label:hover,
+        .starRating>label:hover~input:checked~label,
+        /* lighten current selection */
+        .starRating>input:checked~label:hover~label {
+            color: #FFED85;
         }
     </style>
     <script>
@@ -143,6 +173,8 @@
     </script>
 </head>
 
+
+
 <body>
 
     <label class="label">What ingredients do you have?</label>
@@ -150,15 +182,7 @@
 
 
     <!--Make sure the form has the autocomplete function switched off:-->
-    <!-- <form autocomplete="off" id="submitIngredients">
-        <div class="autocomplete" style="width:300px;">
-            <input id="myInput" type="text" name="allergies" placeholder="Type any ingredients">
-        </div>
-        <input type="submit" id=autoSubmit>
-    </form>
-    <div id="list">
 
-    </div> -->
     <button class="button is-rounded is-medium" id="getRecipes">
         <span class="icon is-large">
             <i class="fa fa-refresh"></i>
@@ -299,15 +323,106 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
+            <nav class="level-right">
+                <div class="level-right">
+                    <div class="level-item">
+
+                        <fieldset class="starRating">
+                            <input type="radio" id="saveRecipe" name="starRating" value="0"
+                                onclick="handleSaveRecipe()" /><label class="full" for="saveRecipe"
+                                title="Save the Recipe"></label>
+                        </fieldset>
+                    </div>
+                </div>
+
+            </nav>
+
             <h1 id="title"> </h1>
             <div id="pic">
+
+            </div>
+            <div id="ratings">
+                <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span></div>
+                <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star"></span></div>
+                <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span></div>
+                <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span></div>
+                <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span></div>
 
             </div>
             <div id="ingredientsNeeded">
 
             </div>
+            <div id="dietsSupported">
+
+            </div>
+
             <div id="instructions">
 
+            </div>
+            <div id="postedReviews">
+
+            </div>
+
+            <div id="reviewBox" class="box">
+
+
+                <article class="media">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img src="https://bulma.io/images/placeholders/128x128.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <fieldset class="starRating">
+                            <input type="radio" id="star5" name="starRating" value="5" /><label class="full" for="star5"
+                                title="Awesome - 5 stars"></label>
+
+                            <input type="radio" id="star4" name="starRating" value="4" /><label class="full" for="star4"
+                                title="Pretty good - 4 stars"></label>
+
+                            <input type="radio" id="star3" name="starRating" value="3" /><label class="full" for="star3"
+                                title="Meh - 3 stars"></label>
+
+                            <input type="radio" id="star2" name="starRating" value="2" /><label class="full" for="star2"
+                                title="Kinda bad - 2 stars"></label>
+
+                            <input type="radio" id="star1" name="starRating" value="1" /><label class="full" for="star1"
+                                title="Sucks big time - 1 star"></label>
+
+                        </fieldset>
+                        <div class="field">
+                            <p class="control">
+                                <textarea class="textarea" id="reviewText" placeholder="Add a comment..."></textarea>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control">
+                                <button class="button is-info" id="postReview" type="button">Submit</button>
+                            </p>
+                        </div>
+
+                    </div>
+                </article>
             </div>
 
         </div>
@@ -492,7 +607,7 @@
             });
             $(document).on("click", "#returnedRecipe", function (event) {
 
-                console.log($(this)[0].lastChild.data)
+                let recipeId = '';
                 let clickedRecipeName = $(this)[0].lastChild.data;
                 // window.location.assign("ModalRecipeBox/index.html");
 
@@ -513,6 +628,7 @@
                 for (let i = 0; i < recipesResponse.results.length; i++) {
 
                     if (recipesResponse.results[i].title === clickedRecipeName) {
+                        recipeId = recipesResponse.results[i].id;
                         console.log("yes it worked")
                         console.log(recipesResponse.results[i].analyzedInstructions[0].steps);
                         //append image
@@ -536,6 +652,21 @@
 
                             document.getElementById("instructions").appendChild(node);     // Append <li> to <ul> with id="myList"
                         }
+                        let listOfIngredients = "";
+                        for (let k = 0; k < recipesResponse.results[i].missedIngredients.length; k++) {
+                            listOfIngredients += recipesResponse.results[i].missedIngredients[k].originalString + ", ";
+
+
+                        }
+                        document.getElementById("ingredientsNeeded").innerHTML = 'Ingredients needed: ' + listOfIngredients;
+
+                        let listOfDiets = "";
+                        for (let l = 0; l < recipesResponse.results[i].diets.length; l++) {
+                            listOfDiets += recipesResponse.results[i].diets[l] + ", ";
+
+
+                        }
+                        document.getElementById("dietsSupported").innerHTML = 'Diets supported: ' + listOfDiets;
                     }
 
                 }
@@ -555,9 +686,117 @@
                         modal.style.display = "none";
                     }
                 }
+                $(document).on("click", "#postReview", async function (e) {
+                    e.preventDefault();
+                    let starsChecked = '';
+                    if (document.getElementById("star5").checked) {
+                        starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span></div>`
+                    }
+                    else if (document.getElementById("star4").checked) {
+                        starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
 
+                    <span class="fa fa-star "></span>`
+                    }
+                    else if (document.getElementById("star3").checked) {
+                        starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>`
+                    }
+                    else if (document.getElementById("star2").checked) {
+                        starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>`
+                    }
+                    else if (document.getElementById("star1").checked) {
+                        starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>`
+                    }
+
+
+                    let reviewContent = document.getElementById("reviewText").value.toString();
+                    let newReview =
+                        `  <div id="newReviewBox" class = "box">
+                <article class="media">
+                        
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img src="https://bulma.io/images/placeholders/128x128.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                            ${starsChecked}
+                        <div class="content">
+                         <p>
+                             <strong>Username</strong>
+                            
+                        <br>
+                            ${reviewContent}
+                        <br>
+       
+                        </p>
+                     </div>
+                    
+                </article>
+                </div>`;
+
+                    document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML += newReview;
+                    document.getElementById("reviewText").value = '';
+
+                    await cloneModal();
+
+                });
+                async function cloneModal() {
+                    var clonedModalHTML = $("<div />").append($("#myModal").clone().html());
+                    var $clonedModal = $("#myModal").clone();
+                    console.log($clonedModal)
+                    console.log(clonedModalHTML)
+                    await axios.post('http://localhost:3000/public/Recipes/' + recipeId,
+                        {
+
+                            "name": clickedRecipeName,
+                            "data": {
+                                "modal": clonedModalHTML,
+
+                            },
+                        });
+                }
+                function handleSaveRecipe() {
+                    axios.post('http://localhost:3000/user/data/' + sessionStorage.getItem('name') + '/data/savedRecipes',
+                        {
+
+
+                            "data": [recipeId],
+                            "type": "merge"
+                        },
+                        {
+                            headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+
+                        }).then((response) => {
+                            console.log(response);
+                        }).catch((error) => {
+                            console.log(error);
+                        });
+
+                }
             });
+
         });
+
+
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../node_modules/axios/dist/axios.js"></script>
