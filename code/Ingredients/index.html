@@ -22,6 +22,39 @@
             background-image: linear-gradient( 135deg, rgb(255, 255, 255) 0%, rgba(75, 156, 211) 100%);
             padding: 25px;
         }
+        .collapsible {
+            background-image: linear-gradient( 135deg, rgb(255, 255, 255) 0%, rgba(75, 156, 211) 100%);
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            font-weight: bold;
+        }  
+
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+        }
+        .collapsible:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 13px;
+            color: white;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+        }
     </style>
 </head>
 
@@ -58,14 +91,14 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="columns is-vcentered">
-                    <div class="column is-3">
+                    <div class="column is-one-third">
                         <div class="blueback">
                             <form class="form-horizontal" >
                                     <fieldset>
                                     
                                     <!-- Text input-->
                                     <div class="field">
-                                      <label class="label" for="restaurantquery-0">Search Query</label>
+                                      <label class="label" for="restaurantquery-0">Enter Ingredients</label>
                                       <div class="control">
                                         <input id="restaurantquery-0" name="restaurantquery-0" type="text" placeholder="Ex: burger, salad, ice cream" class="input " required="">
                                         <p class="help">required</p>
@@ -82,8 +115,122 @@
                                     
                                     </fieldset>
                                     </form>  
-                        </div>                                  
-                    </div>
+                        </div>
+                        <button type="button" class="collapsible">Diets</button>
+                        <div class="content">
+                            <p>This is a test</p>
+                        </div>
+                        <button type="button" class="collapsible">Intolerances</button>
+                        <div class="content">
+                            <div class="field">
+                
+                                <div class="control" style="width:100%; float: none; text-align: center; margin: auto">
+                                    <div class="columns">
+                                        <div class="column">
+                                            <div style="display:flex;
+                                            flex-direction:column;
+                                            text-align: left">
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="dairy">
+                                                    Dairy
+                                                </label>
+                                            </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                            <label class="checkbox">
+                                                <input type="checkbox" id="egg">
+                                                Egg
+                                            </label>
+                                        </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                            <label class="checkbox">
+                                                <input type="checkbox" id="gluten2">
+                                                Gluten
+                                            </label>
+                                        </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                            <label class="checkbox">
+                                                <input type="checkbox" id="grain">
+                                                Grain
+                                            </label>
+                                        </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="peanut">
+                                            Peanut
+                                        </label>
+                                        </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="seafood">
+                                            Seafood
+                                        </label>
+                                        </div>
+                                        </div>
+                                        <div class="column" style="margin-left: 20%">
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="sesame">
+                                            Sesame
+                                        </label>
+                                        </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="shellfish">
+                                            Shellfish
+                                        </label>
+                                        </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="soy">
+                                            Soy
+                                        </label>
+                                        </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="sulfite">
+                                            Sulfite
+                                        </label>
+                                        </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="tree-nut">
+                                            Tree Nut
+                                        </label>
+                                        </div>
+                                        <div style="display:flex;
+                                        flex-direction:column;
+                                        text-align: left">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="wheat">
+                                            Wheat
+                                        </label>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                
+                    </div>                    
                     <div class="column is-6 is-offset-1">
                         <h1 class="title is-2">
                             Possible Recipes
@@ -106,6 +253,23 @@
             </div>
         </div>
     </section>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
 </body>
 
 </html>
