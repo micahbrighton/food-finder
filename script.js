@@ -48,7 +48,12 @@ $(function () {
 
       }).then(() => {
         $message2.html('<span class="has-text-success">Success! You just made an account.</span>')
-        await axios.post('http://localhost:3000/account/login',
+
+      }).catch(() => {
+        $message2.html('<span class="has-text-danger">Something went wrong and you could not make an account. Please try again.</span>');
+      });
+
+    await axios.post('http://localhost:3000/account/login',
       {
         "name": document.getElementById("setupUsername").value.toString(),
         "pass": document.getElementById("setupPassword").value.toString(),
@@ -59,9 +64,6 @@ $(function () {
         location.href = "index2.html"
       }).catch((error) => {
         alert(error);
-      });
-      }).catch(() => {
-        $message2.html('<span class="has-text-danger">Something went wrong and you could not make an account. Please try again.</span>');
       });
     console.log("Bearer " + sessionStorage.getItem('jwt'));
   });
