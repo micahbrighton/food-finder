@@ -183,7 +183,7 @@
 
     <!--Make sure the form has the autocomplete function switched off:-->
 
-    <button class="button is-rounded is-medium" id="getRecipes">
+    <button type="button" class="button is-rounded is-medium" id="getRecipes">
         <span class="icon is-large">
             <i class="fa fa-refresh"></i>
         </span>
@@ -514,7 +514,6 @@
 
 
         $(document).on("click", "#getRecipes", function (event) {
-
             console.log("clicked");
             const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-vegetarian", "ketogenic", "pescetarian", "paleo", "primal", "whole30"];
             const intolerancesList = ["dairy", "egg", "gluten2", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
@@ -598,7 +597,7 @@
 
                 //  response.results.forEach(element => document.getElementById('feedbox').append(element.src = element.image));
 
-
+                return false;
 
             }).catch((error) => {
                 console.log(error);
@@ -606,7 +605,7 @@
 
             });
             $(document).on("click", "#returnedRecipe", function (event) {
-
+                event.preventDefault()
                 let recipeId = '';
                 let clickedRecipeName = $(this)[0].lastChild.data;
                 // window.location.assign("ModalRecipeBox/index.html");
@@ -741,7 +740,7 @@
                             ${starsChecked}
                         <div class="content">
                          <p>
-                             <strong>Username</strong>
+                             <strong>`+sessionStorage.getItem('name')+`</strong>
                             
                         <br>
                             ${reviewContent}
@@ -756,10 +755,12 @@
                     document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML += newReview;
                     document.getElementById("reviewText").value = '';
 
-                    await cloneModal();
-
+                    await cloneModal(e);
+                    
+                    return false;
                 });
-                async function cloneModal() {
+                async function cloneModal(e) {
+                    
                     var clonedModalHTML = $("<div />").append($("#myModal").clone().html());
                     var $clonedModal = $("#myModal").clone();
                     console.log($clonedModal)
@@ -772,7 +773,11 @@
                                 "modal": clonedModalHTML,
 
                             },
-                        });
+                        }).then((response) => {
+                            e.preventDefault;
+                            return false});
+                        e.preventDefault()
+                        return false;
                 }
                 function handleSaveRecipe() {
                     axios.post('http://localhost:3000/user/data/' + sessionStorage.getItem('name') + '/data/savedRecipes',
