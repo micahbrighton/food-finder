@@ -100,6 +100,27 @@
     },
     "nick": {
       "passwordHash": "$2a$10$Bn/UrlzGaOTNRuIwiPnN5.P7pyU5edudj1oAOx2mnLT69Nwz9OzRW"
+    },
+    "a;sldkfj": {
+      "passwordHash": "$2a$10$//WpR1EUOXH7oP.L1Hp.o.jJCd2rNZvH47uTyF28vIB2N3jayTRVy"
+    },
+    "askdhjf;lasdfj": {
+      "passwordHash": "$2a$10$BJf9m168tQZdtj5f1/AaEuITfuWDzO4oMsXIS0.q7co8fqBsrUw3y"
+    },
+    "dfasdf": {
+      "passwordHash": "$2a$10$oBWO77MFUs6Nf0MfzqupFueVvSZjZ4b.vLfy/pvQzH5TB8wJyM84u"
+    },
+    "asdfasdfkkkk": {
+      "passwordHash": "$2a$10$L.iQ4RQdGGb0m.ZCuzjs2.YdDHGHDIjhXvnHOYqFWAf7oxTfnQnyG"
+    },
+    "asdfasdfkkkkqweraw": {
+      "passwordHash": "$2a$10$myz2G2yjsdgWdcYT/o5YbuHksGTVy89mqdpEPqHgBotcG2XUZ/5KC"
+    },
+    "fdasdfasdf00-": {
+      "passwordHash": "$2a$10$JTLiv.xQNtvNmXEgz7Myde6Khud77ZIkG7Dal46ulyzTxBdmTSShi"
+    },
+    "asfasfasfasdf0021": {
+      "passwordHash": "$2a$10$.tCV5dOYB/NzV91PQrQqC.G3QAU4suLbKmolazilKh43U5zXIunjG"
     }
   }
 }

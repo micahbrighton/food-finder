@@ -323,5 +323,14 @@
         "peanut"
       ]
     }
+  },
+  "asfasfasfasdf0021": {
+    "data": {
+      "allergies": [],
+      "diets": [],
+      "intolerances": [
+        "egg"
+      ]
+    }
   }
 }
