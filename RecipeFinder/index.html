@@ -438,6 +438,7 @@
         var enteredAllergies = []
         var user = '';
         var recipesResponse;
+        var clonedModalHTML = '';
         if (sessionStorage.getItem('jwt') === null) {
             console.log('nobody is signed in')
             var enteredAllergies = []
@@ -755,17 +756,32 @@
                     document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML += newReview;
                     document.getElementById("reviewText").value = '';
 
-                    await cloneModal(e);
-
-                    return false;
+                    await cloneModal(sendModal);
                 });
-                async function cloneModal(e) {
+                function cloneModal(callback) {
 
-                    var clonedModalHTML = $("<div />").append($("#myModal").clone().html());
+                    clonedModalHTML = $("<div />").append($("#myModal").clone().html());
                     var $clonedModal = $("#myModal").clone();
                     console.log($clonedModal)
                     console.log(clonedModalHTML)
-                    await axios.post('http://localhost:3000/public/Recipes/' + recipeId,
+                    // await axios.post('http://localhost:3000/public/Recipes/' + recipeId,
+                    //     {
+
+                    //         "name": clickedRecipeName,
+                    //         "data": {
+                    //             "modal": clonedModalHTML,
+
+                    //         },
+                    //     }).then((response) => {
+                    //         e.preventDefault();
+                    //         return false
+                    //     });
+                    // e.preventDefault()
+                    // return false;
+                    callback();
+                }
+                function sendModal() {
+                    axios.post('http://localhost:3000/public/Recipes/' + recipeId,
                         {
 
                             "name": clickedRecipeName,
@@ -774,12 +790,11 @@
 
                             },
                         }).then((response) => {
-                            e.preventDefault;
-                            return false
+                            console.log(response);
+                        }).catch((error) => {
+                            console.log(error);
                         });
-                    e.preventDefault()
-                    return false;
-                }
+                };
                 function handleSaveRecipe() {
                     axios.post('http://localhost:3000/user/data/' + sessionStorage.getItem('name') + '/data/savedRecipes',
                         {
