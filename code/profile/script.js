@@ -9,6 +9,8 @@ $(function () {
 window.onload=function(){
     document.querySelector("a#logout").addEventListener('click', function(event) {
         event.preventDefault();
-        sessionStorage.removeItem('jwt');
+        sessionStorage.setItem('jwt', null);
+        sessionStorage.setItem('name', null);
+        location.href = '/index.html';
     });
 }
