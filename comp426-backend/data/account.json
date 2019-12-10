@@ -97,6 +97,9 @@
     },
     "guynew": {
       "passwordHash": "$2a$10$35rwtUsiixtnxEFVaunnBep.A2I5kzCWXDFHaNwXYPDQ/a.mtO.0K"
+    },
+    "nick": {
+      "passwordHash": "$2a$10$Bn/UrlzGaOTNRuIwiPnN5.P7pyU5edudj1oAOx2mnLT69Nwz9OzRW"
     }
   }
 }
