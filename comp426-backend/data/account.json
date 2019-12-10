@@ -94,6 +94,9 @@
     },
     "s;ldkj": {
       "passwordHash": "$2a$10$Q.x7/f2gglCl.1rS3aIQbeb8mt0qenF/gC2BxdgdVTJ0VKIeuMnzq"
+    },
+    "guynew": {
+      "passwordHash": "$2a$10$35rwtUsiixtnxEFVaunnBep.A2I5kzCWXDFHaNwXYPDQ/a.mtO.0K"
     }
   }
 }

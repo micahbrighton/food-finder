@@ -740,7 +740,7 @@
                             ${starsChecked}
                         <div class="content">
                          <p>
-                             <strong>`+sessionStorage.getItem('name')+`</strong>
+                             <strong>`+ sessionStorage.getItem('name') + `</strong>
                             
                         <br>
                             ${reviewContent}
@@ -756,11 +756,11 @@
                     document.getElementById("reviewText").value = '';
 
                     await cloneModal(e);
-                    
+
                     return false;
                 });
                 async function cloneModal(e) {
-                    
+
                     var clonedModalHTML = $("<div />").append($("#myModal").clone().html());
                     var $clonedModal = $("#myModal").clone();
                     console.log($clonedModal)
@@ -775,9 +775,10 @@
                             },
                         }).then((response) => {
                             e.preventDefault;
-                            return false});
-                        e.preventDefault()
-                        return false;
+                            return false
+                        });
+                    e.preventDefault()
+                    return false;
                 }
                 function handleSaveRecipe() {
                     axios.post('http://localhost:3000/user/data/' + sessionStorage.getItem('name') + '/data/savedRecipes',

@@ -62,6 +62,8 @@ $(function () {
 
     r.then(() => {
       $message.html('<span class="has-text-success">Success! You are now logged in.</span>');
+      location.href = "../code/profile/index.html"
+
     }).catch(() => {
       $message.html('<span class="has-text-danger">Something went wrong and you were not logged in. Check your username and password and try again.</span>');
     });

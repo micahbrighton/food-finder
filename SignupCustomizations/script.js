@@ -34,7 +34,7 @@ $(function () {
             {
                 headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
 
-            }).then(location.href = "../userProfile/index.html"
+            }).then(location.href = "../code/profile/index.html"
             );
     });
 

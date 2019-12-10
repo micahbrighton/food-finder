@@ -305,5 +305,14 @@
       "diets": [],
       "intolerances": []
     }
+  },
+  "guynew": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "vegan"
+      ],
+      "intolerances": []
+    }
   }
 }
