@@ -1,13 +1,4 @@
 {
-  "364783": {
-    "data": {
-      "allergies": [],
-      "diets": [],
-      "intolerances": [
-        "sesame"
-      ]
-    }
-  },
   "2346663": {
     "data": {
       "allergies": [],
@@ -210,126 +201,94 @@
       ]
     }
   },
-  "james": {
-    "data": {
-      "allergies": [
-        "kfjkjfjk"
-      ],
-      "diets": [
-        "primal",
-        "whole30"
-      ],
-      "intolerances": [
-        "egg"
-      ]
-    }
-  },
-  "jdfljadkfj": {
-    "data": {
-      "allergies": [
-        "jelly"
-      ],
-      "diets": [
-        "primal"
-      ],
-      "intolerances": [
-        "soy"
-      ]
-    }
-  },
-  "luke": {
+  "heyyou": {
     "data": {
       "allergies": [
         "chocolate"
       ],
       "diets": [
-        "primal",
-        "whole30"
+        "paleo"
       ],
-      "intolerances": [
-        "tree-nut",
-        "wheat"
-      ]
-    }
-  },
-  "new man": {
-    "data": {
-      "allergies": [
-        "walnut"
-      ],
-      "diets": [],
-      "intolerances": [
-        "sesame",
-        "shellfish",
-        "soy"
-      ]
-    }
-  },
-  "claudio": {
-    "data": {
-      "allergies": [
-        "spicy food"
-      ],
-      "diets": [
-        "vegetarian",
-        "vegan"
-      ],
-      "intolerances": [
-        "tree-nut"
-      ]
-    }
-  },
-  "newperson": {
-    "data": {
-      "allergies": [],
-      "diets": [],
-      "intolerances": [
-        "seafood",
-        "tree-nut"
-      ]
-    }
-  },
-  "e46w345we5": {
-    "data": {
-      "allergies": [],
-      "diets": [],
-      "intolerances": [
-        "sesame",
-        "shellfish"
-      ]
-    }
-  },
-  "rohan": {
-    "data": {
-      "allergies": [],
-      "diets": [],
-      "intolerances": []
-    }
-  },
-  "guynew": {
-    "data": {
-      "allergies": [],
-      "diets": [
-        "vegan"
-      ],
-      "intolerances": []
-    }
-  },
-  "nick": {
-    "data": {
-      "allergies": [],
-      "diets": [],
       "intolerances": [
         "peanut"
       ]
     }
   },
-  "asfasfasfasdf0021": {
+  "lucaslucasluas": {
+    "data": {
+      "allergies": [
+        "sherry"
+      ],
+      "diets": [
+        "gluten"
+      ],
+      "intolerances": [
+        "dairy"
+      ]
+    }
+  },
+  "yoyoyoyoyoy": {
+    "data": {
+      "allergies": [
+        "cod"
+      ],
+      "diets": [
+        "gluten",
+        "whole30"
+      ],
+      "intolerances": [
+        "sesame"
+      ]
+    }
+  },
+  "hihihi": {
+    "data": {
+      "allergies": [
+        "cod",
+        "chive"
+      ],
+      "diets": [
+        "vegan"
+      ],
+      "intolerances": [
+        "grain",
+        "shellfish"
+      ]
+    }
+  },
+  "uekdf": {
     "data": {
       "allergies": [],
-      "diets": [],
+      "diets": [
+        "vegetarian",
+        "whole30"
+      ],
+      "intolerances": []
+    }
+  },
+  "hellodsdf": {
+    "data": {
+      "allergies": [
+        "chocolate"
+      ],
+      "diets": [
+        "vegan",
+        "paleo"
+      ],
       "intolerances": [
-        "egg"
+        "gluten2"
+      ]
+    }
+  },
+  "kdsflkjsdfkj": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "vegan",
+        "primal"
+      ],
+      "intolerances": [
+        "soy"
       ]
     }
   }
