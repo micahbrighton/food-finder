@@ -49,6 +49,12 @@ const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-veg
         intolerancesList.forEach(function (element) {
             if (checked(element)) { userIntolerances.push(element) }
         });
+        var allergiesToAppend=[]
+        var ul=document.getElementById("list2")
+                                var items = ul.getElementsByTagName("li");
+                                for (var i = 0; i < items.length; ++i) {
+                                    allergiesToAppend.push(items[i].innerHTML.split('<')[0]);
+                                }
         
         axios.post('http://localhost:3000/user/data/',
             {
@@ -56,7 +62,7 @@ const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-veg
 
                 "name": sessionStorage.getItem('name'),
                 "data": {
-                    "allergies": Array.from(userIngreds),
+                    "allergies": Array.from(allergiesToAppend),
                     "diets": Array.from(userDiets),
                     "intolerances": Array.from(userIntolerances),
                 },
