@@ -112,6 +112,7 @@ $(function () {
         sessionStorage.setItem('jwt', response.data.jwt);
 
         //redirect
+        location.reload()
       }).catch((error) => {
         alert(error);
       });
@@ -132,7 +133,7 @@ $(function () {
     r.then(response => {
       sessionStorage.setItem('jwt', response.data.jwt);
       sessionStorage.setItem('name', document.getElementById("username").value.toString());
-
+      location.href = "code/profile/index.html"
       console.log(response);
     }).catch(error => {
       console.log(error);
