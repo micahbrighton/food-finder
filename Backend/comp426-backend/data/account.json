@@ -148,6 +148,15 @@
     },
     "george": {
       "passwordHash": "$2a$10$QeBWydEIJvS4UHdJlqG1SedH91PbKDUz0fkbpDHQ0OLOL.Hosco0W"
+    },
+    "hello": {
+      "passwordHash": "$2a$10$N8TTrpl74rwAeDEhabT7ieiPvKCmlBDOkDrlq3OQO3EpYUeb.IV2y"
+    },
+    "lpm": {
+      "passwordHash": "$2a$10$5tlIu2QBeOJhsz3Xg78TaOTQX5AjaTsulmFKXaVkkz/Eai9mAIWRK"
+    },
+    "newnew": {
+      "passwordHash": "$2a$10$RbzueszZ/qRJAEbBXR5Gmu2kDO74.T9JEYqkTNVfb5Ivf6HO7xuva"
     }
   }
 }

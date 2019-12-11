@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
@@ -67,6 +67,15 @@
 
         h4 {
             font-weight: bold;
+        }
+        .enteredA {
+            list-style-type: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .delete{
+            margin-left:3px;
+            margin-top:2px;
         }
     </style>
 </head>
@@ -230,11 +239,12 @@
             const $form = $('#submitIngredients2');
             $form.submit(function (e) {
                 e.preventDefault();
-                var node = document.createElement("H4");                 // Create a <li> node
+                var node = document.createElement("LI");                 // Create a <li> node
                 var textnode = document.createTextNode(document.getElementById("myInput2").value);         // Create a text node
                 node.appendChild(textnode); 
                 var deleteIcon = document.createElement('span')
                 deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
+                node.setAttribute('class', 'enteredA');
                 node.appendChild(deleteIcon);
                 
                 // Append the text to <li>
