@@ -788,7 +788,7 @@
                     var $clonedModal = $("#myModal").clone().html();
                     // console.log($clonedModal)
                     console.log($clonedModal)
-                    axios.post('http://localhost:3000/public/Recipes/' + recipeId,
+                    axios.post('http://localhost:3000/private/Recipes/' + recipeId,
                         {
 
                             "name": clickedRecipeName,
@@ -796,6 +796,9 @@
                                 "modal": $clonedModal,
 
                             },
+                        },
+                        {
+                            headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
                         }).then((response) => {
 
                             console.log(response);
