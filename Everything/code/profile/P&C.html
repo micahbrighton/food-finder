@@ -32,6 +32,7 @@
     <script>
         $(function () {
             $("#autocomplete2").load("/autocompleteAllergies/index.html");
+            document.getElementById("username").append(sessionStorage.getItem('name'));
         });
     </script>
 </head>

@@ -28,6 +28,11 @@
             padding: 25px;
         }
     </style>
+    <script>
+        $(function () {
+            document.getElementById("username").append(sessionStorage.getItem('name'));
+        });
+    </script>
 </head>
 
 <body>
