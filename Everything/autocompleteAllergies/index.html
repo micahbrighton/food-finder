@@ -68,6 +68,14 @@
         h4 {
             font-weight: bold;
         }
+        .enteredA {
+            list-style-type: none;
+            font-weight: bold;
+        }
+        .delete{
+            margin-left:3px;
+            margin-top:2px;
+        }
     </style>
 </head>
 
@@ -235,6 +243,7 @@
                 node.appendChild(textnode); 
                 var deleteIcon = document.createElement('span')
                 deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
+                node.setAttribute('class', 'enteredA');
                 node.appendChild(deleteIcon);
                 
                 // Append the text to <li>
