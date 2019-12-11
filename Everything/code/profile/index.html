@@ -28,6 +28,11 @@
             padding: 25px;
         }
     </style>
+    <script>
+        $(function () {
+            document.getElementById("username").append(sessionStorage.getItem('name'));
+        });
+    </script>
 </head>
 
 <body>
@@ -100,7 +105,7 @@
                 </p>
                 <br>
                 <p class="control">
-                    <a href="savedrecipe.html"></a>
+                    <a href="savedrecipe.html">
                         <button class="button is-info is-outlined is-large is-fullwidth">
                             <span class="icon">
                                 <i class="fas fa-bookmark"></i>
