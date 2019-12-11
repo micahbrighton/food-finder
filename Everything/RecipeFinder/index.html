@@ -176,7 +176,39 @@
 
 
 <body>
-
+        <section class="hero is-fullheight is-default is-bold">
+                <div class="hero-head">
+                    <nav class="navbar">
+                        <div class="container">
+                            <div class="navbar-brand">
+                                <a class="navbar-item" href="../ingredients/index.html">
+                                    <h1><b>Food Finder</b></h1>
+                                </a>
+                                <span class="navbar-burger burger" data-target="navbarMenu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </div>
+                            <div id="navbarMenu" class="navbar-menu">
+                                <div class="navbar-end">
+                                    <div class="tabs is-right">
+                                        <ul>
+                                            <li class="is-active"><a href="/RecipeFinder/index.html">Recipe Finder</a></li>
+                                            <li><a href="/code/profile/index.html">Profile</a></li>
+                                            <li><a id="logout">Log Out</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+    <div class="hero-body" style="display: inline;">
+    <div class="columns">
+    <div class="column is-one-quarter">
+    </div>
+    <div class="column">
     <label class="label">What ingredients do you have?</label>
     <div id="autocomplete"></div>
 
@@ -427,6 +459,7 @@
 
         </div>
 
+    </div>
     </div>
 
     <script src="../node_modules/axios/dist/axios.js"></script>
@@ -817,7 +850,14 @@
             });
 
         });
-
+        window.onload=function(){
+            document.querySelector("a#logout").addEventListener('click', function(event) {
+            event.preventDefault();
+            sessionStorage.setItem('jwt', null);
+            sessionStorage.setItem('name', null);
+            location.href = '/index.html';
+            });
+        }
 
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
