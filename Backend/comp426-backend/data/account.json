@@ -169,6 +169,12 @@
     },
     "kj": {
       "passwordHash": "$2a$10$34YAz3FNONzdmjZODL05YO5hxqWyB6.iKeBsEjHrZpj9iR31EgQp6"
+    },
+    "andrew": {
+      "passwordHash": "$2a$10$QG1kbmOuukSLsioi6pXAf.luenv5Sco7SuiRCiuW58jIvkNQ3FUdG"
+    },
+    "george": {
+      "passwordHash": "$2a$10$QeBWydEIJvS4UHdJlqG1SedH91PbKDUz0fkbpDHQ0OLOL.Hosco0W"
     }
   }
 }
