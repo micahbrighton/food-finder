@@ -64,8 +64,9 @@
             background-color: DodgerBlue !important;
             color: #ffffff;
         }
-        ul {
-            list-style-type: none;
+
+        h4 {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -229,7 +230,7 @@
             const $form = $('#submitIngredients2');
             $form.submit(function (e) {
                 e.preventDefault();
-                var node = document.createElement("LI");                 // Create a <li> node
+                var node = document.createElement("H4");                 // Create a <li> node
                 var textnode = document.createTextNode(document.getElementById("myInput2").value);         // Create a text node
                 node.appendChild(textnode); 
                 var deleteIcon = document.createElement('span')
