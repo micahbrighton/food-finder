@@ -37,7 +37,7 @@ const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-veg
         return document.getElementById(id).checked;
     }
     $(document).on("click", "#autoSubmit", function () {
-        userIngreds.push(document.getElementById("myInput").value)
+        userIngreds.push(document.getElementById("myInput2").value)
     });
     $(document).on("click", "#submitForm", function () {
 
@@ -49,9 +49,10 @@ const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-veg
         intolerancesList.forEach(function (element) {
             if (checked(element)) { userIntolerances.push(element) }
         });
-
-        axios.post('/Backend/user/data/',
+        
+        axios.post('http://localhost:3000/user/data/',
             {
+              
 
                 "name": sessionStorage.getItem('name'),
                 "data": {
@@ -64,7 +65,9 @@ const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-veg
                 headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
 
             }).then(location.href = "/code/profile/index.html"
-            );
+            ).catch(() => {
+              $message2.html('<span class="has-text-danger">Something went wrong and you could not make an account. Please try again.</span>');
+            });
     });
 
 $(function () {
@@ -89,7 +92,7 @@ $(function () {
     setupUserName = document.getElementById("setupUsername").value.toString();
     sessionStorage.setItem('name', document.getElementById("setupUsername").value.toString());
 
-    await axios.post('/Backend/account/create',
+    await axios.post('localhost:3000/account/create',
       {
         "name": document.getElementById("setupUsername").value.toString(),
         "pass": document.getElementById("setupPassword").value.toString(),
@@ -101,7 +104,7 @@ $(function () {
         $message2.html('<span class="has-text-danger">Something went wrong and you could not make an account. Please try again.</span>');
       });
 
-    await axios.post('/Backend/account/login',
+    await axios.post('localhost:3000/account/login',
       {
         "name": document.getElementById("setupUsername").value.toString(),
         "pass": document.getElementById("setupPassword").value.toString(),
@@ -109,6 +112,7 @@ $(function () {
         sessionStorage.setItem('jwt', response.data.jwt);
 
         //redirect
+        location.reload()
       }).catch((error) => {
         alert(error);
       });
@@ -129,7 +133,7 @@ $(function () {
     r.then(response => {
       sessionStorage.setItem('jwt', response.data.jwt);
       sessionStorage.setItem('name', document.getElementById("username").value.toString());
-
+      location.href = "code/profile/index.html"
       console.log(response);
     }).catch(error => {
       console.log(error);

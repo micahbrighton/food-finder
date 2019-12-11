@@ -40,7 +40,7 @@ $(function () {
     event.preventDefault();
     setupUserName = document.getElementById("setupUsername").value.toString();
     sessionStorage.setItem('name', document.getElementById("setupUsername").value.toString());
-
+    var ok=true
     await axios.post('http://localhost:3000/account/create',
       {
         "name": document.getElementById("setupUsername").value.toString(),
@@ -50,9 +50,10 @@ $(function () {
         $message2.html('<span class="has-text-success">Success! You just made an account.</span>')
 
       }).catch(() => {
+        ok=false;
         $message2.html('<span class="has-text-danger">Something went wrong and you could not make an account. Please try again.</span>');
       });
-      
+    if(ok)  {
     await axios.post('http://localhost:3000/account/login',
       {
         "name": document.getElementById("setupUsername").value.toString(),
@@ -65,6 +66,7 @@ $(function () {
       }).catch((error) => {
         alert(error);
       });
+    }
     console.log("Bearer " + sessionStorage.getItem('jwt'));
   });
 
@@ -82,7 +84,7 @@ $(function () {
     r.then(response => {
       sessionStorage.setItem('jwt', response.data.jwt);
       sessionStorage.setItem('name', document.getElementById("username").value.toString());
-
+      location.href = "code/profile/index.html"
       console.log(response);
     }).catch(error => {
       console.log(error);
