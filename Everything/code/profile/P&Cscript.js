@@ -66,9 +66,9 @@ const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-veg
     function checked(id) {
         return document.getElementById(id).checked;
     }
-    $(document).on("click", "#autoSubmit", function () {
-        enteredAllergies.push(document.getElementById("myInput2").value)
-    });
+    // $(document).on("click", "#autoSubmit", function () {
+    //     enteredAllergies.push(document.getElementById("myInput2").value)
+    // });
     $(document).on("click", "#submitForm", function () {
         alert(enteredAllergies)
         let userDiets = [];
