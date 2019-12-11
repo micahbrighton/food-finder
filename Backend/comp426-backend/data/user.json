@@ -541,5 +541,22 @@
       ],
       "intolerances": []
     }
+  },
+  "davey": {
+    "data": {
+      "allergies": [
+        "peanut",
+        "bread"
+      ],
+      "diets": [
+        "vegetarian",
+        "ovo-vegetarian",
+        "paleo"
+      ],
+      "intolerances": [
+        "gluten2",
+        "soy"
+      ]
+    }
   }
 }
