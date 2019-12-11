@@ -369,6 +369,50 @@
         "lacto-vegetarian",
         "paleo"
       ],
+      "intolerances": [],
+      "lpm": {
+        "data": {
+          "savedRecipes": [
+            966502
+          ]
+        }
+      }
+    }
+  },
+  "backend": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "vegetarian"
+      ],
+      "intolerances": []
+    }
+  },
+  "truth": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "vegan",
+        "paleo"
+      ],
+      "intolerances": [],
+      "truth": {
+        "data": {
+          "savedRecipes": [
+            639249,
+            427324
+          ]
+        }
+      }
+    }
+  },
+  "folder": {
+    "data": {
+      "allergies": [],
+      "diets": [
+        "lacto-vegetarian",
+        "primal"
+      ],
       "intolerances": []
     }
   }

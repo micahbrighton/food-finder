@@ -169,6 +169,15 @@
     },
     "lpm": {
       "passwordHash": "$2a$10$yYJIY2NlJ7jUgiHShumw.u/LqmAiN.Fb.xWiEPjjK8myfl2adMSaC"
+    },
+    "backend": {
+      "passwordHash": "$2a$10$P1UKq1WAdjZqi7z56eiKhe36yO/Q6Q.bmduFAEImWmZrFKj.mcVJy"
+    },
+    "truth": {
+      "passwordHash": "$2a$10$JfpzU4XhbSsmeIkCSCVZDO5baQqr58PGeikTnrnFZrjez6lYfQ8ia"
+    },
+    "folder": {
+      "passwordHash": "$2a$10$M2YsYBBxKdIcDd3kwXw0k.m0n6DhUxq390r1OO6JzW76ctzyVaoCa"
     }
   }
 }
