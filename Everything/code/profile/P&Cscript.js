@@ -70,7 +70,7 @@ const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-veg
     //     enteredAllergies.push(document.getElementById("myInput2").value)
     // });
     $(document).on("click", "#submitForm", function () {
-        alert(enteredAllergies)
+        // alert(enteredAllergies)
         let userDiets = [];
         let userIntolerances = [];
         dietsList.forEach(function (element) {
