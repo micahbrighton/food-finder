@@ -140,8 +140,14 @@
     "newspencerguy": {
       "passwordHash": "$2a$10$D9NKNxqoWCPnBWx/dHs9d.05s4Ycy3TwqW1VIwyQxR4FviCGlVbEm"
     },
-    "newlucasguy": {
-      "passwordHash": "$2a$10$3zuMPwUZBu6kJdKbnjMYX.ziNmFX8KkINWpUUJFI2p94exdLGqzYS"
+    "kj": {
+      "passwordHash": "$2a$10$34YAz3FNONzdmjZODL05YO5hxqWyB6.iKeBsEjHrZpj9iR31EgQp6"
+    },
+    "andrew": {
+      "passwordHash": "$2a$10$QG1kbmOuukSLsioi6pXAf.luenv5Sco7SuiRCiuW58jIvkNQ3FUdG"
+    },
+    "george": {
+      "passwordHash": "$2a$10$QeBWydEIJvS4UHdJlqG1SedH91PbKDUz0fkbpDHQ0OLOL.Hosco0W"
     }
   }
 }

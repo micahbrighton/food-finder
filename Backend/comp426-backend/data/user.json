@@ -457,12 +457,55 @@
       "allergies": [],
       "diets": [],
       "intolerances": [
-        "tree-nut"
+        "egg",
+        "peanut",
+        "shellfish"
       ],
-      "newlucasguy": {
+      "dave": {
         "data": {
           "savedRecipes": [
-            695353
+            217438,
+            155898,
+            546283
+          ]
+        }
+      }
+    }
+  },
+  "andrew": {
+    "data": {
+      "allergies": [
+        "milk",
+        "bread"
+      ],
+      "diets": [
+        "lacto-vegetarian"
+      ],
+      "intolerances": [
+        "dairy",
+        "grain",
+        "shellfish"
+      ],
+      "andrew": {
+        "data": {
+          "savedRecipes": [
+            637358,
+            95053,
+            12112,
+            750368
+          ]
+        }
+      }
+    }
+  },
+  "george": {
+    "data": {
+      "george": {
+        "data": {
+          "savedRecipes": [
+            754637,
+            687906,
+            260300
           ]
         }
       }
