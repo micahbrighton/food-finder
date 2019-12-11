@@ -148,6 +148,12 @@
     },
     "george": {
       "passwordHash": "$2a$10$QeBWydEIJvS4UHdJlqG1SedH91PbKDUz0fkbpDHQ0OLOL.Hosco0W"
+    },
+    "ajksfdj;": {
+      "passwordHash": "$2a$10$IvVpyQHIQ6LJFoum8KouxeJ29PQQ/GjeBT2mBHdK5pWUiGw2B6fga"
+    },
+    "georgewashington": {
+      "passwordHash": "$2a$10$zfbzcDlM8nKSx85mCVmafOHjK/.e7DvJtOmCOIzXfc0h0WQF9vxgC"
     }
   }
 }

@@ -29,6 +29,7 @@ $(function () {
                 node.appendChild(textnode);                              // Append the text to <li>
                 var deleteIcon = document.createElement('span')
                 deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
+                node.setAttribute('class', 'enteredA')
                 node.appendChild(deleteIcon);
 
 
