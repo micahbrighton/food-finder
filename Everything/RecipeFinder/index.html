@@ -735,7 +735,7 @@
                         }).catch((error) => {
                             console.log(error);
                         });
-
+                        cloneModal();
 
                 });
                 $(document).on("click", "#postReview", async function (e) {
@@ -836,7 +836,7 @@
 
                             console.log(response);
                         }).catch((error) => {
-                            console.log(error);
+                            alert(error);
                         })
                 }
                 // function sendModal() {
