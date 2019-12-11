@@ -546,7 +546,7 @@
                                             enteredAllergies.splice(i, 1);
                                         }
                                     }
-                                
+
                                     $(this).parent().parent().remove();
 
                                 });
@@ -555,7 +555,7 @@
                         }).catch((error) => {
                             console.log(error)
                         });
-                        
+
                     // axios.get('http://localhost:3000/account/status',
                     // {
 
@@ -567,18 +567,18 @@
                     // }).catch((error) => {
                     //     console.log(error)
                     // });
-                    
+
                 }
 
 
                 $(document).on("click", "#getRecipes", function (event) {
-                    var allergiesToAppend=[]
-                    var ul=document.getElementById("list2")
-                                var items = ul.getElementsByTagName("li");
-                                for (var i = 0; i < items.length; ++i) {
-                                    allergiesToAppend.push(items[i].innerHTML.split('<')[0]);
-                                }
-                    
+                    var allergiesToAppend = []
+                    var ul = document.getElementById("list2")
+                    var items = ul.getElementsByTagName("li");
+                    for (var i = 0; i < items.length; ++i) {
+                        allergiesToAppend.push(items[i].innerHTML.split('<')[0]);
+                    }
+
 
                     const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-vegetarian", "ketogenic", "pescetarian", "paleo", "primal", "whole30"];
                     const intolerancesList = ["dairy", "egg", "gluten2", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
@@ -843,6 +843,7 @@
 
                         });
                         $(document).on("click", "#postReview", async function (e) {
+                            e.stopImmediatePropagation();
                             e.preventDefault();
                             let starsChecked = '';
                             if (document.getElementById("star5").checked) {
@@ -915,8 +916,12 @@
                             document.getElementById('postedReviews').append(p);
                             await cloneModal();
 
+                            //document.getElementById('postedReviews').remove(p);
+                            p = '';
+                            p.innerHTML = '';
                             document.getElementById("reviewText").value = '';
                             newReview = '';
+                            reviewContent = '';
 
                         });
                         function cloneModal() {
@@ -1008,31 +1013,39 @@
                             while (myNode != null && myNode.firstChild != null) {
                                 myNode.removeChild(myNode.firstChild);
                             }
+                            if (myNode != null) { myNode.innerHTML = ''; }
 
                             myNode = document.getElementById("returnedRecipeModal");
                             while (myNode != null && myNode.firstChild != null) {
                                 myNode.removeChild(myNode.firstChild);
                             }
+                            if (myNode != null) { myNode.innerHTML = ''; }
                             myNode = document.getElementById("returnedRecipeModalPublic");
                             while (myNode != null && myNode.firstChild != null) {
                                 myNode.removeChild(myNode.firstChild);
                             }
+                            if (myNode != null) { myNode.innerHTML = ''; }
                             myNode = document.getElementById("pic");
                             while (myNode != null && myNode.firstChild != null) {
                                 myNode.removeChild(myNode.firstChild);
                             }
+                            if (myNode != null) { myNode.innerHTML = ''; }
                             myNode = document.getElementById("picPublic");
                             while (myNode != null && myNode.firstChild != null) {
                                 myNode.removeChild(myNode.firstChild);
                             }
+                            if (myNode != null) { myNode.innerHTML = ''; }
                             myNode = document.getElementById("instructions");
                             while (myNode != null && myNode.firstChild != null) {
                                 myNode.removeChild(myNode.firstChild);
                             }
+                            if (myNode != null) { myNode.innerHTML = ''; }
                             myNode = document.getElementById("instructionsPublic");
                             while (myNode != null && myNode.firstChild != null) {
                                 myNode.removeChild(myNode.firstChild);
                             }
+                            if (myNode != null) { myNode.innerHTML = ''; }
+
 
 
                         }
