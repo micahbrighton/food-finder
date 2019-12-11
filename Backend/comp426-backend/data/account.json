@@ -154,6 +154,9 @@
     },
     "georgewashington": {
       "passwordHash": "$2a$10$zfbzcDlM8nKSx85mCVmafOHjK/.e7DvJtOmCOIzXfc0h0WQF9vxgC"
+    },
+    "davey": {
+      "passwordHash": "$2a$10$Dunyf0fSEQoJRCAVThfEwu.0DNxxt12AnzPJdfL/GONbWuO4Td7Wu"
     }
   }
 }
