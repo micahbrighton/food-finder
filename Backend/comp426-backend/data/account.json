@@ -166,6 +166,9 @@
     },
     "dave": {
       "passwordHash": "$2a$10$skPdADbRqjjuCyRgPcugUOqLrYYpzYpBooblUb/fRZ6wkJq2k9F7O"
+    },
+    "kj": {
+      "passwordHash": "$2a$10$34YAz3FNONzdmjZODL05YO5hxqWyB6.iKeBsEjHrZpj9iR31EgQp6"
     }
   }
 }
