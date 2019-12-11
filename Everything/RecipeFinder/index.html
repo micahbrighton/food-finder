@@ -842,9 +842,11 @@
 
 
                         });
-                        $(document).on("click", "#postReview", async function (e) {
-                            e.stopImmediatePropagation();
-                            e.preventDefault();
+                        $(document).on("click", "#postReview", async function (e2) {
+
+
+                            e2.stopImmediatePropagation();
+                            e2.preventDefault();
                             let starsChecked = '';
                             if (document.getElementById("star5").checked) {
                                 starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
@@ -914,6 +916,15 @@
                             let p = document.createElement("p");
                             p.innerHTML = newReview
                             document.getElementById('postedReviews').append(p);
+                            // console.log(e2.currentTarget.parentElement)
+                            // e2.currentTarget.append(p);
+                            // if (modalTypeResult === "privateExists") {
+                            //     $('#myModalPrivateExistsContent').find('#postedReviews').append(p);
+                            // }
+                            // else if (modalTypeResult === "private") {
+                            //     $('#myModalPrivateExistsContent').find('#postedReviews').append(p);
+                            // }
+
                             await cloneModal();
 
                             //document.getElementById('postedReviews').remove(p);
@@ -1087,7 +1098,7 @@
                                     let d = document.createElement("DIV");
                                     d.classList = "modal-content";
                                     d.id = "myModalPrivateExistsContent";
-                                    d.innerHTML = response.data.result
+                                    d.innerHTML = response.data.result;
                                     document.getElementById('myModalPrivateExists').append(d);
                                     alert("append worked");
 
