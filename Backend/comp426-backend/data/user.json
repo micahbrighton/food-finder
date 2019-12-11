@@ -545,5 +545,12 @@
         "tree-nut"
       ]
     }
+  },
+  "newnew": {
+    "data": {
+      "allergies": [],
+      "diets": [],
+      "intolerances": []
+    }
   }
 }

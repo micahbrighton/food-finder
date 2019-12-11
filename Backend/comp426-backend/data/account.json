@@ -154,6 +154,9 @@
     },
     "lpm": {
       "passwordHash": "$2a$10$5tlIu2QBeOJhsz3Xg78TaOTQX5AjaTsulmFKXaVkkz/Eai9mAIWRK"
+    },
+    "newnew": {
+      "passwordHash": "$2a$10$RbzueszZ/qRJAEbBXR5Gmu2kDO74.T9JEYqkTNVfb5Ivf6HO7xuva"
     }
   }
 }
