@@ -149,14 +149,11 @@
     "george": {
       "passwordHash": "$2a$10$QeBWydEIJvS4UHdJlqG1SedH91PbKDUz0fkbpDHQ0OLOL.Hosco0W"
     },
-    "ajksfdj;": {
-      "passwordHash": "$2a$10$IvVpyQHIQ6LJFoum8KouxeJ29PQQ/GjeBT2mBHdK5pWUiGw2B6fga"
+    "hello": {
+      "passwordHash": "$2a$10$N8TTrpl74rwAeDEhabT7ieiPvKCmlBDOkDrlq3OQO3EpYUeb.IV2y"
     },
-    "georgewashington": {
-      "passwordHash": "$2a$10$zfbzcDlM8nKSx85mCVmafOHjK/.e7DvJtOmCOIzXfc0h0WQF9vxgC"
-    },
-    "davey": {
-      "passwordHash": "$2a$10$Dunyf0fSEQoJRCAVThfEwu.0DNxxt12AnzPJdfL/GONbWuO4Td7Wu"
+    "lpm": {
+      "passwordHash": "$2a$10$5tlIu2QBeOJhsz3Xg78TaOTQX5AjaTsulmFKXaVkkz/Eai9mAIWRK"
     }
   }
 }

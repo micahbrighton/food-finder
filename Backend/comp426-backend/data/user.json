@@ -511,51 +511,38 @@
       }
     }
   },
-  "ajksfdj;": {
+  "hello": {
     "data": {
       "allergies": [
-        "peanut",
-        "milk",
-        "bread"
-      ],
-      "diets": [
-        "lacto-vegetarian",
-        "primal"
-      ],
-      "intolerances": [
-        "gluten2",
-        "tree-nut"
-      ]
-    }
-  },
-  "georgewashington": {
-    "data": {
-      "allergies": [
-        "peanut",
-        "milk"
-      ],
-      "diets": [
-        "lacto-vegetarian",
-        "ketogenic",
-        "primal"
-      ],
-      "intolerances": []
-    }
-  },
-  "davey": {
-    "data": {
-      "allergies": [
-        "peanut",
-        "bread"
+        "chocolate"
       ],
       "diets": [
         "vegetarian",
-        "ovo-vegetarian",
         "paleo"
       ],
+      "intolerances": [],
+      "hello": {
+        "data": {
+          "savedRecipes": [
+            37241,
+            1080283
+          ]
+        }
+      }
+    }
+  },
+  "lpm": {
+    "data": {
+      "allergies": [
+        "chocolate"
+      ],
+      "diets": [
+        "vegetarian",
+        "whole30"
+      ],
       "intolerances": [
-        "gluten2",
-        "soy"
+        "grain",
+        "tree-nut"
       ]
     }
   }
