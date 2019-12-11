@@ -360,9 +360,8 @@
                     <div class="level-item">
 
                         <fieldset class="starRating">
-                            <input type="radio" id="saveRecipe" name="starRating" value="0"
-                                onclick="handleSaveRecipe()" /><label class="full" for="saveRecipe"
-                                title="Save the Recipe"></label>
+                            <input type="radio" id="saveRecipe" name="starRating" value="0" /><label class="full"
+                                for="saveRecipe" title="Save the Recipe"></label>
                         </fieldset>
                     </div>
                 </div>
@@ -471,7 +470,6 @@
         var enteredAllergies = []
         var user = '';
         var recipesResponse;
-        var clonedModalHTML = '';
         if (sessionStorage.getItem('jwt') === null) {
             console.log('nobody is signed in')
             var enteredAllergies = []
@@ -640,6 +638,7 @@
             });
             $(document).on("click", "#returnedRecipe", function (event) {
                 event.preventDefault()
+                clearModal();
                 let recipeId = '';
                 let clickedRecipeName = $(this)[0].lastChild.data;
                 // window.location.assign("ModalRecipeBox/index.html");
@@ -719,6 +718,26 @@
                         modal.style.display = "none";
                     }
                 }
+                $(document).on("click", "#saveRecipe", function () {
+
+                    axios.post('http://localhost:3000/user/data/' + sessionStorage.getItem('name') + '/data/savedRecipes',
+                        {
+
+
+                            "data": [recipeId],
+                            "type": "merge"
+                        },
+                        {
+                            headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+
+                        }).then((response) => {
+                            console.log(response);
+                        }).catch((error) => {
+                            console.log(error);
+                        });
+
+
+                });
                 $(document).on("click", "#postReview", async function (e) {
                     e.preventDefault();
                     let starsChecked = '';
@@ -786,65 +805,67 @@
                 </article>
                 </div>`;
 
-                    document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML += newReview;
+                    // document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML += newReview;
+                    let p = document.createElement("p");
+                    p.innerHTML = newReview
+                    document.getElementById('postedReviews').append(p);
+                    await cloneModal();
+
                     document.getElementById("reviewText").value = '';
+                    newReview = '';
 
-                    await cloneModal(sendModal,e);
                 });
-                function cloneModal(callback,e) {
-                    e.preventDefault()
-                    clonedModalHTML = $("<div />").append($("#myModal").clone().html());
-                    var $clonedModal = $("#myModal").clone();
+                function cloneModal() {
+                    let clonedModalHTML = $("<div />").append($("#myModal").clone().html());
+                    console.log(clonedModalHTML);
+                    var $clonedModal = $("#myModal").clone().html();
+                    // console.log($clonedModal)
                     console.log($clonedModal)
-                    console.log(clonedModalHTML)
-                    // await axios.post('http://localhost:3000/public/Recipes/' + recipeId,
-                    //     {
-
-                    //         "name": clickedRecipeName,
-                    //         "data": {
-                    //             "modal": clonedModalHTML,
-
-                    //         },
-                    //     }).then((response) => {
-                    //         e.preventDefault();
-                    //         return false
-                    //     });
-                    // e.preventDefault()
-                    // return false;
-                    callback(e);
-                }
-                function sendModal(e) {
-                    e.preventDefault()
                     axios.post('http://localhost:3000/public/Recipes/' + recipeId,
                         {
 
                             "name": clickedRecipeName,
                             "data": {
-                                "modal": clonedModalHTML,
+                                "modal": $clonedModal,
 
                             },
                         }).then((response) => {
+
                             console.log(response);
                         }).catch((error) => {
                             console.log(error);
-                        });
-                };
-                function handleSaveRecipe() {
-                    axios.post('http://localhost:3000/user/data/' + sessionStorage.getItem('name') + '/data/savedRecipes',
-                        {
+                        })
+                }
+                // function sendModal() {
+                //     axios.post('http://localhost:3000/public/Recipes/' + recipeId,
+                //         {
 
+                //             "name": clickedRecipeName,
+                //             "data": {
+                //                 "modal": clonedModalHTML,
 
-                            "data": [recipeId],
-                            "type": "merge"
-                        },
-                        {
-                            headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+                //             },
+                //         }).then((response) => {
+                //             console.log(response);
+                //         }).catch((error) => {
+                //             console.log(error);
+                //         });
+                // };
 
-                        }).then((response) => {
-                            console.log(response);
-                        }).catch((error) => {
-                            console.log(error);
-                        });
+                function clearModal() {
+                    //document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML = '';
+                    $("#postedReviews").empty();
+                    document.getElementById("star5").checked = false;
+                    document.getElementById("star4").checked = false;
+                    document.getElementById("star3").checked = false;
+                    document.getElementById("star2").checked = false;
+                    document.getElementById("star1").checked = false;
+                    document.getElementById("saveRecipe").checked = false;
+                    const myNode = document.getElementById("postedReviews");
+                    while (myNode.firstChild) {
+                        myNode.removeChild(myNode.firstChild);
+                    }
+
 
                 }
             });
