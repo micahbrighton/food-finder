@@ -52,14 +52,14 @@ $(function () {
       }).catch(() => {
         $message2.html('<span class="has-text-danger">Something went wrong and you could not make an account. Please try again.</span>');
       });
-
+      
     await axios.post('http://localhost:3000/account/login',
       {
         "name": document.getElementById("setupUsername").value.toString(),
         "pass": document.getElementById("setupPassword").value.toString(),
       }).then(response => {
+        
         sessionStorage.setItem('jwt', response.data.jwt);
-
         //redirect
         location.href = "index2.html"
       }).catch((error) => {

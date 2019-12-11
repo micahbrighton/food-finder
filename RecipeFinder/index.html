@@ -756,10 +756,10 @@
                     document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML += newReview;
                     document.getElementById("reviewText").value = '';
 
-                    await cloneModal(sendModal);
+                    await cloneModal(sendModal,e);
                 });
-                function cloneModal(callback) {
-
+                function cloneModal(callback,e) {
+                    e.preventDefault()
                     clonedModalHTML = $("<div />").append($("#myModal").clone().html());
                     var $clonedModal = $("#myModal").clone();
                     console.log($clonedModal)
@@ -778,9 +778,10 @@
                     //     });
                     // e.preventDefault()
                     // return false;
-                    callback();
+                    callback(e);
                 }
-                function sendModal() {
+                function sendModal(e) {
+                    e.preventDefault()
                     axios.post('http://localhost:3000/public/Recipes/' + recipeId,
                         {
 
