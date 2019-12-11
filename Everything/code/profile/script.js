@@ -1,7 +1,7 @@
 
 
-// $(async function () {
-//     document.getElementById("username").append(sessionStorage.getItem('name'));
+$(async function () {
+    document.getElementById("username").append(sessionStorage.getItem('name'));
 
 //     var savedRecipesArr = [];
 //     await axios.get('http://localhost:3000/user/data',
@@ -38,13 +38,13 @@
 //     }
 
 
-// });
+});
 
-// window.onload=function(){
-//     document.querySelector("a#logout").addEventListener('click', function(event) {
-//         event.preventDefault();
-//         sessionStorage.setItem('jwt', null);
-//         sessionStorage.setItem('name', null);
-//         location.href = '/index.html';
-//     });
-//}
+window.onload=function(){
+    document.querySelector("a#logout").addEventListener('click', function(event) {
+        event.preventDefault();
+        sessionStorage.setItem('jwt', null);
+        sessionStorage.setItem('name', null);
+        location.href = '/index.html';
+    });
+}
