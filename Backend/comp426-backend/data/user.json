@@ -510,5 +510,36 @@
         }
       }
     }
+  },
+  "ajksfdj;": {
+    "data": {
+      "allergies": [
+        "peanut",
+        "milk",
+        "bread"
+      ],
+      "diets": [
+        "lacto-vegetarian",
+        "primal"
+      ],
+      "intolerances": [
+        "gluten2",
+        "tree-nut"
+      ]
+    }
+  },
+  "georgewashington": {
+    "data": {
+      "allergies": [
+        "peanut",
+        "milk"
+      ],
+      "diets": [
+        "lacto-vegetarian",
+        "ketogenic",
+        "primal"
+      ],
+      "intolerances": []
+    }
   }
 }
