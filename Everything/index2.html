@@ -6,10 +6,10 @@
     <title>FoodFinder</title>
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="import" href="./autocompleteIngredients/index.html">
+    <link rel="import" href="./autocompleteAllergies/index.html">
     <script>
             $(function () {
-                $("#autocomplete").load("./autocompleteIngredients/index.html");
+                $("#autocomplete2").load("./autocompleteAllergies/index.html");
             });
     </script>
     <style>
@@ -593,7 +593,11 @@
                             </div>
                         </div>
                     <label class="label" style="text-align: center;">Allergies</label>
-                    <div id="autocomplete" style="width:60%; float: none; text-align: center; margin:auto"></div>
+                    <div id="autocomplete2" style="width:60%; float: none; text-align: center; margin:auto"></div>
+                    <div id="list2">
+
+
+                    </div>
                     <br>
                     <div class="field">
                         <div class="control" style="padding-bottom: 1rem;">

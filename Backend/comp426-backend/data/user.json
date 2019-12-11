@@ -401,5 +401,54 @@
       ],
       "intolerances": []
     }
+  },
+  "allalala": {
+    "data": {
+      "allergies": [
+        "chocolate"
+      ],
+      "diets": [],
+      "intolerances": [
+        "grain"
+      ]
+    }
+  },
+  "alalalala": {
+    "data": {
+      "allergies": [
+        "chocolate",
+        "chocolate"
+      ],
+      "diets": [
+        "lacto-vegetarian"
+      ],
+      "intolerances": [
+        "gluten2"
+      ]
+    }
+  },
+  "jia": {
+    "data": {
+      "allergies": [
+        "chocolate",
+        "chocolate"
+      ],
+      "diets": [],
+      "intolerances": []
+    }
+  },
+  "laldfaldfal": {
+    "data": {
+      "allergies": [
+        "chocolate",
+        "chocolate",
+        "fruit",
+        "fruit"
+      ],
+      "diets": [],
+      "intolerances": [
+        "peanut"
+      ]
+    }
   }
 }
