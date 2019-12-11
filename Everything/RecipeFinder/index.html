@@ -515,7 +515,7 @@
                 var recipesResponse;
                 if (sessionStorage.getItem('jwt') === null) {
                     console.log('nobody is signed in')
-                    var enteredAllergies = []
+                    enteredAllergies = []
                 }
                 else {
                     axios.get('http://localhost:3000/user/data',
@@ -552,7 +552,7 @@
                                 document.getElementById("list2").appendChild(node);     // Append <li> to <ul> with id="myList"
 
 
-
+                                console.log(enteredAllergies)
 
                                 $('.delete').on('click', function () {
 
@@ -564,7 +564,7 @@
                                             enteredAllergies.splice(i, 1);
                                         }
                                     }
-                                    console.log(enteredAllergies);
+                                
                                     $(this).parent().parent().remove();
 
                                 });
@@ -573,7 +573,7 @@
                         }).catch((error) => {
                             console.log(error)
                         });
-
+                        
                     // axios.get('http://localhost:3000/account/status',
                     // {
 
@@ -585,11 +585,19 @@
                     // }).catch((error) => {
                     //     console.log(error)
                     // });
+                    
                 }
 
 
                 $(document).on("click", "#getRecipes", function (event) {
-                    console.log("clicked");
+                    var allergiesToAppend=[]
+                    var ul=document.getElementById("list2")
+                                var items = ul.getElementsByTagName("li");
+                                for (var i = 0; i < items.length; ++i) {
+                                    allergiesToAppend.push(items[i].innerHTML.split('<')[0]);
+                                }
+                    
+
                     const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-vegetarian", "ketogenic", "pescetarian", "paleo", "primal", "whole30"];
                     const intolerancesList = ["dairy", "egg", "gluten2", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
 
@@ -599,7 +607,7 @@
                         return document.getElementById(id).checked;
                     }
 
-
+                    console.log(allergiesToAppend)
 
                     let userDiets = [];
                     let userIntolerances = [];
@@ -623,7 +631,7 @@
                     const intolerancesString = userIntolerances.map(ingredient =>
                         ingredient + '%2C'
                     );
-                    const allergiesString = enteredAllergies.map(ingredient =>
+                    const allergiesString = allergiesToAppend.map(ingredient =>
                         ingredient + '%2C'
                     );
                     let requestString = "https://api.spoonacular.com/recipes/complexSearch?query=" + ingredientsString + "&diet=" + dietsString + "&intolerances=" + intolerancesString + "&excludeIngredients=" + allergiesString + "&instructionsRequired=true&ignorePantry=true&addRecipeInformation=true&fillIngredients=true&apiKey=128541af6bef438a808dc04669c8f556";
