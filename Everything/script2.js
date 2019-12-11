@@ -50,7 +50,7 @@ const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-veg
             if (checked(element)) { userIntolerances.push(element) }
         });
 
-        axios.post('http://localhost:3000/user/data/',
+        axios.post('/Backend/user/data/',
             {
 
                 "name": sessionStorage.getItem('name'),
@@ -89,7 +89,7 @@ $(function () {
     setupUserName = document.getElementById("setupUsername").value.toString();
     sessionStorage.setItem('name', document.getElementById("setupUsername").value.toString());
 
-    await axios.post('http://localhost:3000/account/create',
+    await axios.post('/Backend/account/create',
       {
         "name": document.getElementById("setupUsername").value.toString(),
         "pass": document.getElementById("setupPassword").value.toString(),
@@ -101,7 +101,7 @@ $(function () {
         $message2.html('<span class="has-text-danger">Something went wrong and you could not make an account. Please try again.</span>');
       });
 
-    await axios.post('http://localhost:3000/account/login',
+    await axios.post('/Backend/account/login',
       {
         "name": document.getElementById("setupUsername").value.toString(),
         "pass": document.getElementById("setupPassword").value.toString(),
@@ -120,7 +120,7 @@ $(function () {
     event.preventDefault();
     setupUserName = document.getElementById("username").value.toString();
     sessionStorage.setItem('name', document.getElementById("password").value.toString());
-    let r = axios.post('http://localhost:3000/account/login',
+    let r = axios.post('/Backend/account/login',
       {
         "name": document.getElementById("username").value.toString(),
         "pass": document.getElementById("password").value.toString(),
