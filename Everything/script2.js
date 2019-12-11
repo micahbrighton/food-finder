@@ -49,9 +49,10 @@ const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-veg
         intolerancesList.forEach(function (element) {
             if (checked(element)) { userIntolerances.push(element) }
         });
-
-        axios.post('/Backend/user/data',
+        
+        axios.post('http://localhost:3000/user/data/',
             {
+              
 
                 "name": sessionStorage.getItem('name'),
                 "data": {
