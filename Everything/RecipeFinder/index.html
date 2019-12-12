@@ -838,10 +838,10 @@
                             img.src = response.results[i].image;
                             var title = response.results[i].title;
                             var meal = document.createElement("DIV");
-                            meal.append(title);
+                            meal.append(img);
                             var o =document.createElement("br");
                             meal.append(o);
-                            meal.append(img);
+                            meal.append(title);
                             meal.id = "returnedRecipe";
                             document.getElementById('feedbox').append(meal);
 
