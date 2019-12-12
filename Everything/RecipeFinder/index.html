@@ -734,8 +734,12 @@
                     intolerancesList.forEach(function (element) {
                         if (checked(element)) { userIntolerances.push(element) }
                     });
-
-
+                    var allergiesToAppend=[]
+                    var ul=document.getElementById("list2")
+                                var items = ul.getElementsByTagName("li");
+                                for (var i = 0; i < items.length; ++i) {
+                                    allergiesToAppend.push(items[i].innerHTML.split('<')[0]);
+                                }
 
 
                     const ingredientsString = enteredIngreds.map(ingredient =>
