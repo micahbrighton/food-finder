@@ -174,22 +174,13 @@
         }
 
         /* Style the collapsible content. Note: hidden by default */
-<<<<<<< HEAD
-        .content {
+        .content2 {
             padding: 0 18px;
             background-color: white;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
-=======
-        .content2 {
-        padding: 0 18px;
-        background-color: white;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        border: 2px solid #eee
->>>>>>> dc603b99c0d61538bcf13380dd33772d4a4423cd
+            border: 2px solid #eee
         }
 
         .collapsible:after {
@@ -207,10 +198,10 @@
         }
 
         #returnedRecipe {
-            font-weight:bold;
-            width:100%;
+            font-weight: bold;
+            width: 100%;
             /* border-top:2px solid red; */
-            border-bottom:10px solid #eee;
+            border-bottom: 10px solid #eee;
             padding-top: 10px;
             padding-bottom: 10px;
         }
@@ -258,14 +249,8 @@
             <div class="columns">
                 <div class="column is-one-third">
                     <div id="ingredientInputDiv">
-<<<<<<< HEAD
-
-                        <br>
                         <label class="label" style="text-align: center; font-size:1.25rem">What ingredients do you
                             have?</label>
-=======
-                        <label class="label" style="text-align: center; font-size:1.25rem">What ingredients do you have?</label>
->>>>>>> 456bf893613022296a8eb224275e21d9e1ba9fc5
                         <div id="autocomplete"></div>
 
 
@@ -273,24 +258,14 @@
 
                     </div>
                     <br>
-<<<<<<< HEAD
                     <button type="button" class="collapsible"
-                        style="text-align: center; font-size:20px;font-weight:bold"><b>Diets</b></button>
-                    <div class="content" id="dietInputDiv">
+                        style="text-align: center; font-size:20px;font-weight:bold;border: 2px solid #eee"><b>Diets</b></button>
+                    <div class="content2" id="dietInputDiv">
                         <div class="field">
 
                             <div class="control" style="width:100%; float: none; text-align: center; margin:auto">
                                 <div class="columns">
                                     <div class="column" style="margin-left:2%; padding-bottom:5%">
-=======
-                    <button type="button" class="collapsible" style="text-align: center; font-size:20px;font-weight:bold;border: 2px solid #eee"><b>Diets</b></button>
-                    <div class="content2" id="dietInputDiv">
-                            <div class="field">
-                    
-                                <div class="control" style="width:100%; float: none; text-align: center; margin:auto">
-                                    <div class="columns">
-                                    <div class="column" style ="margin-left:2%; padding-bottom:5%">
->>>>>>> dc603b99c0d61538bcf13380dd33772d4a4423cd
                                         <div style="display:flex;
                                         flex-direction:column;
                                         text-align: left;">
@@ -377,644 +352,602 @@
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
-                    </div>
-                    <button type="button" class="collapsible"
-                        style="text-align: center;font-size:20px;font-weight:bold"><b>Intolerances</b></button>
-                    <div class="content" id="intoleranceInputDiv">
-=======
-                        <button type="button" class="collapsible" style="text-align: center;font-size:20px;font-weight:bold;border: 2px solid #eee"><b>Intolerances</b></button>
+                        <button type="button" class="collapsible"
+                            style="text-align: center;font-size:20px;font-weight:bold;border: 2px solid #eee"><b>Intolerances</b></button>
                         <div class="content2" id="intoleranceInputDiv">
->>>>>>> dc603b99c0d61538bcf13380dd33772d4a4423cd
-                        <div class="field">
+                            <div class="field">
 
-                            <div class="control" style="width:100%; float: none; text-align: center; margin: auto">
-                                <div class="columns">
-                                    <div class="column" style="margin-left:2%;padding-bottom:5%">
-                                        <div style="display:flex;
+                                <div class="control" style="width:100%; float: none; text-align: center; margin: auto">
+                                    <div class="columns">
+                                        <div class="column" style="margin-left:2%;padding-bottom:5%">
+                                            <div style="display:flex;
                                         flex-direction:column;
                                         text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="dairy">
-                                                Dairy
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="dairy">
+                                                    Dairy
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="egg">
-                                                Egg
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="egg">
+                                                    Egg
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="gluten2">
-                                                Gluten
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="gluten2">
+                                                    Gluten
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="grain">
-                                                Grain
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="grain">
+                                                    Grain
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="peanut">
-                                                Peanut
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="peanut">
+                                                    Peanut
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="seafood">
-                                                Seafood
-                                            </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="seafood">
+                                                    Seafood
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="column" style="margin-left: 2%">
-                                        <div style="display:flex;
+                                        <div class="column" style="margin-left: 2%">
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="sesame">
-                                                Sesame
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="sesame">
+                                                    Sesame
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="shellfish">
-                                                Shellfish
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="shellfish">
+                                                    Shellfish
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="soy">
-                                                Soy
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="soy">
+                                                    Soy
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="sulfite">
-                                                Sulfite
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="sulfite">
+                                                    Sulfite
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="tree-nut">
-                                                Tree Nut
-                                            </label>
-                                        </div>
-                                        <div style="display:flex;
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="tree-nut">
+                                                    Tree Nut
+                                                </label>
+                                            </div>
+                                            <div style="display:flex;
                                     flex-direction:column;
                                     text-align: left">
-                                            <label class="checkbox">
-                                                <input type="checkbox" id="wheat">
-                                                Wheat
-                                            </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="wheat">
+                                                    Wheat
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-<<<<<<< HEAD
-                    <div id="allergyEntry">
-                        <label class="label" style="text-align: center; font-size:1.25rem">What are you allergic
-                            to?</label>
-                        <div id="autocomplete2"></div>
-                        <div id="list2">
-
-
-                        </div>
-                    </div>
-                    <button type="button" id="getRecipes" class="button is-outlined is-large is-rounded is-fullwidth"
-                        style="background-color: #4B9CD3; color: #FFF">
-                        <span class="icon">
-                            <i class="fa fa-search"></i>
-                        </span>
-                        <span>Find Recipes</span>
-                    </button>
-                </div>
-                <div class="column">
-                    <h2 style="font-weight:bold; text-align:center;font-size:1.5rem;">Recipe Recommendations</h2>
-                    <div>
-=======
-                    <button type="button" class="collapsible" style="text-align: center; font-size:20px;font-weight:bold;border: 2px solid #eee"><b>Allergies</b></button>
-                    <div class="content2" id="allergyEntry">
-                            <label class="label" style="text-align: center; font-size:1.25rem">What are you allergic to?</label>
+                        <button type="button" class="collapsible"
+                            style="text-align: center; font-size:20px;font-weight:bold;border: 2px solid #eee"><b>Allergies</b></button>
+                        <div class="content2" id="allergyEntry">
+                            <label class="label" style="text-align: center; font-size:1.25rem">What are you allergic
+                                to?</label>
                             <div id="autocomplete2"></div>
                             <div id="list2">
-        
-        
+
+
                             </div>
-                            </div>
-                            <br>
-                            <button type="button" id="getRecipes" class="button is-outlined is-large is-rounded is-fullwidth" style="background-color: #4B9CD3; color: #FFF">
-                                    <span class="icon">
-                                        <i class="fa fa-search"></i>
-                                        </span>
-                                        <span>Find Recipes</span>
-                                </button>
-                </div>
-                <div class="column">
+                        </div>
+                        <br>
+                        <button type="button" id="getRecipes"
+                            class="button is-outlined is-large is-rounded is-fullwidth"
+                            style="background-color: #4B9CD3; color: #FFF">
+                            <span class="icon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                            <span>Find Recipes</span>
+                        </button>
+                    </div>
+                    <div class="column">
                         <div class="card-title" style="background-color: rgba(75, 156, 211);
                             padding: 2rem;">
-                                      <h1 style="color: #fff;
+                            <h1 style="color: #fff;
                             text-align: center;
                             font-size: 1.5rem;">Recipe Recommendations</h1>
                         </div>
-                    <div style="background-color:#FFF">
->>>>>>> dc603b99c0d61538bcf13380dd33772d4a4423cd
-                        <a class="level-item">
-                            <div id="feedbox">
+                        <div style="background-color:#FFF">
+                            <a class="level-item">
+                                <div id="feedbox">
 
 
-                            </div>
-                        </a>
-                    </div>
+                                </div>
+                            </a>
+                        </div>
 
-                    <div id="myModal" class="modal">
+                        <div id="myModal" class="modal">
 
-                        <!-- Modal content -->
-                        <div class="modal-content" id=myModalContent>
-                            <span class="close">&times;</span>
-                            <nav class="level-right">
-                                <div class="level-right">
-                                    <div class="level-item">
+                            <!-- Modal content -->
+                            <div class="modal-content" id=myModalContent>
+                                <span class="close">&times;</span>
+                                <nav class="level-right">
+                                    <div class="level-right">
+                                        <div class="level-item">
 
-                                        <fieldset class="starRating">
-                                            <input type="radio" id="saveRecipe" name="starRating" value="0" /><label
-                                                class="full" for="saveRecipe" title="Save the Recipe"></label>
-                                        </fieldset>
+                                            <fieldset class="starRating">
+                                                <input type="radio" id="saveRecipe" name="starRating" value="0" /><label
+                                                    class="full" for="saveRecipe" title="Save the Recipe"></label>
+                                            </fieldset>
+                                        </div>
                                     </div>
+
+                                </nav>
+
+                                <h1 id="title"> </h1>
+                                <div id="pic">
+
+                                </div>
+                                <div id="ratings">
+
+                                </div>
+                                <div id="ingredientsNeeded">
+
+                                </div>
+                                <div id="dietsSupported">
+
                                 </div>
 
-                            </nav>
+                                <div id="instructions">
 
-                            <h1 id="title"> </h1>
-                            <div id="pic">
+                                </div>
+                                <div id="postedReviews" class="posts">
 
-                            </div>
-                            <div id="ratings">
+                                </div>
 
-                            </div>
-                            <div id="ingredientsNeeded">
+                                <div id="reviewBox" class="box">
 
-                            </div>
-                            <div id="dietsSupported">
-
-                            </div>
-
-                            <div id="instructions">
-
-                            </div>
-                            <div id="postedReviews" class="posts">
-
-                            </div>
-
-                            <div id="reviewBox" class="box">
-
-                                <article class="media">
-                                    <figure class="media-left">
-                                        <p class="image is-64x64">
-                                            <img src="https://bulma.io/images/placeholders/128x128.png">
-                                        </p>
-                                    </figure>
-                                    <div class="media-content">
-                                        <fieldset class="starRating">
-                                            <input type="radio" id="star5" name="starRating" value="5" /><label
-                                                class="full" for="star5" title="Awesome - 5 stars"></label>
-
-                                            <input type="radio" id="star4" name="starRating" value="4" /><label
-                                                class="full" for="star4" title="Pretty good - 4 stars"></label>
-
-                                            <input type="radio" id="star3" name="starRating" value="3" /><label
-                                                class="full" for="star3" title="Meh - 3 stars"></label>
-
-                                            <input type="radio" id="star2" name="starRating" value="2" /><label
-                                                class="full" for="star2" title="Kinda bad - 2 stars"></label>
-
-                                            <input type="radio" id="star1" name="starRating" value="1" /><label
-                                                class="full" for="star1" title="Sucks big time - 1 star"></label>
-
-                                        </fieldset>
-                                        <div class="field">
-                                            <p class="control">
-                                                <textarea class="textarea" id="reviewText"
-                                                    placeholder="Add a comment..."></textarea>
+                                    <article class="media">
+                                        <figure class="media-left">
+                                            <p class="image is-64x64">
+                                                <img src="https://bulma.io/images/placeholders/128x128.png">
                                             </p>
-                                        </div>
-                                        <div class="field">
-                                            <p class="control">
-                                                <button class="button is-info" id="postReview"
-                                                    type="button">Submit</button>
-                                            </p>
-                                        </div>
+                                        </figure>
+                                        <div class="media-content">
+                                            <fieldset class="starRating">
+                                                <input type="radio" id="star5" name="starRating" value="5" /><label
+                                                    class="full" for="star5" title="Awesome - 5 stars"></label>
 
-                                    </div>
-                                </article>
+                                                <input type="radio" id="star4" name="starRating" value="4" /><label
+                                                    class="full" for="star4" title="Pretty good - 4 stars"></label>
+
+                                                <input type="radio" id="star3" name="starRating" value="3" /><label
+                                                    class="full" for="star3" title="Meh - 3 stars"></label>
+
+                                                <input type="radio" id="star2" name="starRating" value="2" /><label
+                                                    class="full" for="star2" title="Kinda bad - 2 stars"></label>
+
+                                                <input type="radio" id="star1" name="starRating" value="1" /><label
+                                                    class="full" for="star1" title="Sucks big time - 1 star"></label>
+
+                                            </fieldset>
+                                            <div class="field">
+                                                <p class="control">
+                                                    <textarea class="textarea" id="reviewText"
+                                                        placeholder="Add a comment..."></textarea>
+                                                </p>
+                                            </div>
+                                            <div class="field">
+                                                <p class="control">
+                                                    <button class="button is-info" id="postReview"
+                                                        type="button">Submit</button>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </article>
+                                </div>
+
                             </div>
 
                         </div>
 
-                    </div>
-
-                    <div id="myModalPrivateExists" class="modal">
+                        <div id="myModalPrivateExists" class="modal">
 
 
-
-
-                    </div>
-                    <div id="myModalPublic" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content" id=myModalPublicContent>
-                            <span class="close">&times;</span>
-                            <nav class="level-right">
-                                <div class="level-right">
-                                    <div class="level-item">
-
-
-                                    </div>
-                                </div>
-
-                            </nav>
-
-                            <h1 id="titlePublic" style=text-align:center class="title"> </h1>
-                            <div id="picPublic" class="center">
-
-                            </div>
-                            <div id="ratingsPublic">
-
-                            </div>
-
-                            <div id="ingredientsNeededPublic" class="container">
-
-                            </div>
-                            <div id="dietsSupportedPublic">
-
-                            </div>
-
-                            <div id="instructionsPublic">
-
-                            </div>
-                            <div id="postedReviewsPublic">
-                                <strong>Log in to view comments and ratings and save recipes</strong>
-                            </div>
 
 
                         </div>
+                        <div id="myModalPublic" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content" id=myModalPublicContent>
+                                <span class="close">&times;</span>
+                                <nav class="level-right">
+                                    <div class="level-right">
+                                        <div class="level-item">
+
+
+                                        </div>
+                                    </div>
+
+                                </nav>
+
+                                <h1 id="titlePublic" style=text-align:center class="title"> </h1>
+                                <div id="picPublic" class="center">
+
+                                </div>
+                                <div id="ratingsPublic">
+
+                                </div>
+
+                                <div id="ingredientsNeededPublic" class="container">
+
+                                </div>
+                                <div id="dietsSupportedPublic">
+
+                                </div>
+
+                                <div id="instructionsPublic">
+
+                                </div>
+                                <div id="postedReviewsPublic">
+                                    <strong>Log in to view comments and ratings and save recipes</strong>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
                     </div>
-
-
                 </div>
-            </div>
 
-            <script src="../node_modules/axios/dist/axios.js"></script>
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-            <script>
-                const API_KEY = "128541af6bef438a808dc04669c8f556";
-                var returnIngreds = [];
-                var enteredIngreds = [];
-                var enteredAllergies = []
-                var user = '';
-                var recipesResponse;
-                if (sessionStorage.getItem('jwt') === null) {
-                    console.log('nobody is signed in')
-                    enteredAllergies = []
-                }
-                else {
-                    axios.get('http://localhost:3000/user/data',
-                        {
-
-                            headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
-
-                        }).then((response) => {
-                            console.log(response);
-                            for (let i = 0; i < response.data.result.diets.length; i++) {
-
-                                let diet = response.data.result.diets[i];
-                                document.getElementById(diet).checked = true;
-
-                            }
-                            for (let i = 0; i < response.data.result.intolerances.length; i++) {
-                                let intolerance = response.data.result.intolerances[i];
-                                document.getElementById(intolerance).checked = true;
-
-                            }
-                            for (let i = 0; i < response.data.result.allergies.length; i++) {
-                                enteredAllergies.push(response.data.result.allergies[i]);
-
-                                var node = document.createElement("LI");
-                                var textnode = document.createTextNode(response.data.result.allergies[i]);
-                                console.log(textnode.nodeValue)       // Create a text node
-                                node.appendChild(textnode);                              // Append the text to <li>
-                                var deleteIcon = document.createElement('span')
-                                deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
-                                node.appendChild(deleteIcon);
-
-
-                                console.log(document.getElementById("list2"))
-                                document.getElementById("list2").appendChild(node);     // Append <li> to <ul> with id="myList"
-
-
-                                console.log(enteredAllergies)
-
-                                $('.delete').on('click', function () {
-
-                                    console.log($(this).parent().parent()[0].childNodes[0].data);
-                                    let removedIngredient = $(this).parent().parent()[0].childNodes[0].data;
-
-                                    for (var i = 0; i < enteredAllergies.length; i++) {
-                                        if (enteredAllergies[i] === removedIngredient) {
-                                            enteredAllergies.splice(i, 1);
-                                        }
-                                    }
-
-                                    $(this).parent().parent().remove();
-
-                                });
-
-                            }
-                        }).catch((error) => {
-                            console.log(error)
-                        });
-
-                    // axios.get('http://localhost:3000/account/status',
-                    // {
-
-                    //     headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
-
-                    // }).then((response) => {
-                    //     console.log(response);
-                    //     user = response.data.user.name;
-                    // }).catch((error) => {
-                    //     console.log(error)
-                    // });
-
-                }
-
-
-                $(document).on("click", "#getRecipes", function (event) {
-                    var allergiesToAppend = []
-                    var ul = document.getElementById("list2")
-                    var items = ul.getElementsByTagName("li");
-                    for (var i = 0; i < items.length; ++i) {
-                        allergiesToAppend.push(items[i].innerHTML.split('<')[0]);
+                <script src="../node_modules/axios/dist/axios.js"></script>
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                <script>
+                    const API_KEY = "128541af6bef438a808dc04669c8f556";
+                    var returnIngreds = [];
+                    var enteredIngreds = [];
+                    var enteredAllergies = []
+                    var user = '';
+                    var recipesResponse;
+                    if (sessionStorage.getItem('jwt') === null) {
+                        console.log('nobody is signed in')
+                        enteredAllergies = []
                     }
+                    else {
+                        axios.get('http://localhost:3000/user/data',
+                            {
 
+                                headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
 
-                    const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-vegetarian", "ketogenic", "pescetarian", "paleo", "primal", "whole30"];
-                    const intolerancesList = ["dairy", "egg", "gluten2", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
+                            }).then((response) => {
+                                console.log(response);
+                                for (let i = 0; i < response.data.result.diets.length; i++) {
 
-                    var userIngreds = [];
-
-                    function checked(id) {
-                        return document.getElementById(id).checked;
-                    }
-
-                    console.log(allergiesToAppend)
-
-                    let userDiets = [];
-                    let userIntolerances = [];
-                    dietsList.forEach(function (element) {
-                        if (checked(element)) { userDiets.push(element) }
-                    });
-                    intolerancesList.forEach(function (element) {
-                        if (checked(element)) { userIntolerances.push(element) }
-                    });
-                    var allergiesToAppend = []
-                    var ul = document.getElementById("list2")
-                    var items = ul.getElementsByTagName("li");
-                    for (var i = 0; i < items.length; ++i) {
-                        allergiesToAppend.push(items[i].innerHTML.split('<')[0]);
-                    }
-
-
-                    const ingredientsString = enteredIngreds.map(ingredient =>
-                        ingredient + '%2C'
-                    );
-
-                    const dietsString = userDiets.map(ingredient =>
-                        ingredient + '%2C'
-                    );
-                    const intolerancesString = userIntolerances.map(ingredient =>
-                        ingredient + '%2C'
-                    );
-                    const allergiesString = allergiesToAppend.map(ingredient =>
-                        ingredient + '%2C'
-                    );
-                    let requestString = "https://api.spoonacular.com/recipes/complexSearch?query=" + ingredientsString + "&diet=" + dietsString + "&intolerances=" + intolerancesString + "&excludeIngredients=" + allergiesString + "&instructionsRequired=true&ignorePantry=true&addRecipeInformation=true&fillIngredients=true&apiKey=128541af6bef438a808dc04669c8f556";
-                    console.log(requestString)
-                    $.ajax({
-
-                        url: requestString,
-
-                        type: 'GET',
-
-                        headers: {
-
-                            'Content-Type':
-                                'application/json',
-
-
-                        },
-
-
-                    }).then((response) => {
-                        if (response.totalResults === 0) {
-                            alert("The ingredients you entered returned no results. Make sure you use the autocompleted options")
-                            location.reload()
-                        }
-                        console.log(response);
-                        recipesResponse = jQuery.parseJSON(JSON.stringify(response));
-                        // recipesResponse = JSON.parse(recipesResponse);
-                        if (document.getElementById('returnedRecipe') != null) {
-                            for (var i = 0; i < 10; i++) {
-                                var element = document.getElementById('returnedRecipe');
-                                element.parentNode.removeChild(element);
-                            }
-                        }
-
-                        for (var i = 0; i < response.results.length; i++) {
-                            var img = new Image();
-                            img.src = response.results[i].image;
-                            var title = response.results[i].title;
-                            var meal = document.createElement("DIV");
-                            meal.append(img);
-                            var o =document.createElement("br");
-                            meal.append(o);
-                            meal.append(title);
-                            meal.id = "returnedRecipe";
-                            document.getElementById('feedbox').append(meal);
-
-                        }
-
-                        //  response.results.forEach(element => document.getElementById('feedbox').append(element.src = element.image));
-
-                        return false;
-
-                    }).catch((error) => {
-                        console.log(error);
-
-
-                    });
-                    $(document).on("click", "#returnedRecipe", async function (event) {
-                        // clearModal();
-                        let recipeId = '';
-                        let clickedRecipeName = $(this)[0].lastChild.data;
-                        console.log(clickedRecipeName);
-                        // window.location.assign("ModalRecipeBox/index.html");
-
-
-                        // document.getElementById("title").append(clickedRecipeName)
-                        document.getElementById("title").innerHTML = clickedRecipeName;
-                        document.getElementById("titlePublic").innerHTML = clickedRecipeName;
-
-                        // Get the button that opens the modal
-                        // var btn = document.getElementById("myBtn");
-
-                        // Get the <span> element that closes the modal
-                        var span = document.getElementsByClassName("close")[0];
-
-                        // When the user clicks the button, open the modal 
-                        //    btn.onclick = function () {
-
-                        async function modalType() {
-                            for (let i = 0; i < recipesResponse.results.length; i++) {
-
-                                if (recipesResponse.results[i].title === clickedRecipeName) {
-                                    recipeId = recipesResponse.results[i].id;
-                                    console.log(recipeId);
-                                    let pmeCheck = await privateModalExistsCheck(recipeId);
-                                    console.log(pmeCheck);
-                                    // let promisedValue = pmeCheck.then(function (result) { return result });
-                                    // console.log(promisedValue);
-                                    if (pmeCheck === true) {
-                                        appendExistingPrivateModal(recipeId);
-                                        // modal = document.getElementById("myModalPrivateExists")
-                                        return "privateExists";
-                                    }
-                                    console.log("yes it worked")
-                                    console.log(recipesResponse.results[i].analyzedInstructions[0].steps);
-                                    //append image
-                                    let img = new Image();
-                                    img.src = recipesResponse.results[i].image;
-                                    let title = recipesResponse.results[i].title;
-                                    let meal = document.createElement("DIV");
-                                    meal.append(img);
-                                    meal.id = "returnedRecipeModal"
-                                    document.getElementById('pic').append(meal);
-
-                                    let imgPub = new Image();
-                                    imgPub.src = recipesResponse.results[i].image;
-                                    let titlePub = recipesResponse.results[i].title;
-                                    let mealPub = document.createElement("DIV");
-                                    mealPub.append(imgPub);
-                                    mealPub.id = "returnedRecipeModalPublic"
-                                    document.getElementById('picPublic').append(mealPub);
-
-                                    //add instructions
-                                    stepByStep = recipesResponse.results[i].analyzedInstructions[0].steps;
-                                    for (let j = 0; j < stepByStep.length; j++) {
-                                        let node = document.createElement("LI");
-                                        let stepByStepNumber = stepByStep[j].number;
-                                        let stepByStepInstruction = stepByStep[j].step;
-                                        let textnode = document.createTextNode(stepByStepNumber + ': ' + stepByStepInstruction);
-                                        console.log(textnode.nodeValue)
-                                        node.appendChild(textnode);
-                                        document.getElementById("instructions").appendChild(node);
-
-                                        let nodePub = document.createElement("LI");
-                                        let stepByStepNumberPub = stepByStep[j].number;
-                                        let stepByStepInstructionPub = stepByStep[j].step;
-                                        let textnodePub = document.createTextNode(stepByStepNumberPub + ': ' + stepByStepInstructionPub);
-                                        nodePub.appendChild(textnodePub);
-                                        document.getElementById("instructionsPublic").appendChild(nodePub);
-                                    }
-                                    let listOfIngredients = "";
-                                    for (let k = 0; k < recipesResponse.results[i].missedIngredients.length; k++) {
-                                        listOfIngredients += recipesResponse.results[i].missedIngredients[k].originalString + ", ";
-
-
-                                    }
-                                    document.getElementById("ingredientsNeeded").innerHTML = 'Ingredients needed: ' + listOfIngredients;
-                                    document.getElementById("ingredientsNeededPublic").innerHTML = 'Ingredients needed: ' + listOfIngredients;
-
-                                    let listOfDiets = "";
-                                    for (let l = 0; l < recipesResponse.results[i].diets.length; l++) {
-                                        listOfDiets += recipesResponse.results[i].diets[l] + ", ";
-
-
-                                    }
-                                    document.getElementById("dietsSupported").innerHTML = 'Diets supported: ' + listOfDiets;
-                                    document.getElementById("dietsSupportedPublic").innerHTML = 'Diets supported: ' + listOfDiets;
+                                    let diet = response.data.result.diets[i];
+                                    document.getElementById(diet).checked = true;
 
                                 }
+                                for (let i = 0; i < response.data.result.intolerances.length; i++) {
+                                    let intolerance = response.data.result.intolerances[i];
+                                    document.getElementById(intolerance).checked = true;
+
+                                }
+                                for (let i = 0; i < response.data.result.allergies.length; i++) {
+                                    enteredAllergies.push(response.data.result.allergies[i]);
+
+                                    var node = document.createElement("LI");
+                                    var textnode = document.createTextNode(response.data.result.allergies[i]);
+                                    console.log(textnode.nodeValue)       // Create a text node
+                                    node.appendChild(textnode);                              // Append the text to <li>
+                                    var deleteIcon = document.createElement('span')
+                                    deleteIcon.innerHTML = ('<span class="delete" id="icon-minus">X</span>');
+                                    node.appendChild(deleteIcon);
+
+
+                                    console.log(document.getElementById("list2"))
+                                    document.getElementById("list2").appendChild(node);     // Append <li> to <ul> with id="myList"
+
+
+                                    console.log(enteredAllergies)
+
+                                    $('.delete').on('click', function () {
+
+                                        console.log($(this).parent().parent()[0].childNodes[0].data);
+                                        let removedIngredient = $(this).parent().parent()[0].childNodes[0].data;
+
+                                        for (var i = 0; i < enteredAllergies.length; i++) {
+                                            if (enteredAllergies[i] === removedIngredient) {
+                                                enteredAllergies.splice(i, 1);
+                                            }
+                                        }
+
+                                        $(this).parent().parent().remove();
+
+                                    });
+
+                                }
+                            }).catch((error) => {
+                                console.log(error)
+                            });
+
+                        // axios.get('http://localhost:3000/account/status',
+                        // {
+
+                        //     headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+
+                        // }).then((response) => {
+                        //     console.log(response);
+                        //     user = response.data.user.name;
+                        // }).catch((error) => {
+                        //     console.log(error)
+                        // });
+
+                    }
+
+
+                    $(document).on("click", "#getRecipes", function (event) {
+                        var allergiesToAppend = []
+                        var ul = document.getElementById("list2")
+                        var items = ul.getElementsByTagName("li");
+                        for (var i = 0; i < items.length; ++i) {
+                            allergiesToAppend.push(items[i].innerHTML.split('<')[0]);
+                        }
+
+
+                        const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-vegetarian", "ketogenic", "pescetarian", "paleo", "primal", "whole30"];
+                        const intolerancesList = ["dairy", "egg", "gluten2", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
+
+                        var userIngreds = [];
+
+                        function checked(id) {
+                            return document.getElementById(id).checked;
+                        }
+
+                        console.log(allergiesToAppend)
+
+                        let userDiets = [];
+                        let userIntolerances = [];
+                        dietsList.forEach(function (element) {
+                            if (checked(element)) { userDiets.push(element) }
+                        });
+                        intolerancesList.forEach(function (element) {
+                            if (checked(element)) { userIntolerances.push(element) }
+                        });
+                        var allergiesToAppend = []
+                        var ul = document.getElementById("list2")
+                        var items = ul.getElementsByTagName("li");
+                        for (var i = 0; i < items.length; ++i) {
+                            allergiesToAppend.push(items[i].innerHTML.split('<')[0]);
+                        }
+
+
+                        const ingredientsString = enteredIngreds.map(ingredient =>
+                            ingredient + '%2C'
+                        );
+
+                        const dietsString = userDiets.map(ingredient =>
+                            ingredient + '%2C'
+                        );
+                        const intolerancesString = userIntolerances.map(ingredient =>
+                            ingredient + '%2C'
+                        );
+                        const allergiesString = allergiesToAppend.map(ingredient =>
+                            ingredient + '%2C'
+                        );
+                        let requestString = "https://api.spoonacular.com/recipes/complexSearch?query=" + ingredientsString + "&diet=" + dietsString + "&intolerances=" + intolerancesString + "&excludeIngredients=" + allergiesString + "&instructionsRequired=true&ignorePantry=true&addRecipeInformation=true&fillIngredients=true&apiKey=128541af6bef438a808dc04669c8f556";
+                        console.log(requestString)
+                        $.ajax({
+
+                            url: requestString,
+
+                            type: 'GET',
+
+                            headers: {
+
+                                'Content-Type':
+                                    'application/json',
+
+
+                            },
+
+
+                        }).then((response) => {
+                            if (response.totalResults === 0) {
+                                alert("The ingredients you entered returned no results. Make sure you use the autocompleted options")
+                                location.reload()
+                            }
+                            console.log(response);
+                            recipesResponse = jQuery.parseJSON(JSON.stringify(response));
+                            // recipesResponse = JSON.parse(recipesResponse);
+                            if (document.getElementById('returnedRecipe') != null) {
+                                for (var i = 0; i < 10; i++) {
+                                    var element = document.getElementById('returnedRecipe');
+                                    element.parentNode.removeChild(element);
+                                }
+                            }
+
+                            for (var i = 0; i < response.results.length; i++) {
+                                var img = new Image();
+                                img.src = response.results[i].image;
+                                var title = response.results[i].title;
+                                var meal = document.createElement("DIV");
+                                meal.append(img);
+                                var o = document.createElement("br");
+                                meal.append(o);
+                                meal.append(title);
+                                meal.id = "returnedRecipe";
+                                document.getElementById('feedbox').append(meal);
 
                             }
-                            if (sessionStorage.getItem('jwt') === null) {
-                                // modal = document.getElementById("myModalPublic");
-                                return "public";
-                            }
-                            else {
 
-                                return "private";
-                            }
+                            //  response.results.forEach(element => document.getElementById('feedbox').append(element.src = element.image));
 
-                        };
-                        let modal;
-                        let modalTypeResult = await modalType();
-                        console.log(modalTypeResult);
-                        if (modalTypeResult === "privateExists") {
-                            // Get the modal
-                            modal = document.getElementById("myModalPrivateExists");
-                        }
-                        else if (modalTypeResult === "public") {
-                            modal = document.getElementById("myModalPublic");
-                        }
-                        else {
-                            modal = document.getElementById("myModal");
-                        }
-                        modal.style.display = "block";
-                        //   }
+                            return false;
 
-                        // When the user clicks on <span> (x), close the modal
-                        span.onclick = async function () {
+                        }).catch((error) => {
+                            console.log(error);
+
+
+                        });
+                        $(document).on("click", "#returnedRecipe", async function (event) {
+                            // clearModal();
+                            let recipeId = '';
+                            let clickedRecipeName = $(this)[0].lastChild.data;
+                            console.log(clickedRecipeName);
+                            // window.location.assign("ModalRecipeBox/index.html");
+
+
+                            // document.getElementById("title").append(clickedRecipeName)
+                            document.getElementById("title").innerHTML = clickedRecipeName;
+                            document.getElementById("titlePublic").innerHTML = clickedRecipeName;
+
+                            // Get the button that opens the modal
+                            // var btn = document.getElementById("myBtn");
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+
+                            // When the user clicks the button, open the modal 
+                            //    btn.onclick = function () {
+
+                            async function modalType() {
+                                for (let i = 0; i < recipesResponse.results.length; i++) {
+
+                                    if (recipesResponse.results[i].title === clickedRecipeName) {
+                                        recipeId = recipesResponse.results[i].id;
+                                        console.log(recipeId);
+                                        let pmeCheck = await privateModalExistsCheck(recipeId);
+                                        console.log(pmeCheck);
+                                        // let promisedValue = pmeCheck.then(function (result) { return result });
+                                        // console.log(promisedValue);
+                                        if (pmeCheck === true) {
+                                            appendExistingPrivateModal(recipeId);
+                                            // modal = document.getElementById("myModalPrivateExists")
+                                            return "privateExists";
+                                        }
+                                        console.log("yes it worked")
+                                        console.log(recipesResponse.results[i].analyzedInstructions[0].steps);
+                                        //append image
+                                        let img = new Image();
+                                        img.src = recipesResponse.results[i].image;
+                                        let title = recipesResponse.results[i].title;
+                                        let meal = document.createElement("DIV");
+                                        meal.append(img);
+                                        meal.id = "returnedRecipeModal"
+                                        document.getElementById('pic').append(meal);
+
+                                        let imgPub = new Image();
+                                        imgPub.src = recipesResponse.results[i].image;
+                                        let titlePub = recipesResponse.results[i].title;
+                                        let mealPub = document.createElement("DIV");
+                                        mealPub.append(imgPub);
+                                        mealPub.id = "returnedRecipeModalPublic"
+                                        document.getElementById('picPublic').append(mealPub);
+
+                                        //add instructions
+                                        stepByStep = recipesResponse.results[i].analyzedInstructions[0].steps;
+                                        for (let j = 0; j < stepByStep.length; j++) {
+                                            let node = document.createElement("LI");
+                                            let stepByStepNumber = stepByStep[j].number;
+                                            let stepByStepInstruction = stepByStep[j].step;
+                                            let textnode = document.createTextNode(stepByStepNumber + ': ' + stepByStepInstruction);
+                                            console.log(textnode.nodeValue)
+                                            node.appendChild(textnode);
+                                            document.getElementById("instructions").appendChild(node);
+
+                                            let nodePub = document.createElement("LI");
+                                            let stepByStepNumberPub = stepByStep[j].number;
+                                            let stepByStepInstructionPub = stepByStep[j].step;
+                                            let textnodePub = document.createTextNode(stepByStepNumberPub + ': ' + stepByStepInstructionPub);
+                                            nodePub.appendChild(textnodePub);
+                                            document.getElementById("instructionsPublic").appendChild(nodePub);
+                                        }
+                                        let listOfIngredients = "";
+                                        for (let k = 0; k < recipesResponse.results[i].missedIngredients.length; k++) {
+                                            listOfIngredients += recipesResponse.results[i].missedIngredients[k].originalString + ", ";
+
+
+                                        }
+                                        document.getElementById("ingredientsNeeded").innerHTML = 'Ingredients needed: ' + listOfIngredients;
+                                        document.getElementById("ingredientsNeededPublic").innerHTML = 'Ingredients needed: ' + listOfIngredients;
+
+                                        let listOfDiets = "";
+                                        for (let l = 0; l < recipesResponse.results[i].diets.length; l++) {
+                                            listOfDiets += recipesResponse.results[i].diets[l] + ", ";
+
+
+                                        }
+                                        document.getElementById("dietsSupported").innerHTML = 'Diets supported: ' + listOfDiets;
+                                        document.getElementById("dietsSupportedPublic").innerHTML = 'Diets supported: ' + listOfDiets;
+
+                                    }
+
+                                }
+                                if (sessionStorage.getItem('jwt') === null) {
+                                    // modal = document.getElementById("myModalPublic");
+                                    return "public";
+                                }
+                                else {
+
+                                    return "private";
+                                }
+
+                            };
+                            let modal;
+                            let modalTypeResult = await modalType();
+                            console.log(modalTypeResult);
                             if (modalTypeResult === "privateExists") {
-                                clonePrivateExists();
-
+                                // Get the modal
+                                modal = document.getElementById("myModalPrivateExists");
+                            }
+                            else if (modalTypeResult === "public") {
+                                modal = document.getElementById("myModalPublic");
                             }
                             else {
-                                await publicOrPrivateModal()
-                                $("#returnedRecipeModal").remove();
-                                $("#returnedRecipeModalPublic").remove();
+                                modal = document.getElementById("myModal");
                             }
-                            clearModal();
-                            modal.style.display = "none";
-                        }
+                            modal.style.display = "block";
+                            //   }
 
-                        // When the user clicks anywhere outside of the modal, close it
-                        window.onclick = async function (event) {
-
-                            if (event.target == modal) {
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = async function () {
                                 if (modalTypeResult === "privateExists") {
                                     clonePrivateExists();
 
@@ -1027,74 +960,91 @@
                                 clearModal();
                                 modal.style.display = "none";
                             }
-                        }
-                        $(document).on("click", "#saveRecipe", function () {
 
-                            axios.post('http://localhost:3000/user/data/' + sessionStorage.getItem('name') + '/data/savedRecipes',
-                                {
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = async function (event) {
+
+                                if (event.target == modal) {
+                                    if (modalTypeResult === "privateExists") {
+                                        clonePrivateExists();
+
+                                    }
+                                    else {
+                                        await publicOrPrivateModal()
+                                        $("#returnedRecipeModal").remove();
+                                        $("#returnedRecipeModalPublic").remove();
+                                    }
+                                    clearModal();
+                                    modal.style.display = "none";
+                                }
+                            }
+                            $(document).on("click", "#saveRecipe", function () {
+
+                                axios.post('http://localhost:3000/user/data/' + sessionStorage.getItem('name') + '/data/savedRecipes',
+                                    {
 
 
-                                    "data": [recipeId],
-                                    "type": "merge"
-                                },
-                                {
-                                    headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+                                        "data": [recipeId],
+                                        "type": "merge"
+                                    },
+                                    {
+                                        headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
 
-                                }).then((response) => {
-                                    console.log(response);
-                                }).catch((error) => {
-                                    console.log(error);
-                                });
-
-
-                        });
-                        $(document).on("click", "#postReview", async function (e2) {
+                                    }).then((response) => {
+                                        console.log(response);
+                                    }).catch((error) => {
+                                        console.log(error);
+                                    });
 
 
-                            e2.stopImmediatePropagation();
-                            e2.preventDefault();
-                            let starsChecked = '';
-                            if (document.getElementById("star5").checked) {
-                                starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                            });
+                            $(document).on("click", "#postReview", async function (e2) {
+
+
+                                e2.stopImmediatePropagation();
+                                e2.preventDefault();
+                                let starsChecked = '';
+                                if (document.getElementById("star5").checked) {
+                                    starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span></div>`
-                            }
-                            else if (document.getElementById("star4").checked) {
-                                starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                                }
+                                else if (document.getElementById("star4").checked) {
+                                    starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span>
 
                     <span class="fa fa-star "></span>`
-                            }
-                            else if (document.getElementById("star3").checked) {
-                                starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                                }
+                                else if (document.getElementById("star3").checked) {
+                                    starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star "></span>
                     <span class="fa fa-star "></span>`
-                            }
-                            else if (document.getElementById("star2").checked) {
-                                starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                                }
+                                else if (document.getElementById("star2").checked) {
+                                    starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star "></span>
                     <span class="fa fa-star "></span>
                     <span class="fa fa-star "></span>`
-                            }
-                            else if (document.getElementById("star1").checked) {
-                                starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
+                                }
+                                else if (document.getElementById("star1").checked) {
+                                    starsChecked = ` <div> <span class="fa fa-star starChecked"></span>
                     <span class="fa fa-star "></span>
                     <span class="fa fa-star "></span>
                     <span class="fa fa-star "></span>
                     <span class="fa fa-star "></span>`
-                            }
+                                }
 
 
-                            let reviewContent = document.getElementById("reviewText").value.toString();
-                            let newReview =
-                                `  <div id="newReviewBox" class = "box">
+                                let reviewContent = document.getElementById("reviewText").value.toString();
+                                let newReview =
+                                    `  <div id="newReviewBox" class = "box">
                 <article class="media">
                         
                     <figure class="media-left">
@@ -1118,230 +1068,230 @@
                 </article>
                 </div>`;
 
-                            // document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML += newReview;
-                            let p = document.createElement("p");
-                            p.innerHTML = newReview
-                            document.getElementById('postedReviews').append(p);
-                            // console.log(e2.currentTarget.parentElement)
-                            // e2.currentTarget.append(p);
-                            // if (modalTypeResult === "privateExists") {
-                            //     $('#myModalPrivateExistsContent').find('#postedReviews').append(p);
-                            // }
-                            // else if (modalTypeResult === "private") {
-                            //     $('#myModalPrivateExistsContent').find('#postedReviews').append(p);
-                            // }
+                                // document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML += newReview;
+                                let p = document.createElement("p");
+                                p.innerHTML = newReview
+                                document.getElementById('postedReviews').append(p);
+                                // console.log(e2.currentTarget.parentElement)
+                                // e2.currentTarget.append(p);
+                                // if (modalTypeResult === "privateExists") {
+                                //     $('#myModalPrivateExistsContent').find('#postedReviews').append(p);
+                                // }
+                                // else if (modalTypeResult === "private") {
+                                //     $('#myModalPrivateExistsContent').find('#postedReviews').append(p);
+                                // }
 
-                            await cloneModal();
+                                await cloneModal();
 
-                            //document.getElementById('postedReviews').remove(p);
-                            p = '';
-                            p.innerHTML = '';
-                            document.getElementById("reviewText").value = '';
-                            newReview = '';
-                            reviewContent = '';
+                                //document.getElementById('postedReviews').remove(p);
+                                p = '';
+                                p.innerHTML = '';
+                                document.getElementById("reviewText").value = '';
+                                newReview = '';
+                                reviewContent = '';
 
+                            });
+                            function cloneModal() {
+                                //  let clonedModalHTML = $("<div />").append($("#myModal").clone().html());
+                                var $clonedModal = $("#myModalContent").clone().html();
+
+
+                                // console.log($clonedModal)
+                                axios.post('http://localhost:3000/private/Recipes/' + recipeId,
+                                    {
+
+                                        "name": clickedRecipeName,
+                                        "data": {
+                                            "modal": $clonedModal,
+
+                                        },
+                                    },
+                                    {
+                                        headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+                                    }).then((response) => {
+
+                                        console.log(response);
+                                    }).catch((error) => {
+                                        console.log(error);
+                                    })
+
+                            }
+                            function clonePublicModal() {
+
+                                var $clonedModalPublic = $("#myModalPublic").clone().html();
+
+                                axios.post('http://localhost:3000/public/Recipes/' + recipeId,
+                                    {
+
+                                        "name": clickedRecipeName,
+                                        "data": {
+                                            "modal": $clonedModalPublic,
+
+                                        },
+                                    },
+                                ).then((response) => {
+
+                                    console.log(response);
+                                }).catch((error) => {
+                                    console.log(error);
+                                })
+                            }
+                            function clonePrivateExists() {
+                                var $clonedModalPE = $("#myModalPrivateExists").clone().html();
+
+
+                                axios.post('http://localhost:3000/private/Recipes/' + recipeId,
+                                    {
+
+                                        "name": clickedRecipeName,
+                                        "data": {
+                                            "modal": $clonedModalPE,
+
+                                        },
+                                    },
+                                    {
+                                        headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+                                    }).then((response) => {
+
+                                        console.log(response);
+                                    }).catch((error) => {
+                                        console.log(error);
+                                    })
+
+                            }
+
+                            function clearModal() {
+                                //document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML = '';
+                                $("#postedReviews").empty();
+                                $("#myModalPrivateExists").empty();
+                                $("#pic").empty();
+                                $("#picPublic").empty();
+                                $("instructions").empty();
+                                $("instructionsPublic").empty();
+                                document.getElementById("star5").checked = false;
+                                document.getElementById("star4").checked = false;
+                                document.getElementById("star3").checked = false;
+                                document.getElementById("star2").checked = false;
+                                document.getElementById("star1").checked = false;
+                                document.getElementById("saveRecipe").checked = false;
+
+                                let myNode = document.getElementById("postedReviews");
+
+                                while (myNode != null && myNode.firstChild != null) {
+                                    myNode.removeChild(myNode.firstChild);
+                                }
+                                if (myNode != null) { myNode.innerHTML = ''; }
+
+                                myNode = document.getElementById("returnedRecipeModal");
+                                while (myNode != null && myNode.firstChild != null) {
+                                    myNode.removeChild(myNode.firstChild);
+                                }
+                                if (myNode != null) { myNode.innerHTML = ''; }
+                                myNode = document.getElementById("returnedRecipeModalPublic");
+                                while (myNode != null && myNode.firstChild != null) {
+                                    myNode.removeChild(myNode.firstChild);
+                                }
+                                if (myNode != null) { myNode.innerHTML = ''; }
+                                myNode = document.getElementById("pic");
+                                while (myNode != null && myNode.firstChild != null) {
+                                    myNode.removeChild(myNode.firstChild);
+                                }
+                                if (myNode != null) { myNode.innerHTML = ''; }
+                                myNode = document.getElementById("picPublic");
+                                while (myNode != null && myNode.firstChild != null) {
+                                    myNode.removeChild(myNode.firstChild);
+                                }
+                                if (myNode != null) { myNode.innerHTML = ''; }
+                                myNode = document.getElementById("instructions");
+                                while (myNode != null && myNode.firstChild != null) {
+                                    myNode.removeChild(myNode.firstChild);
+                                }
+                                if (myNode != null) { myNode.innerHTML = ''; }
+                                myNode = document.getElementById("instructionsPublic");
+                                while (myNode != null && myNode.firstChild != null) {
+                                    myNode.removeChild(myNode.firstChild);
+                                }
+                                if (myNode != null) { myNode.innerHTML = ''; }
+
+
+
+                            }
+                            function publicOrPrivateModal() {
+                                if (sessionStorage.getItem('jwt') === null) {
+                                    return clonePublicModal();
+                                }
+                                return cloneModal();
+                            }
+                            async function privateModalExistsCheck(id) {
+                                let bool;
+                                await axios.get('http://localhost:3000/private/Recipes/' + id + '/modal',
+
+                                    {
+                                        headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+
+
+                                    }).then((response) => {
+                                        // console.log(response);
+                                        // let p = document.createElement("p");
+                                        // p.innerHTML = response.data.result
+                                        // document.getElementById('boxFeed').append(p);
+                                        bool = true;
+
+
+                                    }).catch((error) => { console.log(error); bool = false; });
+                                return bool;
+                            }
+                            function appendExistingPrivateModal(id) {
+                                axios.get('http://localhost:3000/private/Recipes/' + id + '/modal',
+
+                                    {
+                                        headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
+
+
+                                    }).then((response) => {
+                                        console.log(response);
+                                        let d = document.createElement("DIV");
+                                        d.classList = "modal-content";
+                                        d.id = "myModalPrivateExistsContent";
+                                        d.innerHTML = response.data.result;
+                                        document.getElementById('myModalPrivateExists').append(d);
+
+
+
+                                    }).catch((error) => { console.log(error); });
+                            }
                         });
-                        function cloneModal() {
-                            //  let clonedModalHTML = $("<div />").append($("#myModal").clone().html());
-                            var $clonedModal = $("#myModalContent").clone().html();
 
-
-                            // console.log($clonedModal)
-                            axios.post('http://localhost:3000/private/Recipes/' + recipeId,
-                                {
-
-                                    "name": clickedRecipeName,
-                                    "data": {
-                                        "modal": $clonedModal,
-
-                                    },
-                                },
-                                {
-                                    headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
-                                }).then((response) => {
-
-                                    console.log(response);
-                                }).catch((error) => {
-                                    console.log(error);
-                                })
-
-                        }
-                        function clonePublicModal() {
-
-                            var $clonedModalPublic = $("#myModalPublic").clone().html();
-
-                            axios.post('http://localhost:3000/public/Recipes/' + recipeId,
-                                {
-
-                                    "name": clickedRecipeName,
-                                    "data": {
-                                        "modal": $clonedModalPublic,
-
-                                    },
-                                },
-                            ).then((response) => {
-
-                                console.log(response);
-                            }).catch((error) => {
-                                console.log(error);
-                            })
-                        }
-                        function clonePrivateExists() {
-                            var $clonedModalPE = $("#myModalPrivateExists").clone().html();
-
-
-                            axios.post('http://localhost:3000/private/Recipes/' + recipeId,
-                                {
-
-                                    "name": clickedRecipeName,
-                                    "data": {
-                                        "modal": $clonedModalPE,
-
-                                    },
-                                },
-                                {
-                                    headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
-                                }).then((response) => {
-
-                                    console.log(response);
-                                }).catch((error) => {
-                                    console.log(error);
-                                })
-
-                        }
-
-                        function clearModal() {
-                            //document.getElementById('postedReviews').innerHTML = document.getElementById('postedReviews').innerHTML = '';
-                            $("#postedReviews").empty();
-                            $("#myModalPrivateExists").empty();
-                            $("#pic").empty();
-                            $("#picPublic").empty();
-                            $("instructions").empty();
-                            $("instructionsPublic").empty();
-                            document.getElementById("star5").checked = false;
-                            document.getElementById("star4").checked = false;
-                            document.getElementById("star3").checked = false;
-                            document.getElementById("star2").checked = false;
-                            document.getElementById("star1").checked = false;
-                            document.getElementById("saveRecipe").checked = false;
-
-                            let myNode = document.getElementById("postedReviews");
-
-                            while (myNode != null && myNode.firstChild != null) {
-                                myNode.removeChild(myNode.firstChild);
-                            }
-                            if (myNode != null) { myNode.innerHTML = ''; }
-
-                            myNode = document.getElementById("returnedRecipeModal");
-                            while (myNode != null && myNode.firstChild != null) {
-                                myNode.removeChild(myNode.firstChild);
-                            }
-                            if (myNode != null) { myNode.innerHTML = ''; }
-                            myNode = document.getElementById("returnedRecipeModalPublic");
-                            while (myNode != null && myNode.firstChild != null) {
-                                myNode.removeChild(myNode.firstChild);
-                            }
-                            if (myNode != null) { myNode.innerHTML = ''; }
-                            myNode = document.getElementById("pic");
-                            while (myNode != null && myNode.firstChild != null) {
-                                myNode.removeChild(myNode.firstChild);
-                            }
-                            if (myNode != null) { myNode.innerHTML = ''; }
-                            myNode = document.getElementById("picPublic");
-                            while (myNode != null && myNode.firstChild != null) {
-                                myNode.removeChild(myNode.firstChild);
-                            }
-                            if (myNode != null) { myNode.innerHTML = ''; }
-                            myNode = document.getElementById("instructions");
-                            while (myNode != null && myNode.firstChild != null) {
-                                myNode.removeChild(myNode.firstChild);
-                            }
-                            if (myNode != null) { myNode.innerHTML = ''; }
-                            myNode = document.getElementById("instructionsPublic");
-                            while (myNode != null && myNode.firstChild != null) {
-                                myNode.removeChild(myNode.firstChild);
-                            }
-                            if (myNode != null) { myNode.innerHTML = ''; }
-
-
-
-                        }
-                        function publicOrPrivateModal() {
-                            if (sessionStorage.getItem('jwt') === null) {
-                                return clonePublicModal();
-                            }
-                            return cloneModal();
-                        }
-                        async function privateModalExistsCheck(id) {
-                            let bool;
-                            await axios.get('http://localhost:3000/private/Recipes/' + id + '/modal',
-
-                                {
-                                    headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
-
-
-                                }).then((response) => {
-                                    // console.log(response);
-                                    // let p = document.createElement("p");
-                                    // p.innerHTML = response.data.result
-                                    // document.getElementById('boxFeed').append(p);
-                                    bool = true;
-
-
-                                }).catch((error) => { console.log(error); bool = false; });
-                            return bool;
-                        }
-                        function appendExistingPrivateModal(id) {
-                            axios.get('http://localhost:3000/private/Recipes/' + id + '/modal',
-
-                                {
-                                    headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
-
-
-                                }).then((response) => {
-                                    console.log(response);
-                                    let d = document.createElement("DIV");
-                                    d.classList = "modal-content";
-                                    d.id = "myModalPrivateExistsContent";
-                                    d.innerHTML = response.data.result;
-                                    document.getElementById('myModalPrivateExists').append(d);
-
-
-
-                                }).catch((error) => {console.log(error); });
-                        }
                     });
+                    window.onload = function () {
+                        document.querySelector("a#logout").addEventListener('click', function (event) {
+                            event.preventDefault();
+                            sessionStorage.setItem('jwt', null);
+                            sessionStorage.setItem('name', null);
+                            location.href = '/index.html';
+                        });
+                    }
 
-                });
-                window.onload = function () {
-                    document.querySelector("a#logout").addEventListener('click', function (event) {
-                        event.preventDefault();
-                        sessionStorage.setItem('jwt', null);
-                        sessionStorage.setItem('name', null);
-                        location.href = '/index.html';
-                    });
-                }
+                </script>
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                <script src="../node_modules/axios/dist/axios.js"></script>
+                <script src="script.js" type="module"></script>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
 
-            </script>
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-            <script src="../node_modules/axios/dist/axios.js"></script>
-            <script src="script.js" type="module"></script>
-            <script>
-                var coll = document.getElementsByClassName("collapsible");
-                var i;
-
-                for (i = 0; i < coll.length; i++) {
-                    coll[i].addEventListener("click", function () {
-                        this.classList.toggle("active");
-                        var content = this.nextElementSibling;
-                        if (content.style.maxHeight) {
-                            content.style.maxHeight = null;
-                        } else {
-                            content.style.maxHeight = content.scrollHeight + "px";
-                        }
-                    });
-                }
-            </script>
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function () {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
 </body>
 
 </html>
