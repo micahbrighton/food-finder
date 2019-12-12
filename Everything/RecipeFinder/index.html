@@ -164,6 +164,9 @@
         .starRating>input:checked~label:hover~label {
             color: #FFED85;
         }
+        .hero-body{
+            background-color: rgb(238, 238, 238);
+        }
     </style>
     <script>
         $(function () {
@@ -206,141 +209,148 @@
         </div>
         <div class="hero-body" style="display: inline;">
             <div class="columns">
-                <div class="column is-one-quarter">
+                <div class="column is-one-third">
+                    <div id="ingredientInputDiv">
+                        <label class="label">What ingredients do you have?</label>
+                        <div id="autocomplete"></div>
+
+
+                        <!--Make sure the form has the autocomplete function switched off:-->
+
+                        <button type="button" class="button is-rounded is-medium" id="getRecipes">
+                            <span class="icon is-large">
+                                <i class="fa fa-refresh"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div id="dietInputDiv">
+                            <label class="label">Diets</label>
+                            <div class="box">
+                                <div class="field">
+        
+                                    <div class="control">
+                                        <div><label class="checkbox">
+                                                <input type="checkbox" id="gluten">
+                                                Gluten Free
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" id="vegetarian">
+                                                Vegetarian
+                                            </label></div>
+        
+        
+                                        <div><label class="checkbox">
+                                                <input type="checkbox" id="vegan">
+                                                Vegan
+                                            </label><label class="checkbox">
+                                                <input type="checkbox" id="lacto-vegetarian">
+                                                Lacto-Vegetarian
+                                            </label></div>
+        
+                                        <div><label class="checkbox">
+                                                <input type="checkbox" id="ovo-vegetarian">
+                                                Ovo-Vegetarian
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" id="ketogenic">
+                                                Ketogenic
+                                            </label></div>
+        
+                                        <div> <label class="checkbox">
+                                                <input type="checkbox" id="pescetarian">
+                                                Pescetarian
+                                            </label><label class="checkbox">
+                                                <input type="checkbox" id="paleo">
+                                                Paleo
+                                            </label></div>
+        
+                                        <div><label class="checkbox">
+                                                <input type="checkbox" id="primal">
+                                                Primal
+                                            </label><label class="checkbox">
+                                                <input type="checkbox" id="whole30">
+                                                Whole30
+                                            </label></div>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="intoleranceInputDiv">
+                                <label class="label">Intolerances</label>
+                                <div class="box">
+                                    <div class="field">
+            
+                                        <div class="control">
+                                            <div><label class="checkbox">
+                                                    <input type="checkbox" id="dairy">
+                                                    Dairy
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="egg">
+                                                    Egg
+                                                </label></div>
+            
+            
+                                            <div><label class="checkbox">
+                                                    <input type="checkbox" id="gluten2">
+                                                    Gluten
+                                                </label><label class="checkbox">
+                                                    <input type="checkbox" id="grain">
+                                                    Grain
+                                                </label></div>
+            
+                                            <div><label class="checkbox">
+                                                    <input type="checkbox" id="peanut">
+                                                    Peanut
+                                                </label>
+                                                <label class="checkbox">
+                                                    <input type="checkbox" id="seafood">
+                                                    Seafood
+                                                </label></div>
+            
+                                            <div> <label class="checkbox">
+                                                    <input type="checkbox" id="sesame">
+                                                    Sesame
+                                                </label><label class="checkbox">
+                                                    <input type="checkbox" id="shellfish">
+                                                    Shellfish
+                                                </label></div>
+            
+                                            <div></div>
+            
+                                            <div><label class="checkbox">
+                                                    <input type="checkbox" id="soy">
+                                                    Soy
+                                                </label><label class="checkbox">
+                                                    <input type="checkbox" id="sulfite">
+                                                    Sulfite
+                                                </label></div>
+                                            <div><label class="checkbox">
+                                                    <input type="checkbox" id="tree-nut">
+                                                    Tree Nut
+                                                </label><label class="checkbox">
+                                                    <input type="checkbox" id="wheat">
+                                                    Wheat
+                                                </label></div>
+                                            <div></div>
+            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="allergyEntryDiv">
+                                    <label class="label">What are you allergic to?</label>
+                                    <div id="autocomplete2"></div>
+                                    <div id="list2">
+                
+                
+                                    </div>
+                                    </div>
                 </div>
                 <div class="column">
-                    <label class="label">What ingredients do you have?</label>
-                    <div id="autocomplete"></div>
 
-
-                    <!--Make sure the form has the autocomplete function switched off:-->
-
-                    <button type="button" class="button is-rounded is-medium" id="getRecipes">
-                        <span class="icon is-large">
-                            <i class="fa fa-refresh"></i>
-                        </span>
-                    </button>
-                    <label class="label">Diets</label>
-                    <div class="box">
-                        <div class="field">
-
-                            <div class="control">
-                                <div><label class="checkbox">
-                                        <input type="checkbox" id="gluten">
-                                        Gluten Free
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="vegetarian">
-                                        Vegetarian
-                                    </label></div>
-
-
-                                <div><label class="checkbox">
-                                        <input type="checkbox" id="vegan">
-                                        Vegan
-                                    </label><label class="checkbox">
-                                        <input type="checkbox" id="lacto-vegetarian">
-                                        Lacto-Vegetarian
-                                    </label></div>
-
-                                <div><label class="checkbox">
-                                        <input type="checkbox" id="ovo-vegetarian">
-                                        Ovo-Vegetarian
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="ketogenic">
-                                        Ketogenic
-                                    </label></div>
-
-                                <div> <label class="checkbox">
-                                        <input type="checkbox" id="pescetarian">
-                                        Pescetarian
-                                    </label><label class="checkbox">
-                                        <input type="checkbox" id="paleo">
-                                        Paleo
-                                    </label></div>
-
-                                <div></div>
-
-                                <div><label class="checkbox">
-                                        <input type="checkbox" id="primal">
-                                        Primal
-                                    </label><label class="checkbox">
-                                        <input type="checkbox" id="whole30">
-                                        Whole30
-                                    </label></div>
-                                <div></div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <label class="label">Intolerances</label>
-                    <div class="box">
-                        <div class="field">
-
-                            <div class="control">
-                                <div><label class="checkbox">
-                                        <input type="checkbox" id="dairy">
-                                        Dairy
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="egg">
-                                        Egg
-                                    </label></div>
-
-
-                                <div><label class="checkbox">
-                                        <input type="checkbox" id="gluten2">
-                                        Gluten
-                                    </label><label class="checkbox">
-                                        <input type="checkbox" id="grain">
-                                        Grain
-                                    </label></div>
-
-                                <div><label class="checkbox">
-                                        <input type="checkbox" id="peanut">
-                                        Peanut
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="seafood">
-                                        Seafood
-                                    </label></div>
-
-                                <div> <label class="checkbox">
-                                        <input type="checkbox" id="sesame">
-                                        Sesame
-                                    </label><label class="checkbox">
-                                        <input type="checkbox" id="shellfish">
-                                        Shellfish
-                                    </label></div>
-
-                                <div></div>
-
-                                <div><label class="checkbox">
-                                        <input type="checkbox" id="soy">
-                                        Soy
-                                    </label><label class="checkbox">
-                                        <input type="checkbox" id="sulfite">
-                                        Sulfite
-                                    </label></div>
-                                <div><label class="checkbox">
-                                        <input type="checkbox" id="tree-nut">
-                                        Tree Nut
-                                    </label><label class="checkbox">
-                                        <input type="checkbox" id="wheat">
-                                        Wheat
-                                    </label></div>
-                                <div></div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <label class="label">What are you allergic to?</label>
-                    <div id="autocomplete2"></div>
-                    <div id="list2">
-
-
-                    </div>
+                    
                     <div>
                         <a class="level-item">
                             <div id="feedbox">
