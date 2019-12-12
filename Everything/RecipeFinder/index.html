@@ -208,7 +208,7 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
-        #title {
+        #title, #titlePublic {
             background-color: rgba(75, 156, 211);
             color:white;
             padding:2rem;
@@ -913,7 +913,7 @@
 
                                     }
                                     document.getElementById("ingredientsNeeded").innerHTML = '<b>Ingredients needed:</b> ' + listOfIngredients;
-                                    document.getElementById("ingredientsNeededPublic").innerHTML = 'Ingredients needed: ' + listOfIngredients;
+                                    document.getElementById("ingredientsNeededPublic").innerHTML = '<b>Ingredients needed:</b> ' + listOfIngredients;
 
                                     let listOfDiets = "";
                                     for (let l = 0; l < recipesResponse.results[i].diets.length; l++) {
@@ -922,7 +922,7 @@
 
                                     }
                                     document.getElementById("dietsSupported").innerHTML = '<b>Diets supported:</b> ' + listOfDiets;
-                                    document.getElementById("dietsSupportedPublic").innerHTML = 'Diets supported: ' + listOfDiets;
+                                    document.getElementById("dietsSupportedPublic").innerHTML = '<b>Diets supported:</b> ' + listOfDiets;
 
                                 }
 
