@@ -8,7 +8,7 @@ $(function () {
 
 
                                 }).then((response) => {
-                                    for(var i=0;i<response.data.result.length;i++){
+                                    for(var i=response.data.result.length-1;i>=0;i--){
                                         axios.get('http://localhost:3000/private/Recipes/' + response.data.result[i] + '/modal',
 
                                 {
