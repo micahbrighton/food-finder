@@ -794,9 +794,11 @@
                             img.src = response.results[i].image;
                             var title = response.results[i].title;
                             var meal = document.createElement("DIV");
-                            meal.append(img);
                             meal.append(title);
-                            meal.id = "returnedRecipe"
+                            var o =document.createElement("br");
+                            meal.append(o);
+                            meal.append(img);
+                            meal.id = "returnedRecipe";
                             document.getElementById('feedbox').append(meal);
 
                         }
@@ -842,7 +844,6 @@
                                     // let promisedValue = pmeCheck.then(function (result) { return result });
                                     // console.log(promisedValue);
                                     if (pmeCheck === true) {
-                                        alert("its private")
                                         appendExistingPrivateModal(recipeId);
                                         // modal = document.getElementById("myModalPrivateExists")
                                         return "privateExists";
@@ -1220,11 +1221,10 @@
                                     // let p = document.createElement("p");
                                     // p.innerHTML = response.data.result
                                     // document.getElementById('boxFeed').append(p);
-                                    alert("worked");
                                     bool = true;
 
 
-                                }).catch((error) => { console.log(error); alert("didnt work"); bool = false; });
+                                }).catch((error) => { console.log(error); bool = false; });
                             return bool;
                         }
                         function appendExistingPrivateModal(id) {
@@ -1241,11 +1241,10 @@
                                     d.id = "myModalPrivateExistsContent";
                                     d.innerHTML = response.data.result;
                                     document.getElementById('myModalPrivateExists').append(d);
-                                    alert("append worked");
 
 
 
-                                }).catch((error) => { alert("append didnt work"); console.log(error); });
+                                }).catch((error) => {console.log(error); });
                         }
                     });
 
