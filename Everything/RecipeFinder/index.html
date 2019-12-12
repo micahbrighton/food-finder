@@ -89,7 +89,7 @@
         }
 
         .modal-content {
-            background-color: #bfd5e7;
+            background-color: rgb(238, 238, 238);
             margin: auto;
             border: 1px solid rgb(15, 13, 13);
             width: 800px;
@@ -207,6 +207,11 @@
             border-bottom: 10px solid #eee;
             padding-top: 10px;
             padding-bottom: 10px;
+        }
+        #title {
+            background-color: rgba(75, 156, 211);
+            color:white;
+            padding:2rem;
         }
     </style>
     <script>
@@ -907,7 +912,7 @@
 
 
                                     }
-                                    document.getElementById("ingredientsNeeded").innerHTML = 'Ingredients needed: ' + listOfIngredients;
+                                    document.getElementById("ingredientsNeeded").innerHTML = '<b>Ingredients needed:</b> ' + listOfIngredients;
                                     document.getElementById("ingredientsNeededPublic").innerHTML = 'Ingredients needed: ' + listOfIngredients;
 
                                     let listOfDiets = "";
@@ -916,7 +921,7 @@
 
 
                                     }
-                                    document.getElementById("dietsSupported").innerHTML = 'Diets supported: ' + listOfDiets;
+                                    document.getElementById("dietsSupported").innerHTML = '<b>Diets supported:</b> ' + listOfDiets;
                                     document.getElementById("dietsSupportedPublic").innerHTML = 'Diets supported: ' + listOfDiets;
 
                                 }
