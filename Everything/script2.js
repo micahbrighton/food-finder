@@ -1,7 +1,7 @@
 var setupUserName = '';
 
-if(document.querySelector('a#logout')!==null){
 window.onload=function(){
+  if(document.querySelector('a#logout')!==null){
   document.querySelector("a#logout").addEventListener('click', function(event) {
       event.preventDefault();
       sessionStorage.clear();
@@ -9,6 +9,7 @@ window.onload=function(){
   });
 }
 }
+
 if(document.querySelector('a#signup')!==null){
 document.querySelector('a#signup').addEventListener('click', function(event) {
     event.preventDefault();
