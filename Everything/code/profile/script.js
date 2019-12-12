@@ -1,44 +1,36 @@
 
 
-// $(async function () {
-//     document.getElementById("username").append(sessionStorage.getItem('name'));
+$(function () {
+    axios.get('http://localhost:3000/private/Recipes/',
 
-//     var savedRecipesArr = [];
-//     await axios.get('http://localhost:3000/user/data',
-//         {
-
-//             headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
-
-//         }).then((response) => {
-//             console.log(response);
-//             for (let i = 0; i < response.data.result.rohan.data.savedRecipes.length; i++) {
-
-//                 savedRecipesArr.push(savedRecipes[i]);
-//                 //    $("#boxFeed").append(savedRecipes[i]);
-//             }
-//         }).catch((error) => { console.log(error); });
-//     for (let j = 0; j < savedRecipesArr.length; j++) {
-//         axios.get('http://localhost:3000/public/Recipes/' + savedRecipesArr[j],
-//             {
-
-//                 //   headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
-
-//             }).then((response) => {
-//                 console.log(response);
-//                 // document.getElementById("boxFeed").innerHTML = response.data.result.modal
-//                 let p = document.createElement("p");
-//                 p.innerHTML = response.data.result.modal
-//                 document.getElementById('boxFeed').append(p);
+                                {
+                                    headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
 
 
-//             }).catch((error) => { console.log(error); });
+                                }).then((response) => {
+                                    for(var i=0;i<response.data.result.length;i++){
+                                        axios.get('http://localhost:3000/private/Recipes/' + response.data.result[i] + '/modal',
+
+                                {
+                                    headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
 
 
+                                }).then((response) => {
+                                    let p = document.createElement("p");
+                                    p.innerHTML = response.data.result
+                                    document.getElementById('boxFeed').append(p);
+                                    
+                                    console.log(response.data.result)
 
-//     }
+
+                                }).catch((error) => { console.log(error); alert("didnt work"); bool = false; })
+                                    }
+                                    
 
 
-// });
+                                }).catch((error) => { console.log(error); alert("didnt work"); bool = false; });
+
+});
 
 window.onload=function(){
     document.querySelector("a#logout").addEventListener('click', function(event) {
