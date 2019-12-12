@@ -7,7 +7,7 @@ window.onload=function(){
       location.href = '/index.html';
   });
 }
-if(document.getElementById("signup")!==null){
+
 document.querySelector('a#signup').addEventListener('click', function(event) {
     event.preventDefault();
     var modal = document.querySelector('#signupmodal.modal');
@@ -21,8 +21,7 @@ document.querySelector('a#signup').addEventListener('click', function(event) {
       html.classList.remove('is-clipped');
     });
 });
-}
-if(document.querySelector('a#login')!==null){
+
 document.querySelector('a#login').addEventListener('click', function(event) {
     event.preventDefault();
     var modal = document.querySelector('#loginmodal.modal');
@@ -36,7 +35,6 @@ document.querySelector('a#login').addEventListener('click', function(event) {
       html.classList.remove('is-clipped');
     });
 });
-}
 
 $(function () {
   const $setupForm = $('#setup-form');
