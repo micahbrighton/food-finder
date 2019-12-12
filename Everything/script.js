@@ -1,7 +1,7 @@
 var setupUserName = '';
 
 window.onload=function(){
-  document.querySelector('a#logout'){
+  if(document.querySelector('a#logout')!==null){
   document.querySelector("a#logout").addEventListener('click', function(event) {
       event.preventDefault();
       sessionStorage.clear();
