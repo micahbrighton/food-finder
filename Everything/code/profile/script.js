@@ -9,6 +9,8 @@ $(function () {
 
                                 }).then((response) => {
                                     for(var i=response.data.result.length-1;i>=0;i--){
+                                        if(response.data.result[i]!=="modal"){
+                                           
                                         axios.get('http://localhost:3000/private/Recipes/' + response.data.result[i] + '/modal',
 
                                 {
@@ -17,18 +19,25 @@ $(function () {
 
                                 }).then((response) => {
                                     let p = document.createElement("p");
-                                    p.innerHTML = response.data.result
-                                    document.getElementById('boxFeed').append(p);
                                     
-                                    console.log(response.data.result)
+                                    p.innerHTML = response.data.result
+                                    //alert(p.classList.contains("Content"))
+                                    if(p.getElementsByClassName("content").length>=1){
+                                        document.getElementById('boxFeed').append(p);
+                                    }
+                                    //document.getElementById('boxFeed').append(p);
+                                    
+                                    //console.log(response.data.result)
 
 
                                 }).catch((error) => { console.log(error); bool = false; })
                                     }
+                                }
                                     
 
 
                                 }).catch((error) => { console.log(error); bool = false; });
+                                
 
 });
 
