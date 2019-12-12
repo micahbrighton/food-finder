@@ -192,6 +192,14 @@
         transition: max-height 0.2s ease-out;
         border: 2px solid #eee
         }
+        .content3 {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        border: 2px solid #eee
+        }
         .collapsible:after {
         content: '\02795'; /* Unicode character for "plus" sign (+) */
         font-size: 13px;
@@ -468,8 +476,8 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="collapsible" style="text-align: center; font-size:20px;font-weight:bold;border: 2px solid #eee"><b>Allergies</b></button>
-                    <div class="content2" id="allergyEntry">
+                    <!-- <button type="button" class="collapsible" style="text-align: center; font-size:20px;font-weight:bold;border: 2px solid #eee"><b>Allergies</b></button> -->
+                    <div id="allergyEntry">
                             <label class="label" style="text-align: center; font-size:1.25rem">What are you allergic to?</label>
                             <div id="autocomplete2"></div>
                             <div id="list2">
