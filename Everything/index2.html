@@ -117,14 +117,35 @@
                         <div id="mainNavbar" class="navbar-menu">
                             <div class="navbar-end">
                                 <a class="navbar-item" id="getRecipes" href="/RecipeFinder/index.html">Get Recipes</a>
-                                <a class="navbar-item" id="signup">
+                                <script>
+                                        if(sessionStorage.getItem('jwt') != null) {
+                                            var m = document.createElement('span');
+                                            m.innerHTML = "<a class=\"navbar-item\" id=\"profile\" style=\"height:100%\" href=\"/code/profile/index.html\">Profile</a>"
+                                            document.getElementById('navbarT').append(m);
+                                            var y = document.createElement('span');
+                                            y.setAttribute("style", "margin-top:2%; margin-left: 2%;")
+                                            y.innerHTML = "<a class=\"button is-info is-inverted is-outlined\" id=\"logout\"><span>Logout</span></a>"
+                                            document.getElementById('navbarT').append(y);
+                                        } else {
+                                            var w = document.createElement('span');
+                                            // w.setAttribute("class", "navbar-item")
+                                            // w.setAttribute("id", "signup")
+                                            w.innerHTML = "<a class=\"navbar-item\" id=\"signup\" style=\"height:100%\">Sign Up</a>"
+                                            document.getElementById('navbarT').append(w);
+                                            var z = document.createElement('span');
+                                            z.setAttribute("style", "margin-top:2%;")
+                                            z.innerHTML = "<a class=\"button is-info is-inverted is-outlined\" id=\"login\"><span>Login</span></a>"
+                                            document.getElementById('navbarT').append(z);
+                                        }
+                                </script>
+                                <!-- <a class="navbar-item" id="signup">
                                     Sign Up
                                 </a>
                                 <span class="navbar-item">
                                     <a class="button is-info is-inverted is-outlined"  id="login">
                                         <span>Login</span>
                                     </a>
-                                </span>
+                                </span> -->
                             </div>
                         </div>
                     </div>
