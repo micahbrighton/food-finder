@@ -1,13 +1,17 @@
 var setupUserName = '';
 
 window.onload=function(){
+  if(this.document.getElementById("logout")!==null){
+
+  
   document.querySelector("a#logout").addEventListener('click', function(event) {
       event.preventDefault();
       sessionStorage.clear();
       location.href = '/index.html';
   });
 }
-
+}
+if(document.getElementById("signup")!==null){
 document.querySelector('a#signup').addEventListener('click', function(event) {
     event.preventDefault();
     var modal = document.querySelector('#signupmodal.modal');
@@ -21,7 +25,8 @@ document.querySelector('a#signup').addEventListener('click', function(event) {
       html.classList.remove('is-clipped');
     });
 });
-
+}
+if(document.querySelector('a#login')!==null){
 document.querySelector('a#login').addEventListener('click', function(event) {
     event.preventDefault();
     var modal = document.querySelector('#loginmodal.modal');
@@ -35,6 +40,7 @@ document.querySelector('a#login').addEventListener('click', function(event) {
       html.classList.remove('is-clipped');
     });
 });
+}
 
 const dietsList = ["gluten", "vegetarian", "vegan", "lacto-vegetarian", "ovo-vegetarian", "ketogenic", "pescetarian", "paleo", "primal", "whole30"];
     const intolerancesList = ["dairy", "egg", "gluten2", "grain", "peanut", "seafood", "sesame", "shellfish", "soy", "sulfite", "tree-nut", "wheat"];
