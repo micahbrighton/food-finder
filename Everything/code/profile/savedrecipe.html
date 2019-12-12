@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="./node_modules/axios/dist/axios.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <style type="text/css">
         html,
         body {
@@ -189,10 +189,11 @@
     </style>
     <script>
         console.log("run")
-        let j=null
+        
         $(function () {
+            
             document.getElementById("username").append(sessionStorage.getItem('name'));
-
+            let j2=null
             var savedRecipesArr = [];
             axios.get('http://localhost:3000/user/data',
                 {
@@ -201,7 +202,7 @@
 
                 }).then((response) => {
                     console.log(response);
-                    j=response;
+                    j2=response;
                     let name = sessionStorage.getItem('name');
                     if(response['data']['result'][name]['data']['savedRecipes']===undefined){return;}
                     //console.log(x)
@@ -227,6 +228,7 @@
                                 document.getElementById('boxFeed').append(p);
 
 
+
                             }).catch((error) => { console.log(error); });
 
 
@@ -235,7 +237,8 @@
                 }).catch((error) => { console.log(error); });
 
                 $(document).on("click", "#clear", function (event) {
-                if(j['data']['result'][sessionStorage.getItem('name')]['data']['savedRecipes']!==undefined){
+                    //console.log(j2['data']['result'][sessionStorage.getItem('name')])
+                if(j2['data']['result'][sessionStorage.getItem('name')]!==undefined && j2['data']['result'][sessionStorage.getItem('name')]['data']['savedRecipes']!==undefined){
                     axios.delete('http://localhost:3000/user/data/' + sessionStorage.getItem('name') + '/data/savedRecipes',
                                 {
                                         headers: { Authorization: "Bearer " + sessionStorage.getItem('jwt') }
@@ -246,6 +249,12 @@
                                     console.log(error);
                                 });
                             }
+                            // document.getElementById('boxFeed').empty();
+//             let myNode = document.getElementById("boxFeed");
+
+// while (myNode != null && myNode.firstChild != null) {
+//     myNode.removeChild(myNode.firstChild);
+// }
                 });
 
         });
