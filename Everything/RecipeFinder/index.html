@@ -167,7 +167,7 @@
         }
         /* Style the button that is used to open and close the collapsible content */
         .collapsible {
-        background-color: #eee;
+        background-color: #fff;
         color: #444;
         cursor: pointer;
         padding: 18px;
@@ -194,7 +194,7 @@
         .collapsible:after {
         content: '\02795'; /* Unicode character for "plus" sign (+) */
         font-size: 13px;
-        color: white;
+        color: #eee;
         float: right;
         margin-left: 5px;
         }
@@ -246,7 +246,7 @@
             <div class="columns">
                 <div class="column is-one-third">
                     <div id="ingredientInputDiv">
-                        <button type="button" id="getRecipes" class="button is-outlined is-large is-rounded is-fullwidth">
+                        <button type="button" id="getRecipes" class="button is-outlined is-large is-rounded is-fullwidth" style="background-color: #4B9CD3; color: #FFF">
                             <span class="icon">
                                 <i class="fa fa-search"></i>
                                 </span>
@@ -260,9 +260,9 @@
                         <!--Make sure the form has the autocomplete function switched off:-->
 
                     </div>
-                    <button type="button" class="collapsible">Open Collapsible</button>
+                    <br>
+                    <button type="button" class="collapsible" style="text-align: center;"><b>Diets</b></button>
                     <div class="content" id="dietInputDiv">
-                            <label class="label" style="text-align: center; font-size:1.25rem">Diets</label>
                             <div class="field">
                     
                                 <div class="control" style="width:100%; float: none; text-align: center; margin:auto">
@@ -355,8 +355,8 @@
                             </div>
                             </div>
                         </div>
-                        <div id="intoleranceInputDiv">
-                                <label class="label" style="text-align: center; font-size:1.25rem">Intolerances</label>
+                        <button type="button" class="collapsible" style="text-align: center;"><b>Intolerances</b></button>
+                        <div class="content" id="intoleranceInputDiv">
                         <div class="field">
                 
                             <div class="control" style="width:100%; float: none; text-align: center; margin: auto">
@@ -465,7 +465,6 @@
                             </div>
                         </div>
                     </div>
-                    <br>
                     <div id="allergyEntry">
                             <label class="label" style="text-align: center; font-size:1.25rem">What are you allergic to?</label>
                             <div id="autocomplete2"></div>
