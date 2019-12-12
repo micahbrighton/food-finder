@@ -23,12 +23,12 @@ $(function () {
                                     console.log(response.data.result)
 
 
-                                }).catch((error) => { console.log(error); alert("didnt work"); bool = false; })
+                                }).catch((error) => { console.log(error); bool = false; })
                                     }
                                     
 
 
-                                }).catch((error) => { console.log(error); alert("didnt work"); bool = false; });
+                                }).catch((error) => { console.log(error); bool = false; });
 
 });
 
