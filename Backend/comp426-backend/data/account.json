@@ -229,6 +229,18 @@
     },
     "ajfdslka": {
       "passwordHash": "$2a$10$mM2okdChFIaSzUZISz5JTOtnhXo9ajmgbmNheInga2To8iKKpR6ka"
+    },
+    "lacroix": {
+      "passwordHash": "$2a$10$TaShYLAJ9qMp27wTIXdgj.MfNoCrdwWtDDyYbqRGxt.PjUT5ux9ti"
+    },
+    "youyouou": {
+      "passwordHash": "$2a$10$ut7H0.SQAm8lcGILGO1h..1utLAg9xswBw/vqFrS95UMpRDgz/1IO"
+    },
+    "kljklj": {
+      "passwordHash": "$2a$10$8i21c5ljUw2AR3y2YBtAUOburS.D4eXDkPxRqrKjNKeDGm5k5PMHC"
+    },
+    "christopher": {
+      "passwordHash": "$2a$10$WRrvGcGy8Ahg1Os9kbb87.iEFJbsVFT0bbpeNmWdVQAhoUC4y6waC"
     }
   }
 }
