@@ -1,17 +1,13 @@
 var setupUserName = '';
 
-window.onload=function(){
-  if(this.document.getElementById("logout")!==null){
+// window.onload=function(){
+//   document.querySelector("a#logout").addEventListener('click', function(event) {
+//       event.preventDefault();
+//       sessionStorage.clear();
+//       location.href = '/index.html';
+//   });
+// }
 
-  
-  document.querySelector("a#logout").addEventListener('click', function(event) {
-      event.preventDefault();
-      sessionStorage.clear();
-      location.href = '/index.html';
-  });
-}
-}
-if(document.getElementById("signup")!==null){
 document.querySelector('a#signup').addEventListener('click', function(event) {
     event.preventDefault();
     var modal = document.querySelector('#signupmodal.modal');
